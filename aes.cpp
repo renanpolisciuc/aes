@@ -2,7 +2,7 @@
 #include<string.h>
 
 using namespace std;
-#define BLOCK_SIZE 16
+#define AES_BLK_SIZE 16
 unsigned char s_box[256] = {
     0x63, 0x7C, 0x77, 0x7B, 0xF2, 0x6B, 0x6F, 0xC5, 0x30, 0x01, 0x67, 0x2B, 0xFE, 0xD7, 0xAB, 0x76,
     0xCA, 0x82, 0xC9, 0x7D, 0xFA, 0x59, 0x47, 0xF0, 0xAD, 0xD4, 0xA2, 0xAF, 0x9C, 0xA4, 0x72, 0xC0,
@@ -63,15 +63,16 @@ unsigned char mul3[] = {
 void sub_bytes(unsigned char * state);
 void shift_rows(unsigned char * state);
 void add_round_key(unsigned char * state, unsigned char * key);
+void mix_columns(unsigned char * state);
 void aes(unsigned char * state, unsigned char * key);
 
 void sub_bytes(unsigned char * state) {
-  for(int i = 0; i < BLOCK_SIZE; i++)
+  for(int i = 0; i < AES_BLK_SIZE; i++)
     state[i] = s_box[state[i]];
 }
 
 void shift_rows(unsigned char * state) {
-  unsigned char tmp[BLOCK_SIZE];
+  unsigned char tmp[AES_BLK_SIZE];
   tmp[0] = state[0];
   tmp[1] = state[1];
   tmp[2] = state[2];
@@ -92,13 +93,36 @@ void shift_rows(unsigned char * state) {
   tmp[14] = state[13];
   tmp[15] = state[14];
 
-  for(int i = 0; i < BLOCK_SIZE; i++)
+  for(int i = 0; i < AES_BLK_SIZE; i++)
     state[i] = tmp[i];
 }
 
 void add_round_key(unsigned char * state, unsigned char * key) {
-  for(int i = 0; i < BLOCK_SIZE; i++)
+  for(int i = 0; i < AES_BLK_SIZE; i++)
     state[i] ^= key[i];
+}
+
+void mix_columns(unsigned char * state) {
+  unsigned char tmp[AES_BLK_SIZE];
+  tmp[0] = (unsigned char) mul2[state[0]]^mul3[state[1]]^state[2]^state[3];
+  tmp[1] = (unsigned char) state[0]^mul2[state[1]]^mul3[state[2]]^state[3];
+  tmp[2] = (unsigned char) state[0]^state[1]^mul2[state[2]]^mul3[state[3]];
+  tmp[3] = (unsigned char) mul3[state[0]]^state[1]^state[2]^mul2[state[3]];
+
+  tmp[4] = (unsigned char) mul2[state[4]]^mul3[state[5]]^state[6]^state[7];
+  tmp[5] = (unsigned char) state[4]^mul2[state[5]]^mul3[state[6]]^state[7];
+  tmp[6] = (unsigned char) state[4]^state[5]^mul2[state[6]]^mul3[state[7]];
+  tmp[7] = (unsigned char) mul3[state[4]]^state[5]^state[6]^mul2[state[7]];
+
+  tmp[8]  = (unsigned char) mul2[state[8]]^mul3[state[9]]^state[10]^state[11];
+  tmp[9]  = (unsigned char) state[8]^mul2[state[9]]^mul3[state[10]]^state[11];
+  tmp[10] = (unsigned char) state[8]^state[9]^mul2[state[10]]^mul3[state[11]];
+  tmp[11] = (unsigned char) mul3[state[8]]^state[9]^state[10]^mul2[state[11]];
+
+  tmp[12] = (unsigned char) mul2[state[12]]^mul3[state[13]]^state[14]^state[15];
+  tmp[13] = (unsigned char) state[12]^mul2[state[13]]^mul3[state[14]]^state[15];
+  tmp[14] = (unsigned char) state[12]^state[13]^mul2[state[14]]^mul3[state[15]];
+  tmp[15] = (unsigned char) mul3[state[12]]^state[13]^state[14]^mul2[state[15]];
 }
 
 void aes(unsigned char * state, unsigned char * key) {
