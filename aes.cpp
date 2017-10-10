@@ -59,7 +59,8 @@ void shift_rows(unsigned char * state) {
 }
 
 void add_round_key(unsigned char * state, unsigned char * key) {
-
+  for(int i = 0; i < BLOCK_SIZE; i++)
+    state[i] ^= key[i];
 }
 
 void aes(unsigned char * state, unsigned char * key) {
