@@ -28,11 +28,34 @@ void add_round_key(unsigned char * state, unsigned char * key);
 void aes(unsigned char * state, unsigned char * key);
 
 void sub_bytes(unsigned char * state) {
-
+  for(int i = 0; i < BLOCK_SIZE; i++)
+    state[i] = s_box[state[i]];
 }
 
 void shift_rows(unsigned char * state) {
+  unsigned char * tmp = (unsigned char *) malloc(sizeof(unsigned char) * BLOCK_SIZE);
+  tmp[0] = state[0];
+  tmp[1] = state[1];
+  tmp[2] = state[2];
+  tmp[3] = state[3];
 
+  tmp[4] = state[5];
+  tmp[5] = state[6];
+  tmp[6] = state[7];
+  tmp[7] = state[4];
+
+  tmp[8]  = state[10];
+  tmp[9]  = state[11];
+  tmp[10] = state[8];
+  tmp[11] = state[9];
+
+  tmp[12] = state[15];
+  tmp[13] = state[12];
+  tmp[14] = state[13];
+  tmp[15] = state[14];
+
+  for(int i = 0; i < BLOCK_SIZE; i++)
+    state[i] = tmp[i];
 }
 
 void add_round_key(unsigned char * state, unsigned char * key) {
@@ -48,10 +71,10 @@ void aes(unsigned char * state, unsigned char * key) {
 int main(int argc, char ** argv) {
   unsigned char state[] = "I dont now what i'm doing";
   unsigned char key[16] = {
-    1, 2, 3, 4,
-    5, 6, 7, 8,
-    9, 10, 11, 12,
-    13, 14, 15
+    0, 1, 2, 3,
+    4, 5, 6, 7,
+    8, 9, 10, 11,
+    12, 13, 14, 15
   };
   aes(state, key);
   return 0;
