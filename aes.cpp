@@ -33,18 +33,36 @@ void shiftRows(unsigned char * state) {
   memcpy(state, tmp, 16);
 }
 
-void aes(unsigned char * in_bytes, unsigned char * chave) {
+void addRoundKey(unsigned char * state, unsigned char * key) {
+  for(int i = 0; i < 16; i++)
+    state[i] ^= key[i];
+}
+
+void addKeyExpansion(unsigned char * key, unsigned char * exp_key) {
+
+}
+
+void mixColumns(unsigned char * state) {
+
+}
+
+void aes(unsigned char * in_bytes, unsigned char * key) {
   unsigned char state[16];
+  unsigned char exp_key[EXP_KEY_SIZE];
+
   memcpy(state, in_bytes, 16);
+  addKeyExpansion(key, exp_key);
+  addRoundKey(state, key);
+  for(int i = 0; i < (R_ROUNDS -1); i++) {
+    subBytes(state);
+    shiftRows(state);
+    mixColumns(state);
+    addRoundKey(state, key);
+  }
+
   subBytes(state);
   shiftRows(state);
-  for(int i = 0; i < 16; i++) {
-    printf("[%X]", state[i]);
-  }
-  cout << endl;
-
-  for(int i = 0; i < (R_ROUNDS -1); i++) {
-  }
+  addRoundKey(state, key);
 }
 
 int main(int argc, char ** argv) {
