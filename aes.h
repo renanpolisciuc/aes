@@ -67,3 +67,4 @@ void addRoundKey(unsigned char * state, unsigned char * key);
 void addKeyExpansion(unsigned char * key, unsigned char * exp_key);
 void mixColumns(unsigned char * state);
 void aes(unsigned char * in_bytes, unsigned char * key);
+void rotWord(unsigned char * word);

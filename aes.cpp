@@ -38,8 +38,18 @@ void addRoundKey(unsigned char * state, unsigned char * key) {
     state[i] ^= key[i];
 }
 
-void addKeyExpansion(unsigned char * key, unsigned char * exp_key) {
+void rotWord(unsigned char * word) {
 
+}
+
+void addKeyExpansion(unsigned char * key, unsigned char * exp_key) {
+  int bytesExpanded = 0;
+  memcpy(exp_key, key, 16);
+  bytesExpanded = 16;
+
+  while(bytesExpanded < EXP_KEY_SIZE) {
+    bytesExpanded += 16;
+  }
 }
 
 void mixColumns(unsigned char * state) {
