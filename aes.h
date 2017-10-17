@@ -56,7 +56,7 @@ unsigned char mul3[] = {
   0x3b, 0x38, 0x3d, 0x3e, 0x37, 0x34, 0x31, 0x32, 0x23, 0x20, 0x25, 0x26, 0x2f, 0x2c, 0x29, 0x2a,
   0x0b, 0x08, 0x0d, 0x0e, 0x07, 0x04, 0x01, 0x02, 0x13, 0x10, 0x15, 0x16, 0x1f, 0x1c, 0x19, 0x1a
 };
-unsigned char rcon[256] = {
+unsigned char rcon[11] = {
   0x8d, 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80, 0x1b, 0x36
 };
 
@@ -64,7 +64,13 @@ void help();
 void shiftRows(unsigned char * state);
 void subBytes(unsigned char * state);
 void addRoundKey(unsigned char * state, unsigned char * key);
-void addKeyExpansion(unsigned char * key, unsigned char * exp_key);
+void addKeyExpansion(unsigned char * key, unsigned char * exp_keys);
+void addKeyExpansionCore(unsigned char * in, unsigned char i);
 void mixColumns(unsigned char * state);
 void aes(unsigned char * in_bytes, unsigned char * key);
 void rotWord(unsigned char * word);
+void subWord(unsigned char * word);
+
+
+//DEBUG
+void printState(unsigned char * state, int size);

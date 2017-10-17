@@ -12,67 +12,126 @@ void subBytes(unsigned char * state) {
 void shiftRows(unsigned char * state) {
   unsigned char tmp[16];
   tmp[0] = state[0];
-  tmp[4] = state[4];
-  tmp[8] = state[8];
-  tmp[12] = state[12];
+  tmp[1] = state[1];
+  tmp[2] = state[2];
+  tmp[3] = state[3];
 
-  tmp[1] = state[5];
-  tmp[5] = state[9];
-  tmp[9] = state[13];
-  tmp[13] = state[1];
+  tmp[4] = state[5];
+  tmp[5] = state[6];
+  tmp[6] = state[7];
+  tmp[7] = state[4];
 
-  tmp[2] = state[10];
-  tmp[6] = state[14];
-  tmp[10] = state[2];
-  tmp[14] = state[6];
+  tmp[8] = state[10];
+  tmp[9] = state[11];
+  tmp[10] = state[8];
+  tmp[11] = state[9];
 
-  tmp[3] = state[15];
-  tmp[7] = state[3];
-  tmp[11] = state[7];
-  tmp[15] = state[11];
+  tmp[12] = state[15];
+  tmp[13] = state[12];
+  tmp[14] = state[13];
+  tmp[15] = state[14];
   memcpy(state, tmp, 16);
 }
 
 void addRoundKey(unsigned char * state, unsigned char * key) {
-  for(int i = 0; i < 16; i++)
-    state[i] ^= key[i];
+  for(int i = 0; i < 4; i++)
+    for(int j = 0; j < 4; j++)
+      state[j * 4 + i] ^= key[i * 4 + j];
 }
 
 void rotWord(unsigned char * word) {
-
+  unsigned char tmp_word = word[0];
+  word[0] = word[1];
+  word[1] = word[2];
+  word[2] = word[3];
+  word[3] = tmp_word;
+}
+void subWord(unsigned char * word) {
+  for(int i = 0; i < 4; i++)
+    word[i] = S_BOX[word[i]];
 }
 
-void addKeyExpansion(unsigned char * key, unsigned char * exp_key) {
-  int bytesExpanded = 0;
-  memcpy(exp_key, key, 16);
-  bytesExpanded = 16;
+void addKeyExpansionCore(unsigned char * in, unsigned char i) {
+  rotWord(in);
+  subWord(in);
+  in[0] ^= rcon[i];
+}
 
-  while(bytesExpanded < EXP_KEY_SIZE) {
-    bytesExpanded += 16;
+void addKeyExpansion(unsigned char * key, unsigned char * exp_keys) {
+  int bytesGenerated = 16;
+  int rconIte = 1;
+  unsigned char tmp[4];
+  memcpy(exp_keys, key, 16);
+
+  while(bytesGenerated < EXP_KEY_SIZE) {
+    for(int i = 0; i < 4; i++)
+      tmp[i] = exp_keys[i + bytesGenerated - 4];
+
+    if (bytesGenerated % 16 == 0)
+      addKeyExpansionCore(tmp, rconIte++);
+
+    for(int i = 0; i < 4; i++) {
+      exp_keys[bytesGenerated] = exp_keys[bytesGenerated - 16] ^ tmp[i];
+      bytesGenerated++;
+    }
   }
 }
 
 void mixColumns(unsigned char * state) {
+  unsigned char tmp[16];
+  tmp[0] = (unsigned char)(mul2[state[0]] ^ mul3[state[4]] ^ state[8] ^ state[12]);
+  tmp[4] = (unsigned char)(state[0] ^ mul2[state[4]] ^ mul3[state[8]] ^ state[12]);
+  tmp[8] = (unsigned char)(state[0] ^ state[4] ^ mul2[state[8]] ^ mul3[state[12]]);
+  tmp[12] = (unsigned char)(mul3[state[0]] ^ state[4] ^ state[8] ^ mul2[state[12]]);
 
+  tmp[1] = (unsigned char)(mul2[state[1]] ^ mul3[state[5]] ^ state[9] ^ state[13]);
+  tmp[5] = (unsigned char)(state[1] ^ mul2[state[5]] ^ mul3[state[9]] ^ state[13]);
+  tmp[9] = (unsigned char)(state[1] ^ state[5] ^ mul2[state[9]] ^ mul3[state[13]]);
+  tmp[13] = (unsigned char)(mul3[state[1]] ^ state[5] ^ state[9] ^ mul2[state[13]]);
+
+  tmp[2] = (unsigned char)(mul2[state[2]] ^ mul3[state[6]] ^ state[10] ^ state[14]);
+  tmp[6] = (unsigned char)(state[2] ^ mul2[state[6]] ^ mul3[state[10]] ^ state[14]);
+  tmp[10] = (unsigned char)(state[2] ^ state[6] ^ mul2[state[10]] ^ mul3[state[14]]);
+  tmp[14] = (unsigned char)(mul3[state[2]] ^ state[6] ^ state[10] ^ mul2[state[14]]);
+
+  tmp[3] = (unsigned char)(mul2[state[3]] ^ mul3[state[7]] ^ state[11] ^ state[15]);
+  tmp[7] = (unsigned char)(state[3] ^ mul2[state[7]] ^ mul3[state[11]] ^ state[15]);
+  tmp[11] = (unsigned char)(state[3] ^ state[7] ^ mul2[state[11]] ^ mul3[state[15]]);
+  tmp[15] = (unsigned char)(mul3[state[3]] ^ state[7] ^ state[11] ^ mul2[state[15]]);
+  memcpy(state, tmp, 16);
 }
 
 void aes(unsigned char * in_bytes, unsigned char * key) {
   unsigned char state[16];
-  unsigned char exp_key[EXP_KEY_SIZE];
-
   memcpy(state, in_bytes, 16);
-  addKeyExpansion(key, exp_key);
+
   addRoundKey(state, key);
   for(int i = 0; i < (R_ROUNDS -1); i++) {
+    printState(state, 16);
     subBytes(state);
+    printState(state, 16);
     shiftRows(state);
+    printState(state, 16);
     mixColumns(state);
-    addRoundKey(state, key);
+    printState(state, 16);
+    cout << "Chave da rodada: " << endl;
+    printState(key + (16 * (i + 1)), 16);
+    addRoundKey(state, key + (16 * (i + 1)));
+    cout << "----------------------------" << endl;
   }
 
   subBytes(state);
   shiftRows(state);
-  addRoundKey(state, key);
+  addRoundKey(state, key + 160);
+
+  memcpy(in_bytes, state, 16);
+}
+
+void printState(unsigned char * state, int size) {
+  for(int i = 0; i < size; i++) {
+    printf("%X ", state[i]);
+  }
+  cout << endl;
 }
 
 int main(int argc, char ** argv) {
@@ -81,12 +140,21 @@ int main(int argc, char ** argv) {
 
   FILE * fin; // Pointer para o arquivo
   unsigned char * fbytes = NULL; //Bytes do arquivo
-  unsigned char chave[16] = {
-    0x0, 0x1, 0x2, 0x3,
-    0x4, 0x5, 0x6, 0x7,
-    0x8, 0x9, 0xA, 0xB,
-    0xC, 0xD, 0xE, 0xF
+  // unsigned char fbytes[16] = {
+  //   0x01, 0x89, 0xFE, 0x76,
+  //   0x23, 0xAB, 0xDC, 0x54,
+  //   0x45, 0xCD, 0xBA, 0x32,
+  //   0x67, 0xEF, 0x98, 0x10
+  // };
+
+  unsigned char key[16] = {
+    0x01, 0x02, 0x03, 0x04,
+    0x05, 0x06, 0x07, 0x08,
+    0x09, 0x0A, 0x0B, 0x0C,
+    0x0D, 0x0E, 0x0F, 0x10
   };
+
+
 
   fin = fopen(argv[1], "r"); //Abre o arquivo como leitura
 
@@ -111,16 +179,21 @@ int main(int argc, char ** argv) {
   //Lê os bytes do arquivo e adiciona padding caso necessário
   fbytes = new unsigned char[fsize];
   bytes_read = fread(fbytes, sizeof(unsigned char), fsize, fin);
+
   if (bytes_read < fsize)
     memset((fbytes + bytes_read), 0, (fsize - bytes_read));
-
+  unsigned char exp_key[EXP_KEY_SIZE];
+  addKeyExpansion(key, exp_key);
+  for(int i = 0; i < EXP_KEY_SIZE; i += 16)
+    printState(exp_key + i, 16);
+  cout << "############################" << endl;
   for(int i = 0; i < fsize; i+= 16) {
     //Processa os bytes de 16 em 16
-    aes(fbytes + i, chave);
+    aes(fbytes + i, exp_key);
   }
-
+  printState(fbytes, fsize);
   //Libera a memória alocada
-  delete [] fbytes;
+  //delete [] fbytes;
   fclose(fin);
   return 0;
 }
