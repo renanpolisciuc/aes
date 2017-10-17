@@ -70,6 +70,7 @@ void mixColumns(unsigned char * state);
 void aes(unsigned char * in_bytes, unsigned char * key);
 void rotWord(unsigned char * word);
 void subWord(unsigned char * word);
+void translateWord(unsigned char * word);
 
 
 //DEBUG

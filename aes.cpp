@@ -34,9 +34,8 @@ void shiftRows(unsigned char * state) {
 }
 
 void addRoundKey(unsigned char * state, unsigned char * key) {
-  for(int i = 0; i < 4; i++)
-    for(int j = 0; j < 4; j++)
-      state[j * 4 + i] ^= key[i * 4 + j];
+  for(int i = 0; i < 16; i++)
+    state[i] ^= key[i];
 }
 
 void rotWord(unsigned char * word) {
@@ -55,6 +54,13 @@ void addKeyExpansionCore(unsigned char * in, unsigned char i) {
   rotWord(in);
   subWord(in);
   in[0] ^= rcon[i];
+}
+void translateWord(unsigned char * word) {
+  unsigned char tmp[16];
+  for(int i = 0; i < 4; i++)
+    for(int j = 0; j < 4; j++)
+      tmp[i * 4 + j] = word[4 * j + i];
+  memcpy(word, tmp, 16);
 }
 
 void addKeyExpansion(unsigned char * key, unsigned char * exp_keys) {
@@ -104,7 +110,7 @@ void mixColumns(unsigned char * state) {
 void aes(unsigned char * in_bytes, unsigned char * key) {
   unsigned char state[16];
   memcpy(state, in_bytes, 16);
-
+printState(state, 16);
   addRoundKey(state, key);
   for(int i = 0; i < (R_ROUNDS -1); i++) {
     printState(state, 16);
@@ -139,19 +145,19 @@ int main(int argc, char ** argv) {
        bytes_read = 0L; //Quantidade de bytes lidos pelo fread
 
   FILE * fin; // Pointer para o arquivo
-  unsigned char * fbytes = NULL; //Bytes do arquivo
-  // unsigned char fbytes[16] = {
-  //   0x01, 0x89, 0xFE, 0x76,
-  //   0x23, 0xAB, 0xDC, 0x54,
-  //   0x45, 0xCD, 0xBA, 0x32,
-  //   0x67, 0xEF, 0x98, 0x10
-  // };
+  //unsigned char * fbytes = NULL; //Bytes do arquivo
+  unsigned char fbytes[16] = {
+    0x01, 0x89, 0xFE, 0x76,
+    0x23, 0xAB, 0xDC, 0x54,
+    0x45, 0xCD, 0xBA, 0x32,
+    0x67, 0xEF, 0x98, 0x10
+  };
 
   unsigned char key[16] = {
-    0x01, 0x02, 0x03, 0x04,
-    0x05, 0x06, 0x07, 0x08,
-    0x09, 0x0A, 0x0B, 0x0C,
-    0x0D, 0x0E, 0x0F, 0x10
+    0x0f, 0x47, 0x0c, 0xaf,
+    0x15, 0xd9, 0xb7, 0x7f,
+    0x71, 0xe8, 0xad, 0x67,
+    0xc9, 0x59, 0xd6, 0x98
   };
 
 
@@ -173,17 +179,20 @@ int main(int argc, char ** argv) {
 
   //Verifica se o tamanho do arquivo é múltiplo de 16. Caso não for, encontra o próximo múltiplo de 16 a partir
   //do tamanho do arquivo
+  fsize = 16;
   if (fsize % 16 != 0)
     fsize = fsize + (16 - (fsize % 16));
 
   //Lê os bytes do arquivo e adiciona padding caso necessário
-  fbytes = new unsigned char[fsize];
+  /*fbytes = new unsigned char[fsize];
   bytes_read = fread(fbytes, sizeof(unsigned char), fsize, fin);
 
   if (bytes_read < fsize)
-    memset((fbytes + bytes_read), 0, (fsize - bytes_read));
+    memset((fbytes + bytes_read), 0, (fsize - bytes_read));*/
   unsigned char exp_key[EXP_KEY_SIZE];
+  translateWord(key);
   addKeyExpansion(key, exp_key);
+
   for(int i = 0; i < EXP_KEY_SIZE; i += 16)
     printState(exp_key + i, 16);
   cout << "############################" << endl;
