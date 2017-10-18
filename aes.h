@@ -1,19 +1,76 @@
 
+//Número de rodadas do AES 128 bits
 #define R_ROUNDS 10
+
+//Número de chaves do AES. 176 = 16 * 11 (1 para cada rodada do AES + chave escolhida pelo usuário)
 #define EXP_KEY_SIZE 176
 
-
-void help();
+/**
+  Função shiftRows do AES
+  @param estado atual
+*/
 void shiftRows(unsigned char * state);
+
+/**
+  Função subbytes do AES
+  @param estado atual
+*/
 void subBytes(unsigned char * state);
-void addRoundKey(unsigned char * state, unsigned char * key);
-void addKeyExpansion(unsigned char * key, unsigned char * exp_keys);
-void addKeyExpansionCore(unsigned char * in, unsigned char i);
+
+/**
+  Função mixColumns do AES
+  @param estado atual
+*/
 void mixColumns(unsigned char * state);
-void aes(unsigned char * in_bytes, unsigned char * key);
+
+/**
+  Função addRoundKey do AES
+  @param estado atual
+  @param chave da rodada atual
+*/
+void addRoundKey(unsigned char * state, unsigned char * key);
+
+/**
+  Função addKeyExpansion do AES
+  @param chave
+  @param lista de chaves (1 chave para cada rodada + chave)
+*/
+void addKeyExpansion(unsigned char * key, unsigned char * exp_keys);
+
+/**
+  Função addKeyExpansionCore
+  -Essa função faz a geração da chave i
+  @param chave
+  @param Iteração
+*/
+void addKeyExpansionCore(unsigned char * key, unsigned char i);
+
+/**
+  Função rotWord
+  -Rotaciona uma word (4 bytes)
+  @param palavra
+*/
 void rotWord(unsigned char * word);
+
+/**
+  Função subWord
+  -Substitui cada byte da word por um byte na S_BOX
+  @param palavra
+*/
 void subWord(unsigned char * word);
+
+/**
+  Função translateWord
+  -Função auxiliar que tranlada uma matriz de tamanho 4 x 4
+  @param palavra
+*/
 void translateWord(unsigned char * word);
 
-//DEBUG
-void printState(unsigned char * state, int size);
+
+/**
+  Função AES
+  - Realiza a criptografia de in_bytes utilizando os algoritmos do AES
+  @param in_bytes (16 bytes)
+  @param key chave escolhida pelo usuário (16 bytes)
+*/
+void aes(unsigned char * in_bytes, unsigned char * key);

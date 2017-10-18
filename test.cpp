@@ -4,6 +4,19 @@
 #include "aes.h"
 using namespace std;
 
+//
+void help();
+
+//DEBUG
+void printState(unsigned char * state, int size);
+
+void printState(unsigned char * state, int size) {
+  for(int i = 0; i < size; i++)
+    printf("%X ", state[i]);
+
+  printf("\n");
+}
+
 int main(int argc, char ** argv) {
   long fsize = 0L, //Tamanho do arquivo
        bytes_read = 0L; //Quantidade de bytes lidos pelo fread
