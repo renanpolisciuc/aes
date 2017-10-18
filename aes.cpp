@@ -142,10 +142,10 @@ int main(int argc, char ** argv) {
   unsigned char * fbytes = NULL; //Bytes do arquivo
 
   unsigned char key[16] = {
-    0x1, 0x2, 0x3, 0x4,
-    0x5, 0x6, 0x7, 0x8,
-    0x9, 0xA, 0xB, 0xC,
-    0xD, 0xE, 0xF, 0x10
+    1, 2, 3, 4,
+    5, 6, 7, 8,
+    9, 10, 11, 12,
+    13, 14, 15, 16
   };
 
   fin = fopen(argv[1], "r"); //Abre o arquivo como leitura
@@ -160,9 +160,8 @@ int main(int argc, char ** argv) {
     Conta a quantidade de bytes do arquivo
   */
   fseek(fin, 0L, SEEK_END);
-  fsize = ftell(fin);
+  fsize = ftell(fin) - 1;
   rewind(fin);
-
   //Verifica se o tamanho do arquivo é múltiplo de 16. Caso não for, encontra o próximo múltiplo de 16 a partir
   //do tamanho do arquivo
   if (fsize % 16 != 0)
@@ -173,7 +172,7 @@ int main(int argc, char ** argv) {
   bytes_read = fread(fbytes, sizeof(unsigned char), fsize, fin);
 
   if (bytes_read < fsize)
-    memset((fbytes + bytes_read), 0, (fsize - bytes_read) + 1);
+    memset((fbytes + bytes_read), 0, (fsize - bytes_read));
 
   unsigned char exp_key[EXP_KEY_SIZE];
   addKeyExpansion(key, exp_key);
@@ -182,8 +181,9 @@ int main(int argc, char ** argv) {
     //Processa os bytes de 16 em 16
     aes(fbytes + i, exp_key);
   }
-  for(int i = 0; i < fsize; i += 16)
-    printState(fbytes + i, 16);
+  //DEBUG
+  /*for(int i = 0; i < fsize; i += 16)
+    printState(fbytes + i, 16);*/
   //Libera a memória alocada
   delete [] fbytes;
   fclose(fin);
