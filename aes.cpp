@@ -169,11 +169,10 @@ int main(int argc, char ** argv) {
 
   //Lê os bytes do arquivo e adiciona padding caso necessário
   fbytes = new unsigned char[fsize];
-  bytes_read = fread(fbytes, sizeof(unsigned char), fsize, fin);
+  bytes_read = fread(fbytes, sizeof(unsigned char), fsize, fin) - 1;
 
   if (bytes_read < fsize)
     memset((fbytes + bytes_read), 0, (fsize - bytes_read));
-
   unsigned char exp_key[EXP_KEY_SIZE];
   addKeyExpansion(key, exp_key);
 
@@ -182,8 +181,8 @@ int main(int argc, char ** argv) {
     aes(fbytes + i, exp_key);
   }
   //DEBUG
-  /*for(int i = 0; i < fsize; i += 16)
-    printState(fbytes + i, 16);*/
+  for(int i = 0; i < fsize; i += 16)
+    printState(fbytes + i, 16);
   //Libera a memória alocada
   delete [] fbytes;
   fclose(fin);
