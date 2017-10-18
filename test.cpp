@@ -12,9 +12,7 @@ void printState(unsigned char * state, int size);
 
 void printState(unsigned char * state, int size) {
   for(int i = 0; i < size; i++)
-    printf("%X ", state[i]);
-
-  printf("\n");
+    printf("%c", state[i]);
 }
 
 int main(int argc, char ** argv) {
@@ -65,7 +63,7 @@ int main(int argc, char ** argv) {
   }
   //DEBUG
   for(int i = 0; i < fsize; i += 16)
-    printState(fbytes + i, 16);
+    printState(fbytes + i, fsize);
   //Libera a memória alocada
   delete [] fbytes;
   fclose(fin);
