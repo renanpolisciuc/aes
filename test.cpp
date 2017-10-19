@@ -73,8 +73,8 @@ int main(int argc, char ** argv) {
     }
 
     //DEBUG
-    /*for(int i = 0; i < buffSize; i += 16)
-      printState(buffer + i, 16);*/
+    for(int i = 0; i < buffSize; i += 16)
+      printState(buffer + i, 16);
 
     memset(buffer, 0, buffSize * sizeof(unsigned char));
     bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin) - 1;
