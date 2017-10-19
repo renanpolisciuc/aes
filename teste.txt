@@ -1,1 +1,3 @@
-This is a message we will encrypt with AES!
+Constructed without association, these objects are associated to a file by
+calling member open. Once open, all input/output operations performed on the
+object are reflected in the associated file.

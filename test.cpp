@@ -4,23 +4,24 @@
 #include "aes.h"
 using namespace std;
 
-//
-void help();
+#define MAX_BUFFER_SIZE  536870912
 
 //DEBUG
 void printState(unsigned char * state, int size);
 
 void printState(unsigned char * state, int size) {
   for(int i = 0; i < size; i++)
-    printf("%c", state[i]);
+    printf("%X ", state[i]);
+  cout << endl;
 }
 
 int main(int argc, char ** argv) {
-  long fsize = 0L, //Tamanho do arquivo
-       bytes_read = 0L; //Quantidade de bytes lidos pelo fread
+  long buffSize = 0L, //Tamanho do arquivo
+       bytesRead = 0L,
+       fileSize = 0L; //Quantidade de bytes lidos pelo fread
 
   FILE * fin; // Pointer para o arquivo
-  unsigned char * fbytes = NULL; //Bytes do arquivo
+  unsigned char * buffer = NULL; //Bytes do arquivo
 
   unsigned char key[16] = {
     1, 2, 3, 4,
@@ -38,34 +39,48 @@ int main(int argc, char ** argv) {
   }
 
   /**
-    Conta a quantidade de bytes do arquivo
+    Descobre o tamanho do arquivo para debug
   */
   fseek(fin, 0L, SEEK_END);
-  fsize = ftell(fin) - 1;
+  fileSize = ftell(fin) - 1;
   rewind(fin);
-  //Verifica se o tamanho do arquivo é múltiplo de 16. Caso não for, encontra o próximo múltiplo de 16 a partir
-  //do tamanho do arquivo
-  if (fsize % 16 != 0)
-    fsize = fsize + (16 - (fsize % 16));
 
-  //Lê os bytes do arquivo e adiciona padding caso necessário
-  fbytes = new unsigned char[fsize];
-  bytes_read = fread(fbytes, sizeof(unsigned char), fsize, fin) - 1;
-
-  if (bytes_read < fsize)
-    memset((fbytes + bytes_read), 0, (fsize - bytes_read));
+  //Expansão de chaves
   unsigned char exp_key[EXP_KEY_SIZE];
   addKeyExpansion(key, exp_key);
 
-  for(int i = 0; i < fsize; i+= 16) {
-    //Processa os bytes de 16 em 16
-    aes(fbytes + i, exp_key);
+  //Lê os bytes do arquivo e adiciona padding caso necessário
+  buffer = new unsigned char[MAX_BUFFER_SIZE];
+  bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
+  while (bytesRead > 0) {
+    if (bytesRead < MAX_BUFFER_SIZE)
+      bytesRead -= 1; /* Se ler o último bloco do arquivo, desconsidera o EOF */
+
+    buffSize = bytesRead;
+
+    //Verifica se o tamanho do arquivo é múltiplo de 16. Caso não for, encontra o próximo múltiplo de 16 a partir
+    //do tamanho do arquivo
+    if (buffSize % 16 != 0)
+      buffSize = buffSize + (16 - (buffSize % 16));
+
+    if (bytesRead < buffSize)
+      memset((buffer + bytesRead), 0, (buffSize - bytesRead));
+
+    /* Execução do algoritmo AES */
+    for(int i = 0; i < buffSize; i+= 16) {
+      //Processa os bytes de 16 em 16
+      aes(buffer + i, exp_key);
+    }
+
+    //DEBUG
+    /*for(int i = 0; i < buffSize; i += 16)
+      printState(buffer + i, 16);*/
+
+    memset(buffer, 0, buffSize * sizeof(unsigned char));
+    bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin) - 1;
   }
-  //DEBUG
-  for(int i = 0; i < fsize; i += 16)
-    printState(fbytes + i, fsize);
   //Libera a memória alocada
-  delete [] fbytes;
+  delete [] buffer;
   fclose(fin);
   return 0;
 }
