@@ -2,6 +2,8 @@
 #include<iostream>
 #include<string.h>
 #include "aes.h"
+#include "key_expansion.h"
+
 using namespace std;
 
 #define MAX_BUFFER_SIZE  536870912

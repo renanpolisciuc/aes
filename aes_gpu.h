@@ -30,43 +30,6 @@ __device__ void mixColumns(unsigned char * state);
 __device__ void addRoundKey(unsigned char * state, unsigned char * key);
 
 /**
-  Função addKeyExpansion do AES
-  @param chave
-  @param lista de chaves (1 chave para cada rodada + chave)
-*/
-__device__ void addKeyExpansion(unsigned char * key, unsigned char * exp_keys);
-
-/**
-  Função addKeyExpansionCore
-  -Essa função faz a geração da chave i
-  @param chave
-  @param Iteração
-*/
-__device__ void addKeyExpansionCore(unsigned char * key, unsigned char i);
-
-/**
-  Função rotWord
-  -Rotaciona uma word (4 bytes)
-  @param palavra
-*/
-__device__ void rotWord(unsigned char * word);
-
-/**
-  Função subWord
-  -Substitui cada byte da word por um byte na S_BOX
-  @param palavra
-*/
-__device__ void subWord(unsigned char * word);
-
-/**
-  Função translateWord
-  -Função auxiliar que tranlada uma matriz de tamanho 4 x 4
-  @param palavra
-*/
-__device__ void translateWord(unsigned char * word);
-
-
-/**
   Função AES
   - Realiza a criptografia de in_bytes utilizando os algoritmos do AES
   @param in_bytes (16 bytes)

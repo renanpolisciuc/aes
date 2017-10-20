@@ -12,6 +12,31 @@ void subBytes(unsigned char * state) {
 
 __device__
 void shiftRows(unsigned char * state) {
+  unsigned char tmp[16];
+  //0 shifts
+  tmp[0] = state[0];
+  tmp[4] = state[4];
+  tmp[8] = state[8];
+  tmp[12] = state[12];
+
+  //1 shift para a esquerda
+  tmp[1] = state[5];
+  tmp[5] = state[9];
+  tmp[9] = state[13];
+  tmp[13] = state[1];
+
+  //2 shifts para a esquerda
+  tmp[2] = state[10];
+  tmp[6] = state[14];
+  tmp[10] = state[2];
+  tmp[14] = state[6];
+
+  //3 shifts para a esquerda
+  tmp[3] = state[15];
+  tmp[7] = state[3];
+  tmp[11] = state[7];
+  tmp[15] = state[11];
+  cudaMemcpy(state, tmp, 16, cudaMemcpyDeviceToDevice);
 }
 
 __device__
@@ -20,42 +45,6 @@ void addRoundKey(unsigned char * state, unsigned char * key) {
   for(int i = 0; i < 16; i++)
     state[i] ^= key[i];
 }
-
-__device__
-void rotWord(unsigned char * word) {
-  unsigned char tmp_word = word[0];
-  //Rotaciona uma word
-  word[0] = word[1];
-  word[1] = word[2];
-  word[2] = word[3];
-  word[3] = tmp_word;
-}
-
-__device__
-void subWord(unsigned char * word) {
-  //Substitui cada byte da word por um byte da S_BOX
-  for(int i = 0; i < 4; i++)
-    word[i] = S_BOX[word[i]];
-}
-
-__device__
-void addKeyExpansionCore(unsigned char * key, unsigned char i) {
-  //Rotaciona, substitui e faz um xor com a tabela rcon (apenas os bits mais à esquerda)
-  rotWord(key);
-  subWord(key);
-  key[0] ^= rcon[i];
-}
-
-__device__
-void translateWord(unsigned char * word) {
-
-}
-
-__device__
-void addKeyExpansion(unsigned char * key, unsigned char * exp_keys) {
-
-}
-
 __device__
 void mixColumns(unsigned char * state) {
   //Algoritmo mix column
