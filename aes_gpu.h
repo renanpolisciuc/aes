@@ -35,4 +35,4 @@ __device__ void addRoundKey(unsigned char * state, unsigned char * key);
   @param in_bytes (16 bytes)
   @param key chave escolhida pelo usuário (16 bytes)
 */
-__global__ void aes(unsigned char * in_bytes, unsigned char * key);
+__global__ void aes(unsigned char * in_bytes, unsigned char * key, int nBlocks);
