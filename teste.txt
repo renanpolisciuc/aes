@@ -1,3 +1,1 @@
-Constructed without association, these objects are associated to a file by
-calling member open. Once open, all input/output operations performed on the
-object are reflected in the associated file.
+This is a text will be encrypted with AES!
