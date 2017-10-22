@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<string.h>
 #include "aes_gpu.h"
-#include "tables_gpu.h"
 
 __device__
 unsigned char S_BOX[256] = {
@@ -219,17 +218,21 @@ void addKeyExpansion(unsigned char * key, unsigned char * exp_keys) {
 
 
 __global__
-void aes(unsigned char * in_bytes, unsigned char * out_bytes, unsigned char * key, int nBlocks) {
+void aes(unsigned char * in_bytes, unsigned char * key, int nBlocks) {
   int id = blockIdx.x * blockDim.x + threadIdx.x;
+  __shared__ unsigned char cache[CACHE_SIZE];
 
   if (id < nBlocks) {
     int idBlock = id * 16;
+    for(int i = 0, idP = idBlock; i < 16; i++, idP++)
+      cache[threadIdx.x * 16 + i] = in_bytes[idP];
+
+    __syncthreads();
+
     unsigned char state[16];
     //Copia os primeiros 16 bytes para a memoria
-    for(int i = 0, idP = idBlock; i < 16; i++, idP++) {
-      state[i] = in_bytes[idP];
-
-    }
+    for(int i = 0; i < 16; i++)
+      state[i] = cache[threadIdx.x * 16 + i];
 
     //Adiciona a primeira chave
     addRoundKey(state, key);
@@ -252,6 +255,6 @@ void aes(unsigned char * in_bytes, unsigned char * out_bytes, unsigned char * ke
     //Copia a resposta para a memória
 
     for(int i = 0, idP = idBlock; i < 16; i++, idP++)
-      out_bytes[idP] = state[i];
+      in_bytes[idP] = state[i];
   }
 }

@@ -79,7 +79,7 @@ int main(int argc, char ** argv) {
       printState(buffer + i, 16);
 
     memset(buffer, 0, buffSize * sizeof(unsigned char));
-    bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin) - 1;
+    bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
   }
   //Libera a memória alocada
   delete [] buffer;
