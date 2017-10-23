@@ -1,10 +1,12 @@
 #include<stdio.h>
 #include<iostream>
 #include<string.h>
+#include <chrono>
 #include "aes.h"
 #include "key_expansion.h"
 
 using namespace std;
+using namespace std::chrono;
 
 #define MAX_BUFFER_SIZE  536870912
 
@@ -19,11 +21,12 @@ void printState(unsigned char * state, int size) {
 
 int main(int argc, char ** argv) {
   long buffSize = 0L, //Tamanho do arquivo
-       bytesRead = 0L,
-       fileSize = 0L; //Quantidade de bytes lidos pelo fread
+       bytesRead = 0L; //Quantidade de bytes lidos pelo fread
 
   FILE * fin; // Pointer para o arquivo
+  FILE * fout;
   unsigned char * buffer = NULL; //Bytes do arquivo
+  double duracao = 0L;
 
   unsigned char key[16] = {
     1, 2, 3, 4,
@@ -33,19 +36,13 @@ int main(int argc, char ** argv) {
   };
 
   fin = fopen(argv[1], "r"); //Abre o arquivo como leitura
+  fout = fopen("cpu.out", "w"); //Abre o arquivo como escrita
 
   //Verificar se o arquivo foi 'aberto'
   if (fin == NULL) {
     cout << "Ocorreu uma falha ao tentar abrir o arquivo " << argv[1] << endl;
     return -1;
   }
-
-  /**
-    Descobre o tamanho do arquivo para debug
-  */
-  fseek(fin, 0L, SEEK_END);
-  fileSize = ftell(fin) - 1;
-  rewind(fin);
 
   //Expansão de chaves
   unsigned char exp_key[EXP_KEY_SIZE];
@@ -55,6 +52,8 @@ int main(int argc, char ** argv) {
   buffer = new unsigned char[MAX_BUFFER_SIZE];
   bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
   while (bytesRead > 0) {
+
+    auto t1 = high_resolution_clock::now();
     if (bytesRead < MAX_BUFFER_SIZE)
       bytesRead -= 1; /* Se ler o último bloco do arquivo, desconsidera o EOF */
 
@@ -73,16 +72,24 @@ int main(int argc, char ** argv) {
       //Processa os bytes de 16 em 16
       aes(buffer + i, exp_key);
     }
+    auto t2 = high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = t2 - t1;
+
+    duracao += elapsed.count();
 
     //DEBUG
-    /*for(int i = 0; i < buffSize; i += 16)
-      printState(buffer + i, 16);*/
+    // for(int i = 0; i < buffSize; i += 16)
+    //   printState(buffer + i, 16);
 
-    memset(buffer, 0, buffSize * sizeof(unsigned char));
+    fwrite(buffer, sizeof(unsigned char), buffSize, fout);
     bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
+
+    memset(buffer, 0, MAX_BUFFER_SIZE * sizeof(unsigned char));
   }
+  cout << duracao << endl;
   //Libera a memória alocada
   delete [] buffer;
   fclose(fin);
+  fclose(fout);
   return 0;
 }

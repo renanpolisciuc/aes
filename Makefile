@@ -17,6 +17,7 @@ key_expansion:
 make_gpu: aes_gpu test_gpu
 	nvcc -ccbin g++-4.7 *.o -o gpu_src/run_gpu
 	rm -f aes_gpu.o tables_gpu.o key_expansion.o tables.o teste_gpu.o
+	mv gpu_src/run_gpu .
 aes_gpu:
 	nvcc -ccbin g++-4.7 -c gpu_src/aes_gpu.cu
 test_gpu:
