@@ -84,7 +84,6 @@ int main(int argc, char ** argv) {
         int nTh = 1024;
 
         aes<<<nBlocks, nTh>>>(buffGPU + CACHE_SIZE * i, keysGPU, 3072);
-        cudaDeviceSynchronize();
         cudaMemcpy(buffer + CACHE_SIZE * i, buffGPU + CACHE_SIZE * i, sizeof(unsigned char) * CACHE_SIZE, cudaMemcpyDeviceToHost);
       }
     }
@@ -104,8 +103,8 @@ int main(int argc, char ** argv) {
     }
 
     //DEBUG
-    for(int i = 0; i < buffSize; i += 16)
-      printState(buffer + i, 16);
+    /*for(int i = 0; i < buffSize; i += 16)
+      printState(buffer + i, 16);*/
 
     memset(buffer, 0, buffSize * sizeof(unsigned char));
     bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
