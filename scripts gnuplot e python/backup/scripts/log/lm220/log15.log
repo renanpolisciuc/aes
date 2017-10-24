@@ -1,0 +1,290 @@
+Waf: Entering directory `/home/renan/Documents/NR2/ns-allinone-3.20/ns-3.20/build'
+Waf: Leaving directory `/home/renan/Documents/NR2/ns-allinone-3.20/ns-3.20/build'
+'build' finished successfully (1.925s)
+0s NetworkModule:SetPosition(): Network 0 set position => (28, 74)
+0s NetworkModule:SetRange(): Network 0 set range => 100
+0s NetworkModule:SetPosition(): Network 1 set position => (84, 84)
+0s NetworkModule:SetRange(): Network 1 set range => 100
+0s DeviceModule:ConfigureMobility(): Device [init x = 50, init y = 50, max = 100, velocity = 12]
+1s DeviceModule:MoveRandom(): New position: (50, 38)
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+2s DeviceModule:MoveRandom(): New position: (62, 38)
+3s DeviceModule:MoveRandom(): New position: (62, 50)
+4s DeviceModule:MoveRandom(): New position: (50, 50)
+5s DeviceModule:MoveRandom(): New position: (62, 50)
+6s DeviceModule:MoveRandom(): New position: (50, 50)
+7s DeviceModule:MoveRandom(): New position: (50, 62)
+8s DeviceModule:MoveRandom(): New position: (50, 50)
+9s DeviceModule:MoveRandom(): New position: (38, 50)
+10s DeviceModule:MoveRandom(): New position: (26, 50)
+11s DeviceModule:MoveRandom(): New position: (26, 38)
+12s DeviceModule:MoveRandom(): New position: (14, 38)
+13s DeviceModule:MoveRandom(): New position: (14, 50)
+14s DeviceModule:MoveRandom(): New position: (26, 50)
+15s DeviceModule:MoveRandom(): New position: (38, 50)
+16s DeviceModule:MoveRandom(): New position: (38, 38)
+17s DeviceModule:MoveRandom(): New position: (26, 38)
+18s DeviceModule:MoveRandom(): New position: (26, 26)
+19s DeviceModule:MoveRandom(): New position: (38, 26)
+20s DecisionModule:Run(): Run decision
+20s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 43, SignalStrength: 7, AntiFragility: 45}, IQ: 35]
+20s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 43, SignalStrength: 7, AntiFragility: 45}, IQ: 35]
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 38, SignalStrength: 61, AntiFragility: 8}, IQ: 28]
+20s DeviceModule:MoveRandom(): New position: (38, 14)
+21s DeviceModule:MoveRandom(): New position: (38, 26)
+22s DeviceModule:MoveRandom(): New position: (38, 14)
+23s DeviceModule:MoveRandom(): New position: (38, 26)
+24s DeviceModule:MoveRandom(): New position: (50, 26)
+25s DeviceModule:MoveRandom(): New position: (50, 14)
+26s DeviceModule:MoveRandom(): New position: (62, 14)
+27s DeviceModule:MoveRandom(): New position: (74, 14)
+28s DeviceModule:MoveRandom(): New position: (74, 2)
+29s DeviceModule:MoveRandom(): New position: (86, 2)
+30s DeviceModule:MoveRandom(): New position: (74, 2)
+31s DeviceModule:MoveRandom(): New position: (86, 2)
+32s DeviceModule:MoveRandom(): New position: (98, 2)
+33s DeviceModule:MoveRandom(): New position: (98, 14)
+34s DeviceModule:MoveRandom(): New position: (98, 14)
+35s DeviceModule:MoveRandom(): New position: (98, 2)
+36s DeviceModule:MoveRandom(): New position: (98, 2)
+37s DeviceModule:MoveRandom(): New position: (98, 14)
+38s DeviceModule:MoveRandom(): New position: (98, 26)
+39s DeviceModule:MoveRandom(): New position: (98, 38)
+40s DecisionModule:Run(): Run decision
+40s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 17, SignalStrength: 87, AntiFragility: 47}, IQ: 49]
+40s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 17, SignalStrength: 87, AntiFragility: 47}, IQ: 49]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 41, SignalStrength: 82, AntiFragility: 28}, IQ: 44]
+40s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 139
+40s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 278
+40s ExecutionModule:Run(): Event: Vertical Handover.
+40s DeviceModule:MoveRandom(): New position: (98, 26)
+41s DeviceModule:MoveRandom(): New position: (86, 26)
+42s DeviceModule:MoveRandom(): New position: (74, 26)
+43s DeviceModule:MoveRandom(): New position: (74, 14)
+44s DeviceModule:MoveRandom(): New position: (62, 14)
+45s DeviceModule:MoveRandom(): New position: (50, 14)
+46s DeviceModule:MoveRandom(): New position: (50, 26)
+47s DeviceModule:MoveRandom(): New position: (62, 26)
+48s DeviceModule:MoveRandom(): New position: (62, 14)
+49s DeviceModule:MoveRandom(): New position: (50, 14)
+50s DeviceModule:MoveRandom(): New position: (62, 14)
+51s DeviceModule:MoveRandom(): New position: (62, 2)
+52s DeviceModule:MoveRandom(): New position: (50, 2)
+53s DeviceModule:MoveRandom(): New position: (38, 2)
+54s DeviceModule:MoveRandom(): New position: (38, 2)
+55s DeviceModule:MoveRandom(): New position: (26, 2)
+56s DeviceModule:MoveRandom(): New position: (26, 2)
+57s DeviceModule:MoveRandom(): New position: (14, 2)
+57s ExecutionModule:OutOfRange(): OUT OF BETTER NETWORK! Choosing another network...
+57s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+57s DecisionModule:Run(): Run decision
+57s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 56, SignalStrength: 82, AntiFragility: 21}, IQ: 45]
+57s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 56, SignalStrength: 82, AntiFragility: 21}, IQ: 45]
+57s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 95
+57s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 44
+57s ExecutionModule:Run(): Event: Vertical Handover.
+58s DeviceModule:MoveRandom(): New position: (14, 2)
+59s DeviceModule:MoveRandom(): New position: (2, 2)
+60s DecisionModule:Run(): Run decision
+60s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 56, SignalStrength: 82, AntiFragility: 21}, IQ: 45]
+60s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 56, SignalStrength: 82, AntiFragility: 21}, IQ: 45]
+60s DeviceModule:MoveRandom(): New position: (2, 2)
+61s DeviceModule:MoveRandom(): New position: (2, 2)
+62s DeviceModule:MoveRandom(): New position: (2, 2)
+63s DeviceModule:MoveRandom(): New position: (2, 2)
+64s DeviceModule:MoveRandom(): New position: (14, 2)
+65s DeviceModule:MoveRandom(): New position: (14, 2)
+66s DeviceModule:MoveRandom(): New position: (2, 2)
+67s DeviceModule:MoveRandom(): New position: (2, 2)
+68s DeviceModule:MoveRandom(): New position: (2, 14)
+69s DeviceModule:MoveRandom(): New position: (14, 14)
+69s DecisionModule:AddNetworkToList(): Network detected
+70s DeviceModule:MoveRandom(): New position: (14, 26)
+71s DeviceModule:MoveRandom(): New position: (2, 26)
+72s DeviceModule:MoveRandom(): New position: (14, 26)
+73s DeviceModule:MoveRandom(): New position: (14, 14)
+74s DeviceModule:MoveRandom(): New position: (14, 2)
+74s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+75s DeviceModule:MoveRandom(): New position: (14, 2)
+76s DeviceModule:MoveRandom(): New position: (2, 2)
+77s DeviceModule:MoveRandom(): New position: (14, 2)
+78s DeviceModule:MoveRandom(): New position: (2, 2)
+79s DeviceModule:MoveRandom(): New position: (2, 2)
+80s DecisionModule:Run(): Run decision
+80s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 57, SignalStrength: 65, AntiFragility: 39}, IQ: 50]
+80s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 57, SignalStrength: 65, AntiFragility: 39}, IQ: 50]
+80s DeviceModule:MoveRandom(): New position: (14, 2)
+81s DeviceModule:MoveRandom(): New position: (14, 2)
+82s DeviceModule:MoveRandom(): New position: (26, 2)
+82s DecisionModule:AddNetworkToList(): Network detected
+83s DeviceModule:MoveRandom(): New position: (26, 14)
+84s DeviceModule:MoveRandom(): New position: (14, 14)
+85s DeviceModule:MoveRandom(): New position: (2, 14)
+85s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+86s DeviceModule:MoveRandom(): New position: (2, 26)
+86s DecisionModule:AddNetworkToList(): Network detected
+87s DeviceModule:MoveRandom(): New position: (2, 38)
+88s DeviceModule:MoveRandom(): New position: (2, 50)
+89s DeviceModule:MoveRandom(): New position: (2, 62)
+90s DeviceModule:MoveRandom(): New position: (2, 50)
+91s DeviceModule:MoveRandom(): New position: (14, 50)
+92s DeviceModule:MoveRandom(): New position: (14, 62)
+93s DeviceModule:MoveRandom(): New position: (2, 62)
+94s DeviceModule:MoveRandom(): New position: (2, 74)
+95s DeviceModule:MoveRandom(): New position: (2, 62)
+96s DeviceModule:MoveRandom(): New position: (2, 74)
+97s DeviceModule:MoveRandom(): New position: (2, 86)
+98s DeviceModule:MoveRandom(): New position: (2, 74)
+99s DeviceModule:MoveRandom(): New position: (2, 86)
+100s DecisionModule:Run(): Run decision
+100s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 10, SignalStrength: 94, AntiFragility: 57}, IQ: 54]
+100s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 10, SignalStrength: 94, AntiFragility: 57}, IQ: 54]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 54, SignalStrength: 65, AntiFragility: 27}, IQ: 43]
+100s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 142
+100s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 31
+100s ExecutionModule:Run(): Event: Vertical Handover.
+100s DeviceModule:MoveRandom(): New position: (14, 86)
+101s DeviceModule:MoveRandom(): New position: (26, 86)
+102s DeviceModule:MoveRandom(): New position: (26, 98)
+103s DeviceModule:MoveRandom(): New position: (38, 98)
+104s DeviceModule:MoveRandom(): New position: (50, 98)
+105s DeviceModule:MoveRandom(): New position: (50, 98)
+106s DeviceModule:MoveRandom(): New position: (50, 86)
+107s DeviceModule:MoveRandom(): New position: (38, 86)
+108s DeviceModule:MoveRandom(): New position: (38, 74)
+109s DeviceModule:MoveRandom(): New position: (50, 74)
+110s DeviceModule:MoveRandom(): New position: (38, 74)
+111s DeviceModule:MoveRandom(): New position: (50, 74)
+112s DeviceModule:MoveRandom(): New position: (50, 62)
+113s DeviceModule:MoveRandom(): New position: (50, 50)
+114s DeviceModule:MoveRandom(): New position: (50, 38)
+115s DeviceModule:MoveRandom(): New position: (38, 38)
+116s DeviceModule:MoveRandom(): New position: (38, 50)
+117s DeviceModule:MoveRandom(): New position: (50, 50)
+118s DeviceModule:MoveRandom(): New position: (50, 38)
+119s DeviceModule:MoveRandom(): New position: (62, 38)
+120s DecisionModule:Run(): Run decision
+120s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 60, SignalStrength: 44, AntiFragility: 38}, IQ: 45]
+120s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 60, SignalStrength: 44, AntiFragility: 38}, IQ: 45]
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 18, SignalStrength: 19, AntiFragility: 61}, IQ: 39]
+120s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 143
+120s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 32
+120s ExecutionModule:Run(): Event: Vertical Handover.
+120s DeviceModule:MoveRandom(): New position: (62, 26)
+121s DeviceModule:MoveRandom(): New position: (62, 14)
+122s DeviceModule:MoveRandom(): New position: (62, 2)
+123s DeviceModule:MoveRandom(): New position: (74, 2)
+124s DeviceModule:MoveRandom(): New position: (62, 2)
+125s DeviceModule:MoveRandom(): New position: (74, 2)
+126s DeviceModule:MoveRandom(): New position: (74, 2)
+127s DeviceModule:MoveRandom(): New position: (86, 2)
+128s DeviceModule:MoveRandom(): New position: (86, 2)
+129s DeviceModule:MoveRandom(): New position: (74, 2)
+130s DeviceModule:MoveRandom(): New position: (62, 2)
+131s DeviceModule:MoveRandom(): New position: (50, 2)
+132s DeviceModule:MoveRandom(): New position: (50, 2)
+133s DeviceModule:MoveRandom(): New position: (50, 2)
+134s DeviceModule:MoveRandom(): New position: (62, 2)
+135s DeviceModule:MoveRandom(): New position: (50, 2)
+136s DeviceModule:MoveRandom(): New position: (38, 2)
+137s DeviceModule:MoveRandom(): New position: (26, 2)
+138s DeviceModule:MoveRandom(): New position: (26, 2)
+139s DeviceModule:MoveRandom(): New position: (26, 14)
+140s DecisionModule:Run(): Run decision
+140s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 66, SignalStrength: 84, AntiFragility: 83}, IQ: 79]
+140s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 66, SignalStrength: 84, AntiFragility: 83}, IQ: 79]
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 47, SignalStrength: 33, AntiFragility: 87}, IQ: 63]
+140s DeviceModule:MoveRandom(): New position: (26, 26)
+141s DeviceModule:MoveRandom(): New position: (38, 26)
+142s DeviceModule:MoveRandom(): New position: (26, 26)
+143s DeviceModule:MoveRandom(): New position: (38, 26)
+144s DeviceModule:MoveRandom(): New position: (26, 26)
+145s DeviceModule:MoveRandom(): New position: (26, 14)
+146s DeviceModule:MoveRandom(): New position: (26, 2)
+147s DeviceModule:MoveRandom(): New position: (26, 14)
+148s DeviceModule:MoveRandom(): New position: (14, 14)
+149s DeviceModule:MoveRandom(): New position: (14, 2)
+149s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+150s DeviceModule:MoveRandom(): New position: (14, 14)
+150s DecisionModule:AddNetworkToList(): Network detected
+151s DeviceModule:MoveRandom(): New position: (26, 14)
+152s DeviceModule:MoveRandom(): New position: (14, 14)
+153s DeviceModule:MoveRandom(): New position: (14, 26)
+154s DeviceModule:MoveRandom(): New position: (14, 14)
+155s DeviceModule:MoveRandom(): New position: (26, 14)
+156s DeviceModule:MoveRandom(): New position: (38, 14)
+157s DeviceModule:MoveRandom(): New position: (26, 14)
+158s DeviceModule:MoveRandom(): New position: (38, 14)
+159s DeviceModule:MoveRandom(): New position: (50, 14)
+160s DecisionModule:Run(): Run decision
+160s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 83, SignalStrength: 99, AntiFragility: 64}, IQ: 77]
+160s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 83, SignalStrength: 99, AntiFragility: 64}, IQ: 77]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 72, SignalStrength: 81, AntiFragility: 62}, IQ: 69]
+160s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 224
+160s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 53
+160s ExecutionModule:Run(): Event: Vertical Handover.
+160s DeviceModule:MoveRandom(): New position: (62, 14)
+161s DeviceModule:MoveRandom(): New position: (74, 14)
+162s DeviceModule:MoveRandom(): New position: (62, 14)
+163s DeviceModule:MoveRandom(): New position: (62, 2)
+164s DeviceModule:MoveRandom(): New position: (74, 2)
+165s DeviceModule:MoveRandom(): New position: (74, 14)
+166s DeviceModule:MoveRandom(): New position: (86, 14)
+167s DeviceModule:MoveRandom(): New position: (86, 2)
+168s DeviceModule:MoveRandom(): New position: (86, 14)
+169s DeviceModule:MoveRandom(): New position: (86, 2)
+170s DeviceModule:MoveRandom(): New position: (86, 2)
+171s DeviceModule:MoveRandom(): New position: (98, 2)
+172s DeviceModule:MoveRandom(): New position: (98, 2)
+173s DeviceModule:MoveRandom(): New position: (98, 2)
+174s DeviceModule:MoveRandom(): New position: (98, 2)
+175s DeviceModule:MoveRandom(): New position: (86, 2)
+176s DeviceModule:MoveRandom(): New position: (98, 2)
+177s DeviceModule:MoveRandom(): New position: (98, 2)
+178s DeviceModule:MoveRandom(): New position: (86, 2)
+179s DeviceModule:MoveRandom(): New position: (74, 2)
+180s DecisionModule:Run(): Run decision
+180s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 37, SignalStrength: 50, AntiFragility: 70}, IQ: 56]
+180s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #1, Technology = Wimax, Address = 02-06-00:00:00:00:00:04, { DataRate: 37, SignalStrength: 50, AntiFragility: 70}, IQ: 56]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 82, SignalStrength: 52, AntiFragility: 4}, IQ: 35]
+180s DeviceModule:MoveRandom(): New position: (86, 2)
+181s DeviceModule:MoveRandom(): New position: (74, 2)
+182s DeviceModule:MoveRandom(): New position: (74, 14)
+183s DeviceModule:MoveRandom(): New position: (74, 26)
+184s DeviceModule:MoveRandom(): New position: (62, 26)
+185s DeviceModule:MoveRandom(): New position: (74, 26)
+186s DeviceModule:MoveRandom(): New position: (62, 26)
+187s DeviceModule:MoveRandom(): New position: (62, 38)
+188s DeviceModule:MoveRandom(): New position: (62, 50)
+189s DeviceModule:MoveRandom(): New position: (50, 50)
+190s DeviceModule:MoveRandom(): New position: (50, 62)
+191s DeviceModule:MoveRandom(): New position: (50, 74)
+192s DeviceModule:MoveRandom(): New position: (38, 74)
+193s DeviceModule:MoveRandom(): New position: (38, 86)
+194s DeviceModule:MoveRandom(): New position: (26, 86)
+195s DeviceModule:MoveRandom(): New position: (26, 98)
+196s DeviceModule:MoveRandom(): New position: (26, 86)
+197s DeviceModule:MoveRandom(): New position: (14, 86)
+198s DeviceModule:MoveRandom(): New position: (26, 86)
+199s DeviceModule:MoveRandom(): New position: (14, 86)

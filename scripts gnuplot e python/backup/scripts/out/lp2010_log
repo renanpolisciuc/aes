@@ -1,0 +1,15 @@
+######################
+Relatorio 
+######################
+-Ator: Pessoa
+-Velocidade: 1m/s
+-Media de decisoes por simulacao: 0.0
+-Numero medio de handovers: 17.4666666667
+-Numero medio de handovers sem zeros: 17.4666666667
+-Numero maximo de handovers: 20
+-Numero minimo de handovers: 16
+-Handovers: [17, 17, 16, 18, 18, 18, 20, 17, 17, 19, 17, 18, 17, 17, 17, 16, 19, 17, 18, 17, 16, 18, 16, 18, 19, 19, 19, 17, 16, 16]
+-Variancia: 9188
+-Desvio padrao: 95.8540557306
+-Intervalo de confiancia: [-16.834266654, 51.7675999873]
+-: [-16.834266654, 51.7675999873]

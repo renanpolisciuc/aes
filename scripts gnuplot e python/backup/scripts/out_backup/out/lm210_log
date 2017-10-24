@@ -1,0 +1,14 @@
+######################
+Relatorio 
+######################
+-Ator: Motorista
+-Velocidade: 10m/s
+-Media de decisoes por simulacao: 0.0
+-Numero medio de handovers: 0.866666666667
+-Numero maximo de handovers: 2
+-Numero minimo de handovers: 0
+Handovers: [1, 2, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 0, 0, 1, 0, 1]
+Media de handovers: 0.866666666667
+Variancia: 34
+Desvio padrao: 5.83095189485
+Intervalo de confiancia: [-1.21991267123, 2.95324600456]

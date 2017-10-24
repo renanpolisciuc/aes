@@ -1,0 +1,37 @@
+#Arquivo 28
+20s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 277
+20s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 177
+30s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 270
+30s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 333
+50s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 297
+50s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 44
+60s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 295
+60s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 31
+70s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 297
+70s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 123
+80s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 304
+80s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 122
+90s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 562
+90s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 178
+100s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 555
+100s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 36
+110s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 303
+110s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 31
+120s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 302
+120s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 123
+130s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 303
+130s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 31
+140s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 314
+140s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 32
+150s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 296
+150s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 121
+160s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 302
+160s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 123
+170s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 556
+170s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 180
+180s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 268
+180s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 125
+190s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 669
+190s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 206
+#FimArquivo28
+

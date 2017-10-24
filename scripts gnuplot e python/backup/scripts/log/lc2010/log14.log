@@ -1,0 +1,887 @@
+Waf: Entering directory `/home/renan/Documents/NR2/ns-allinone-3.20/ns-3.20/build'
+Waf: Leaving directory `/home/renan/Documents/NR2/ns-allinone-3.20/ns-3.20/build'
+'build' finished successfully (1.804s)
+0s NetworkModule:SetPosition(): Network 0 set position => (130, 156)
+0s NetworkModule:SetRange(): Network 0 set range => 100
+0s NetworkModule:SetPosition(): Network 1 set position => (175, 40)
+0s NetworkModule:SetRange(): Network 1 set range => 100
+0s NetworkModule:SetPosition(): Network 2 set position => (107, 95)
+0s NetworkModule:SetRange(): Network 2 set range => 100
+0s NetworkModule:SetPosition(): Network 3 set position => (99, 187)
+0s NetworkModule:SetRange(): Network 3 set range => 100
+0s NetworkModule:SetPosition(): Network 4 set position => (66, 21)
+0s NetworkModule:SetRange(): Network 4 set range => 100
+0s NetworkModule:SetPosition(): Network 5 set position => (196, 102)
+0s NetworkModule:SetRange(): Network 5 set range => 100
+0s NetworkModule:SetPosition(): Network 6 set position => (30, 85)
+0s NetworkModule:SetRange(): Network 6 set range => 100
+0s NetworkModule:SetPosition(): Network 7 set position => (92, 157)
+0s NetworkModule:SetRange(): Network 7 set range => 100
+0s NetworkModule:SetPosition(): Network 8 set position => (66, 53)
+0s NetworkModule:SetRange(): Network 8 set range => 100
+0s NetworkModule:SetPosition(): Network 9 set position => (69, 122)
+0s NetworkModule:SetRange(): Network 9 set range => 100
+0s NetworkModule:SetPosition(): Network 10 set position => (1, 171)
+0s NetworkModule:SetRange(): Network 10 set range => 100
+0s NetworkModule:SetPosition(): Network 11 set position => (138, 108)
+0s NetworkModule:SetRange(): Network 11 set range => 100
+0s NetworkModule:SetPosition(): Network 12 set position => (0, 65)
+0s NetworkModule:SetRange(): Network 12 set range => 100
+0s NetworkModule:SetPosition(): Network 13 set position => (46, 129)
+0s NetworkModule:SetRange(): Network 13 set range => 100
+0s NetworkModule:SetPosition(): Network 14 set position => (1, 95)
+0s NetworkModule:SetRange(): Network 14 set range => 100
+0s NetworkModule:SetPosition(): Network 15 set position => (52, 122)
+0s NetworkModule:SetRange(): Network 15 set range => 100
+0s NetworkModule:SetPosition(): Network 16 set position => (163, 83)
+0s NetworkModule:SetRange(): Network 16 set range => 100
+0s NetworkModule:SetPosition(): Network 17 set position => (130, 27)
+0s NetworkModule:SetRange(): Network 17 set range => 100
+0s NetworkModule:SetPosition(): Network 18 set position => (167, 22)
+0s NetworkModule:SetRange(): Network 18 set range => 100
+0s NetworkModule:SetPosition(): Network 19 set position => (44, 29)
+0s NetworkModule:SetRange(): Network 19 set range => 100
+0s DeviceModule:ConfigureMobility(): Device [init x = 100, init y = 100, max = 200, velocity = 3]
+1s DeviceModule:MoveRandom(): New position: (97, 100)
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+2s DeviceModule:MoveRandom(): New position: (100, 100)
+3s DeviceModule:MoveRandom(): New position: (100, 97)
+3s DecisionModule:AddNetworkToList(): Network detected
+4s DeviceModule:MoveRandom(): New position: (97, 97)
+4s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+5s DeviceModule:MoveRandom(): New position: (94, 97)
+5s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+5s DecisionModule:AddNetworkToList(): Network detected
+6s DeviceModule:MoveRandom(): New position: (97, 97)
+6s DecisionModule:AddNetworkToList(): Network detected
+6s DecisionModule:RemoveNetworkFromList(): Network: 12 out of range!
+7s DeviceModule:MoveRandom(): New position: (97, 94)
+7s DecisionModule:AddNetworkToList(): Network detected
+8s DeviceModule:MoveRandom(): New position: (97, 91)
+8s DecisionModule:AddNetworkToList(): Network detected
+9s DeviceModule:MoveRandom(): New position: (94, 91)
+9s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+10s DecisionModule:Run(): Run decision
+10s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 57, SignalStrength: 95, AntiFragility: 81}, IQ: 78]
+10s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 57, SignalStrength: 95, AntiFragility: 81}, IQ: 78]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 41, SignalStrength: 84, AntiFragility: 83}, IQ: 72]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 99, SignalStrength: 36, AntiFragility: 75}, IQ: 71]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 1, SignalStrength: 70, AntiFragility: 97}, IQ: 66]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 41, SignalStrength: 27, AntiFragility: 97}, IQ: 65]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 83, SignalStrength: 77, AntiFragility: 49}, IQ: 64]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 78, SignalStrength: 50, AntiFragility: 59}, IQ: 61]
+       [Network #12, Technology = Wifi, Address = 02-06-00:00:00:00:00:0e, { DataRate: 45, SignalStrength: 89, AntiFragility: 47}, IQ: 57]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 24, SignalStrength: 15, AntiFragility: 82}, IQ: 50]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 98, SignalStrength: 66, AntiFragility: 10}, IQ: 46]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 26, SignalStrength: 42, AntiFragility: 58}, IQ: 46]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 60, SignalStrength: 44, AntiFragility: 34}, IQ: 43]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 97, SignalStrength: 51, AntiFragility: 11}, IQ: 42]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 22, SignalStrength: 51, AntiFragility: 39}, IQ: 37]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 75, SignalStrength: 17, AntiFragility: 28}, IQ: 37]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 84, SignalStrength: 47, AntiFragility: 3}, IQ: 34]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 11, SignalStrength: 69, AntiFragility: 22}, IQ: 31]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 14, SignalStrength: 16, AntiFragility: 33}, IQ: 24]
+10s DeviceModule:MoveRandom(): New position: (94, 88)
+11s DeviceModule:MoveRandom(): New position: (94, 85)
+11s DecisionModule:RemoveNetworkFromList(): Network: 3 out of range!
+12s DeviceModule:MoveRandom(): New position: (94, 88)
+12s DecisionModule:AddNetworkToList(): Network detected
+13s DeviceModule:MoveRandom(): New position: (94, 85)
+13s DecisionModule:RemoveNetworkFromList(): Network: 3 out of range!
+14s DeviceModule:MoveRandom(): New position: (91, 85)
+15s DeviceModule:MoveRandom(): New position: (91, 88)
+15s DecisionModule:AddNetworkToList(): Network detected
+16s DeviceModule:MoveRandom(): New position: (91, 85)
+16s DecisionModule:RemoveNetworkFromList(): Network: 3 out of range!
+17s DeviceModule:MoveRandom(): New position: (94, 85)
+18s DeviceModule:MoveRandom(): New position: (94, 82)
+19s DeviceModule:MoveRandom(): New position: (94, 85)
+20s DecisionModule:Run(): Run decision
+20s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 79, SignalStrength: 70, AntiFragility: 90}, IQ: 82]
+20s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 79, SignalStrength: 70, AntiFragility: 90}, IQ: 82]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 97, SignalStrength: 91, AntiFragility: 67}, IQ: 80]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 67, SignalStrength: 97, AntiFragility: 79}, IQ: 80]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 59, SignalStrength: 2, AntiFragility: 91}, IQ: 60]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 52, SignalStrength: 2, AntiFragility: 90}, IQ: 58]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 83, SignalStrength: 70, AntiFragility: 36}, IQ: 56]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 22, SignalStrength: 8, AntiFragility: 96}, IQ: 55]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 57, SignalStrength: 16, AntiFragility: 75}, IQ: 55]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 64, SignalStrength: 76, AntiFragility: 33}, IQ: 51]
+       [Network #12, Technology = Wifi, Address = 02-06-00:00:00:00:00:0e, { DataRate: 60, SignalStrength: 94, AntiFragility: 21}, IQ: 49]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 93, SignalStrength: 78, AntiFragility: 10}, IQ: 47]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 36, SignalStrength: 69, AntiFragility: 41}, IQ: 46]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 55, SignalStrength: 21, AntiFragility: 53}, IQ: 45]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 98, SignalStrength: 65, AntiFragility: 7}, IQ: 44]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 85, SignalStrength: 2, AntiFragility: 46}, IQ: 44]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 76, SignalStrength: 2, AntiFragility: 16}, IQ: 27]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 54, SignalStrength: 4, AntiFragility: 6}, IQ: 17]
+20s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 271
+20s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 273
+20s ExecutionModule:Run(): Event: Vertical Handover.
+20s DeviceModule:MoveRandom(): New position: (94, 88)
+20s DecisionModule:AddNetworkToList(): Network detected
+21s DeviceModule:MoveRandom(): New position: (94, 91)
+22s DeviceModule:MoveRandom(): New position: (91, 91)
+22s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+23s DeviceModule:MoveRandom(): New position: (94, 91)
+23s DecisionModule:AddNetworkToList(): Network detected
+24s DeviceModule:MoveRandom(): New position: (94, 88)
+25s DeviceModule:MoveRandom(): New position: (97, 88)
+25s DecisionModule:AddNetworkToList(): Network detected
+26s DeviceModule:MoveRandom(): New position: (94, 88)
+26s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+27s DeviceModule:MoveRandom(): New position: (94, 91)
+28s DeviceModule:MoveRandom(): New position: (97, 91)
+28s DecisionModule:AddNetworkToList(): Network detected
+29s DeviceModule:MoveRandom(): New position: (94, 91)
+29s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+30s DecisionModule:Run(): Run decision
+30s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 65, SignalStrength: 98, AntiFragility: 89}, IQ: 85]
+30s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 65, SignalStrength: 98, AntiFragility: 89}, IQ: 85]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 84, SignalStrength: 61, AntiFragility: 90}, IQ: 81]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 46, SignalStrength: 51, AntiFragility: 79}, IQ: 63]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 86, SignalStrength: 78, AntiFragility: 43}, IQ: 62]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 38, SignalStrength: 58, AntiFragility: 59}, IQ: 53]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 81, SignalStrength: 53, AntiFragility: 38}, IQ: 52]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 9, SignalStrength: 24, AntiFragility: 88}, IQ: 52]
+       [Network #12, Technology = Wifi, Address = 02-06-00:00:00:00:00:0e, { DataRate: 1, SignalStrength: 29, AntiFragility: 85}, IQ: 50]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 92, SignalStrength: 87, AntiFragility: 7}, IQ: 48]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 8, SignalStrength: 65, AntiFragility: 60}, IQ: 48]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 17, SignalStrength: 85, AntiFragility: 29}, IQ: 40]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 27, SignalStrength: 19, AntiFragility: 46}, IQ: 34]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 73, SignalStrength: 6, AntiFragility: 26}, IQ: 32]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 1, SignalStrength: 36, AntiFragility: 43}, IQ: 30]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 25, SignalStrength: 83, AntiFragility: 2}, IQ: 28]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 9, SignalStrength: 68, AntiFragility: 17}, IQ: 27]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 21, SignalStrength: 20, AntiFragility: 26}, IQ: 23]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 1, SignalStrength: 50, AntiFragility: 14}, IQ: 19]
+30s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 285
+30s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 44
+30s ExecutionModule:Run(): Event: Vertical Handover.
+30s DeviceModule:MoveRandom(): New position: (91, 91)
+30s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+31s DeviceModule:MoveRandom(): New position: (91, 94)
+32s DeviceModule:MoveRandom(): New position: (88, 94)
+32s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+33s DeviceModule:MoveRandom(): New position: (88, 91)
+33s DecisionModule:AddNetworkToList(): Network detected
+34s DeviceModule:MoveRandom(): New position: (91, 91)
+35s DeviceModule:MoveRandom(): New position: (94, 91)
+35s DecisionModule:AddNetworkToList(): Network detected
+36s DeviceModule:MoveRandom(): New position: (91, 91)
+36s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+37s DeviceModule:MoveRandom(): New position: (91, 94)
+38s DeviceModule:MoveRandom(): New position: (91, 97)
+38s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+39s DeviceModule:MoveRandom(): New position: (91, 94)
+39s DecisionModule:AddNetworkToList(): Network detected
+40s DecisionModule:Run(): Run decision
+40s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 85, SignalStrength: 98, AntiFragility: 99}, IQ: 95]
+40s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 85, SignalStrength: 98, AntiFragility: 99}, IQ: 95]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 98, SignalStrength: 64, AntiFragility: 69}, IQ: 75]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 31, SignalStrength: 83, AntiFragility: 70}, IQ: 63]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 85, SignalStrength: 88, AntiFragility: 28}, IQ: 57]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 60, SignalStrength: 65, AntiFragility: 38}, IQ: 50]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 56, SignalStrength: 18, AntiFragility: 56}, IQ: 46]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 18, SignalStrength: 43, AntiFragility: 59}, IQ: 44]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 89, SignalStrength: 58, AntiFragility: 7}, IQ: 40]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 10, SignalStrength: 24, AntiFragility: 64}, IQ: 40]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 61, SignalStrength: 1, AntiFragility: 44}, IQ: 37]
+       [Network #12, Technology = Wifi, Address = 02-06-00:00:00:00:00:0e, { DataRate: 34, SignalStrength: 17, AntiFragility: 48}, IQ: 36]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 13, SignalStrength: 41, AntiFragility: 43}, IQ: 35]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 11, SignalStrength: 65, AntiFragility: 23}, IQ: 30]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 26, SignalStrength: 41, AntiFragility: 26}, IQ: 29]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 60, SignalStrength: 7, AntiFragility: 17}, IQ: 25]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 20, SignalStrength: 45, AntiFragility: 15}, IQ: 23]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 45, SignalStrength: 35, AntiFragility: 1}, IQ: 20]
+40s DeviceModule:MoveRandom(): New position: (91, 91)
+41s DeviceModule:MoveRandom(): New position: (94, 91)
+41s DecisionModule:AddNetworkToList(): Network detected
+42s DeviceModule:MoveRandom(): New position: (97, 91)
+42s DecisionModule:AddNetworkToList(): Network detected
+43s DeviceModule:MoveRandom(): New position: (100, 91)
+43s DecisionModule:RemoveNetworkFromList(): Network: 12 out of range!
+44s DeviceModule:MoveRandom(): New position: (97, 91)
+44s DecisionModule:AddNetworkToList(): Network detected
+45s DeviceModule:MoveRandom(): New position: (94, 91)
+45s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+46s DeviceModule:MoveRandom(): New position: (97, 91)
+46s DecisionModule:AddNetworkToList(): Network detected
+47s DeviceModule:MoveRandom(): New position: (94, 91)
+47s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+48s DeviceModule:MoveRandom(): New position: (97, 91)
+48s DecisionModule:AddNetworkToList(): Network detected
+49s DeviceModule:MoveRandom(): New position: (100, 91)
+49s DecisionModule:RemoveNetworkFromList(): Network: 12 out of range!
+50s DecisionModule:Run(): Run decision
+50s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 96, SignalStrength: 67, AntiFragility: 84}, IQ: 82]
+50s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 96, SignalStrength: 67, AntiFragility: 84}, IQ: 82]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 53, SignalStrength: 89, AntiFragility: 90}, IQ: 80]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 85, SignalStrength: 50, AntiFragility: 80}, IQ: 73]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 52, SignalStrength: 80, AntiFragility: 76}, IQ: 71]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 73, SignalStrength: 57, AntiFragility: 62}, IQ: 63]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 14, SignalStrength: 71, AntiFragility: 71}, IQ: 56]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 45, SignalStrength: 20, AntiFragility: 79}, IQ: 55]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 44, SignalStrength: 19, AntiFragility: 78}, IQ: 54]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 55, SignalStrength: 30, AntiFragility: 56}, IQ: 49]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 28, SignalStrength: 54, AntiFragility: 55}, IQ: 48]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 25, SignalStrength: 67, AntiFragility: 48}, IQ: 47]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 47, SignalStrength: 1, AntiFragility: 66}, IQ: 45]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 23, SignalStrength: 58, AntiFragility: 45}, IQ: 42]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 17, SignalStrength: 85, AntiFragility: 33}, IQ: 42]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 23, SignalStrength: 51, AntiFragility: 43}, IQ: 40]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 14, SignalStrength: 15, AntiFragility: 49}, IQ: 31]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 6, SignalStrength: 22, AntiFragility: 26}, IQ: 20]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 3, SignalStrength: 1, AntiFragility: 38}, IQ: 20]
+50s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 286
+50s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 122
+50s ExecutionModule:Run(): Event: Horizontal Handover.
+50s DeviceModule:MoveRandom(): New position: (97, 91)
+50s DecisionModule:AddNetworkToList(): Network detected
+51s DeviceModule:MoveRandom(): New position: (97, 88)
+52s DeviceModule:MoveRandom(): New position: (94, 88)
+52s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+53s DeviceModule:MoveRandom(): New position: (97, 88)
+53s DecisionModule:AddNetworkToList(): Network detected
+54s DeviceModule:MoveRandom(): New position: (100, 88)
+54s DecisionModule:RemoveNetworkFromList(): Network: 12 out of range!
+55s DeviceModule:MoveRandom(): New position: (100, 91)
+56s DeviceModule:MoveRandom(): New position: (103, 91)
+56s DecisionModule:RemoveNetworkFromList(): Network: 14 out of range!
+57s DeviceModule:MoveRandom(): New position: (103, 88)
+58s DeviceModule:MoveRandom(): New position: (103, 91)
+59s DeviceModule:MoveRandom(): New position: (106, 91)
+60s DecisionModule:Run(): Run decision
+60s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 90, SignalStrength: 92, AntiFragility: 96}, IQ: 93]
+60s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 90, SignalStrength: 92, AntiFragility: 96}, IQ: 93]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 90, SignalStrength: 74, AntiFragility: 86}, IQ: 84]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 93, SignalStrength: 78, AntiFragility: 78}, IQ: 81]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 98, SignalStrength: 99, AntiFragility: 52}, IQ: 75]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 79, SignalStrength: 51, AntiFragility: 84}, IQ: 74]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 47, SignalStrength: 55, AntiFragility: 94}, IQ: 72]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 32, SignalStrength: 25, AntiFragility: 82}, IQ: 55]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 26, SignalStrength: 80, AntiFragility: 43}, IQ: 48]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 76, SignalStrength: 42, AntiFragility: 36}, IQ: 47]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 90, SignalStrength: 29, AntiFragility: 35}, IQ: 47]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 23, SignalStrength: 90, AntiFragility: 26}, IQ: 41]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 77, SignalStrength: 32, AntiFragility: 26}, IQ: 40]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 30, SignalStrength: 36, AntiFragility: 43}, IQ: 38]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 74, SignalStrength: 34, AntiFragility: 9}, IQ: 31]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 75, SignalStrength: 21, AntiFragility: 8}, IQ: 28]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 11, SignalStrength: 60, AntiFragility: 15}, IQ: 25]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 35, SignalStrength: 5, AntiFragility: 24}, IQ: 22]
+60s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 279
+60s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 121
+60s ExecutionModule:Run(): Event: Horizontal Handover.
+60s DeviceModule:MoveRandom(): New position: (109, 91)
+61s DeviceModule:MoveRandom(): New position: (106, 91)
+62s DeviceModule:MoveRandom(): New position: (106, 94)
+63s DeviceModule:MoveRandom(): New position: (106, 91)
+64s DeviceModule:MoveRandom(): New position: (106, 94)
+65s DeviceModule:MoveRandom(): New position: (109, 94)
+66s DeviceModule:MoveRandom(): New position: (112, 94)
+67s DeviceModule:MoveRandom(): New position: (115, 94)
+68s DeviceModule:MoveRandom(): New position: (112, 94)
+69s DeviceModule:MoveRandom(): New position: (109, 94)
+70s DecisionModule:Run(): Run decision
+70s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 88, SignalStrength: 80, AntiFragility: 86}, IQ: 85]
+70s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 88, SignalStrength: 80, AntiFragility: 86}, IQ: 85]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 61, SignalStrength: 87, AntiFragility: 89}, IQ: 81]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 74, SignalStrength: 95, AntiFragility: 74}, IQ: 79]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 98, SignalStrength: 26, AntiFragility: 75}, IQ: 68]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 87, SignalStrength: 37, AntiFragility: 70}, IQ: 66]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 65, SignalStrength: 38, AntiFragility: 77}, IQ: 64]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 66, SignalStrength: 63, AntiFragility: 60}, IQ: 62]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 25, SignalStrength: 79, AntiFragility: 58}, IQ: 55]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 25, SignalStrength: 34, AntiFragility: 78}, IQ: 53]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 27, SignalStrength: 96, AntiFragility: 43}, IQ: 52]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 15, SignalStrength: 9, AntiFragility: 83}, IQ: 47]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 44, SignalStrength: 94, AntiFragility: 14}, IQ: 41]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 74, SignalStrength: 75, AntiFragility: 2}, IQ: 38]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 1, SignalStrength: 36, AntiFragility: 33}, IQ: 25]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 17, SignalStrength: 33, AntiFragility: 25}, IQ: 25]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 5, SignalStrength: 41, AntiFragility: 25}, IQ: 24]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 31, SignalStrength: 9, AntiFragility: 18}, IQ: 19]
+70s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 276
+70s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 31
+70s ExecutionModule:Run(): Event: Vertical Handover.
+70s DeviceModule:MoveRandom(): New position: (109, 97)
+71s DeviceModule:MoveRandom(): New position: (112, 97)
+72s DeviceModule:MoveRandom(): New position: (115, 97)
+73s DeviceModule:MoveRandom(): New position: (112, 97)
+74s DeviceModule:MoveRandom(): New position: (109, 97)
+75s DeviceModule:MoveRandom(): New position: (109, 94)
+76s DeviceModule:MoveRandom(): New position: (109, 97)
+77s DeviceModule:MoveRandom(): New position: (109, 100)
+78s DeviceModule:MoveRandom(): New position: (106, 100)
+79s DeviceModule:MoveRandom(): New position: (109, 100)
+80s DecisionModule:Run(): Run decision
+80s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 69, SignalStrength: 98, AntiFragility: 79}, IQ: 81]
+80s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 69, SignalStrength: 98, AntiFragility: 79}, IQ: 81]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 46, SignalStrength: 68, AntiFragility: 99}, IQ: 78]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 68, SignalStrength: 81, AntiFragility: 81}, IQ: 77]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 59, SignalStrength: 38, AntiFragility: 80}, IQ: 64]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 44, SignalStrength: 30, AntiFragility: 78}, IQ: 57]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 88, SignalStrength: 70, AntiFragility: 31}, IQ: 55]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 25, SignalStrength: 77, AntiFragility: 58}, IQ: 54]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 20, SignalStrength: 55, AntiFragility: 58}, IQ: 47]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 65, SignalStrength: 58, AntiFragility: 26}, IQ: 43]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 36, SignalStrength: 60, AntiFragility: 34}, IQ: 41]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 5, SignalStrength: 40, AntiFragility: 55}, IQ: 38]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 53, SignalStrength: 24, AntiFragility: 39}, IQ: 38]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 35, SignalStrength: 20, AntiFragility: 50}, IQ: 38]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 64, SignalStrength: 7, AntiFragility: 27}, IQ: 31]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 70, SignalStrength: 26, AntiFragility: 12}, IQ: 30]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 88, SignalStrength: 11, AntiFragility: 4}, IQ: 26]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 26, SignalStrength: 70, AntiFragility: 1}, IQ: 24]
+80s DeviceModule:MoveRandom(): New position: (109, 103)
+81s DeviceModule:MoveRandom(): New position: (109, 106)
+81s ExecutionModule:OutOfRange(): OUT OF BETTER NETWORK! Choosing another network...
+81s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+81s DecisionModule:Run(): Run decision
+81s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 72, SignalStrength: 88, AntiFragility: 88}, IQ: 84]
+81s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 72, SignalStrength: 88, AntiFragility: 88}, IQ: 84]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 45, SignalStrength: 84, AntiFragility: 99}, IQ: 81]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 9, SignalStrength: 93, AntiFragility: 96}, IQ: 73]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 58, SignalStrength: 97, AntiFragility: 69}, IQ: 73]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 59, SignalStrength: 31, AntiFragility: 99}, IQ: 72]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 87, SignalStrength: 89, AntiFragility: 55}, IQ: 71]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 7, SignalStrength: 82, AntiFragility: 94}, IQ: 69]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 94, SignalStrength: 34, AntiFragility: 56}, IQ: 60]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 62, SignalStrength: 13, AntiFragility: 83}, IQ: 60]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 5, SignalStrength: 62, AntiFragility: 79}, IQ: 56]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 4, SignalStrength: 23, AntiFragility: 98}, IQ: 55]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 90, SignalStrength: 71, AntiFragility: 12}, IQ: 46]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 89, SignalStrength: 10, AntiFragility: 35}, IQ: 42]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 4, SignalStrength: 67, AntiFragility: 41}, IQ: 38]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 20, SignalStrength: 65, AntiFragility: 22}, IQ: 32]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 19, SignalStrength: 58, AntiFragility: 23}, IQ: 30]
+81s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 207
+81s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 31
+81s ExecutionModule:Run(): Event: Vertical Handover.
+82s DeviceModule:MoveRandom(): New position: (109, 103)
+82s DecisionModule:AddNetworkToList(): Network detected
+83s DeviceModule:MoveRandom(): New position: (106, 103)
+83s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+84s DeviceModule:MoveRandom(): New position: (106, 100)
+84s DecisionModule:AddNetworkToList(): Network detected
+85s DeviceModule:MoveRandom(): New position: (103, 100)
+86s DeviceModule:MoveRandom(): New position: (103, 103)
+86s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+87s DeviceModule:MoveRandom(): New position: (106, 103)
+88s DeviceModule:MoveRandom(): New position: (103, 103)
+89s DeviceModule:MoveRandom(): New position: (100, 103)
+89s DecisionModule:AddNetworkToList(): Network detected
+90s DecisionModule:Run(): Run decision
+90s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 96, SignalStrength: 99, AntiFragility: 59}, IQ: 78]
+90s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 96, SignalStrength: 99, AntiFragility: 59}, IQ: 78]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 94, SignalStrength: 15, AntiFragility: 88}, IQ: 71]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 12, SignalStrength: 98, AntiFragility: 86}, IQ: 70]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 46, SignalStrength: 19, AntiFragility: 90}, IQ: 61]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 49, SignalStrength: 53, AntiFragility: 70}, IQ: 60]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 47, SignalStrength: 83, AntiFragility: 56}, IQ: 60]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 66, SignalStrength: 12, AntiFragility: 78}, IQ: 58]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 73, SignalStrength: 26, AntiFragility: 66}, IQ: 57]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 16, SignalStrength: 28, AntiFragility: 90}, IQ: 56]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 86, SignalStrength: 17, AntiFragility: 54}, IQ: 52]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 27, SignalStrength: 40, AntiFragility: 63}, IQ: 48]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 34, SignalStrength: 75, AntiFragility: 33}, IQ: 43]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 34, SignalStrength: 71, AntiFragility: 21}, IQ: 36]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 22, SignalStrength: 46, AntiFragility: 26}, IQ: 30]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 28, SignalStrength: 6, AntiFragility: 35}, IQ: 26]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 78, SignalStrength: 14, AntiFragility: 1}, IQ: 23]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 7, SignalStrength: 13, AntiFragility: 25}, IQ: 17]
+90s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 260
+90s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 121
+90s ExecutionModule:Run(): Event: Horizontal Handover.
+90s DeviceModule:MoveRandom(): New position: (100, 106)
+91s DeviceModule:MoveRandom(): New position: (103, 106)
+91s DecisionModule:RemoveNetworkFromList(): Network: 14 out of range!
+92s DeviceModule:MoveRandom(): New position: (106, 106)
+93s DeviceModule:MoveRandom(): New position: (103, 106)
+94s DeviceModule:MoveRandom(): New position: (103, 109)
+95s DeviceModule:MoveRandom(): New position: (106, 109)
+95s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+96s DeviceModule:MoveRandom(): New position: (103, 109)
+96s DecisionModule:AddNetworkToList(): Network detected
+97s DeviceModule:MoveRandom(): New position: (106, 109)
+97s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+98s DeviceModule:MoveRandom(): New position: (103, 109)
+98s DecisionModule:AddNetworkToList(): Network detected
+99s DeviceModule:MoveRandom(): New position: (103, 106)
+100s DecisionModule:Run(): Run decision
+100s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 83, SignalStrength: 68, AntiFragility: 65}, IQ: 70]
+100s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 83, SignalStrength: 68, AntiFragility: 65}, IQ: 70]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 28, SignalStrength: 44, AntiFragility: 99}, IQ: 67]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 4, SignalStrength: 80, AntiFragility: 90}, IQ: 66]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 5, SignalStrength: 53, AntiFragility: 88}, IQ: 58]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 15, SignalStrength: 64, AntiFragility: 76}, IQ: 57]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 18, SignalStrength: 71, AntiFragility: 62}, IQ: 53]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 23, SignalStrength: 77, AntiFragility: 48}, IQ: 49]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 97, SignalStrength: 13, AntiFragility: 26}, IQ: 40]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 29, SignalStrength: 41, AntiFragility: 44}, IQ: 39]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 29, SignalStrength: 84, AntiFragility: 20}, IQ: 38]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 43, SignalStrength: 25, AntiFragility: 38}, IQ: 36]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 33, SignalStrength: 34, AntiFragility: 39}, IQ: 36]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 24, SignalStrength: 75, AntiFragility: 9}, IQ: 29]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 1, SignalStrength: 25, AntiFragility: 37}, IQ: 25]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 44, SignalStrength: 35, AntiFragility: 3}, IQ: 21]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 2, SignalStrength: 16, AntiFragility: 32}, IQ: 20]
+100s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 273
+100s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 122
+100s ExecutionModule:Run(): Event: Horizontal Handover.
+100s DeviceModule:MoveRandom(): New position: (100, 106)
+100s DecisionModule:AddNetworkToList(): Network detected
+101s DeviceModule:MoveRandom(): New position: (100, 109)
+101s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+102s DeviceModule:MoveRandom(): New position: (100, 106)
+102s DecisionModule:AddNetworkToList(): Network detected
+103s DeviceModule:MoveRandom(): New position: (100, 109)
+103s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+104s DeviceModule:MoveRandom(): New position: (103, 109)
+104s DecisionModule:AddNetworkToList(): Network detected
+104s DecisionModule:RemoveNetworkFromList(): Network: 14 out of range!
+105s DeviceModule:MoveRandom(): New position: (100, 109)
+105s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+105s DecisionModule:AddNetworkToList(): Network detected
+106s DeviceModule:MoveRandom(): New position: (103, 109)
+106s DecisionModule:AddNetworkToList(): Network detected
+106s DecisionModule:RemoveNetworkFromList(): Network: 14 out of range!
+107s DeviceModule:MoveRandom(): New position: (100, 109)
+107s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+107s DecisionModule:AddNetworkToList(): Network detected
+108s DeviceModule:MoveRandom(): New position: (103, 109)
+108s DecisionModule:AddNetworkToList(): Network detected
+108s DecisionModule:RemoveNetworkFromList(): Network: 14 out of range!
+109s DeviceModule:MoveRandom(): New position: (106, 109)
+109s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+110s DecisionModule:Run(): Run decision
+110s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 86, SignalStrength: 43, AntiFragility: 76}, IQ: 70]
+110s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 86, SignalStrength: 43, AntiFragility: 76}, IQ: 70]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 83, SignalStrength: 35, AntiFragility: 79}, IQ: 69]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 97, SignalStrength: 11, AntiFragility: 74}, IQ: 64]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 92, SignalStrength: 96, AntiFragility: 27}, IQ: 60]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 53, SignalStrength: 37, AntiFragility: 72}, IQ: 58]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 57, SignalStrength: 57, AntiFragility: 53}, IQ: 55]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 75, SignalStrength: 82, AntiFragility: 25}, IQ: 51]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 77, SignalStrength: 64, AntiFragility: 31}, IQ: 50]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 84, SignalStrength: 72, AntiFragility: 18}, IQ: 48]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 11, SignalStrength: 17, AntiFragility: 58}, IQ: 36]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 3, SignalStrength: 54, AntiFragility: 39}, IQ: 33]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 85, SignalStrength: 10, AntiFragility: 20}, IQ: 33]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 71, SignalStrength: 18, AntiFragility: 17}, IQ: 30]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 65, SignalStrength: 27, AntiFragility: 3}, IQ: 24]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 25, SignalStrength: 8, AntiFragility: 9}, IQ: 12]
+110s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 267
+110s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 121
+110s ExecutionModule:Run(): Event: Horizontal Handover.
+110s DeviceModule:MoveRandom(): New position: (106, 112)
+111s DeviceModule:MoveRandom(): New position: (106, 109)
+112s DeviceModule:MoveRandom(): New position: (106, 112)
+113s DeviceModule:MoveRandom(): New position: (103, 112)
+113s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+114s DeviceModule:MoveRandom(): New position: (106, 112)
+114s DecisionModule:AddNetworkToList(): Network detected
+115s DeviceModule:MoveRandom(): New position: (106, 109)
+116s DeviceModule:MoveRandom(): New position: (109, 109)
+117s DeviceModule:MoveRandom(): New position: (109, 106)
+117s DecisionModule:AddNetworkToList(): Network detected
+118s DeviceModule:MoveRandom(): New position: (112, 106)
+118s DecisionModule:AddNetworkToList(): Network detected
+118s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+119s DeviceModule:MoveRandom(): New position: (115, 106)
+120s DecisionModule:Run(): Run decision
+120s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 81, SignalStrength: 45, AntiFragility: 98}, IQ: 80]
+120s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 81, SignalStrength: 45, AntiFragility: 98}, IQ: 80]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 97, SignalStrength: 56, AntiFragility: 76}, IQ: 76]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 84, SignalStrength: 45, AntiFragility: 85}, IQ: 74]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 85, SignalStrength: 68, AntiFragility: 73}, IQ: 74]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 19, SignalStrength: 70, AntiFragility: 91}, IQ: 67]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 86, SignalStrength: 15, AntiFragility: 69}, IQ: 59]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 85, SignalStrength: 78, AntiFragility: 23}, IQ: 52]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 91, SignalStrength: 14, AntiFragility: 49}, IQ: 50]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 48, SignalStrength: 26, AntiFragility: 53}, IQ: 45]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 90, SignalStrength: 66, AntiFragility: 4}, IQ: 41]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 60, SignalStrength: 9, AntiFragility: 47}, IQ: 40]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 40, SignalStrength: 76, AntiFragility: 10}, IQ: 34]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 66, SignalStrength: 39, AntiFragility: 10}, IQ: 31]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 96, SignalStrength: 6, AntiFragility: 11}, IQ: 31]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 30, SignalStrength: 53, AntiFragility: 9}, IQ: 25]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 27, SignalStrength: 16, AntiFragility: 5}, IQ: 13]
+120s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 381
+120s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 146
+120s ExecutionModule:Run(): Event: Horizontal Handover.
+120s DeviceModule:MoveRandom(): New position: (118, 106)
+121s DeviceModule:MoveRandom(): New position: (118, 103)
+122s DeviceModule:MoveRandom(): New position: (118, 106)
+123s DeviceModule:MoveRandom(): New position: (121, 106)
+123s DecisionModule:RemoveNetworkFromList(): Network: 4 out of range!
+124s DeviceModule:MoveRandom(): New position: (124, 106)
+125s DeviceModule:MoveRandom(): New position: (124, 103)
+125s DecisionModule:AddNetworkToList(): Network detected
+126s DeviceModule:MoveRandom(): New position: (121, 103)
+127s DeviceModule:MoveRandom(): New position: (121, 106)
+127s DecisionModule:RemoveNetworkFromList(): Network: 4 out of range!
+128s DeviceModule:MoveRandom(): New position: (121, 103)
+128s DecisionModule:AddNetworkToList(): Network detected
+129s DeviceModule:MoveRandom(): New position: (118, 103)
+130s DecisionModule:Run(): Run decision
+130s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 37, SignalStrength: 79, AntiFragility: 73}, IQ: 65]
+130s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 37, SignalStrength: 79, AntiFragility: 73}, IQ: 65]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 47, SignalStrength: 30, AntiFragility: 91}, IQ: 64]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 73, SignalStrength: 37, AntiFragility: 70}, IQ: 62]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 62, SignalStrength: 32, AntiFragility: 64}, IQ: 55]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 9, SignalStrength: 54, AntiFragility: 75}, IQ: 53]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 53, SignalStrength: 28, AntiFragility: 65}, IQ: 52]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 81, SignalStrength: 40, AntiFragility: 43}, IQ: 51]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 14, SignalStrength: 71, AntiFragility: 54}, IQ: 48]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 46, SignalStrength: 71, AntiFragility: 25}, IQ: 41]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 15, SignalStrength: 56, AntiFragility: 41}, IQ: 38]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 16, SignalStrength: 35, AntiFragility: 51}, IQ: 38]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 60, SignalStrength: 75, AntiFragility: 7}, IQ: 37]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 21, SignalStrength: 10, AntiFragility: 49}, IQ: 32]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 6, SignalStrength: 84, AntiFragility: 5}, IQ: 25]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 19, SignalStrength: 65, AntiFragility: 7}, IQ: 24]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 23, SignalStrength: 29, AntiFragility: 21}, IQ: 23]
+130s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 628
+130s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 206
+130s ExecutionModule:Run(): Event: Horizontal Handover.
+130s DeviceModule:MoveRandom(): New position: (115, 103)
+131s DeviceModule:MoveRandom(): New position: (112, 103)
+131s DecisionModule:AddNetworkToList(): Network detected
+132s DeviceModule:MoveRandom(): New position: (112, 100)
+133s DeviceModule:MoveRandom(): New position: (115, 100)
+134s DeviceModule:MoveRandom(): New position: (112, 100)
+135s DeviceModule:MoveRandom(): New position: (109, 100)
+136s DeviceModule:MoveRandom(): New position: (109, 97)
+137s DeviceModule:MoveRandom(): New position: (109, 100)
+138s DeviceModule:MoveRandom(): New position: (112, 100)
+139s DeviceModule:MoveRandom(): New position: (112, 103)
+140s DecisionModule:Run(): Run decision
+140s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 70, SignalStrength: 99, AntiFragility: 87}, IQ: 85]
+140s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 70, SignalStrength: 99, AntiFragility: 87}, IQ: 85]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 76, SignalStrength: 87, AntiFragility: 78}, IQ: 79]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 99, SignalStrength: 30, AntiFragility: 93}, IQ: 78]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 65, SignalStrength: 86, AntiFragility: 43}, IQ: 59]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 85, SignalStrength: 1, AntiFragility: 72}, IQ: 57]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 92, SignalStrength: 25, AntiFragility: 56}, IQ: 57]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 88, SignalStrength: 88, AntiFragility: 27}, IQ: 57]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 66, SignalStrength: 56, AntiFragility: 50}, IQ: 55]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 87, SignalStrength: 46, AntiFragility: 34}, IQ: 50]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 52, SignalStrength: 85, AntiFragility: 29}, IQ: 48]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 6, SignalStrength: 61, AntiFragility: 59}, IQ: 46]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 8, SignalStrength: 21, AntiFragility: 77}, IQ: 45]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 53, SignalStrength: 46, AntiFragility: 33}, IQ: 41]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 5, SignalStrength: 17, AntiFragility: 65}, IQ: 38]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 19, SignalStrength: 71, AntiFragility: 32}, IQ: 38]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 61, SignalStrength: 42, AntiFragility: 18}, IQ: 34]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 9, SignalStrength: 89, AntiFragility: 11}, IQ: 30]
+140s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 283
+140s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 31
+140s ExecutionModule:Run(): Event: Vertical Handover.
+140s DeviceModule:MoveRandom(): New position: (109, 103)
+141s DeviceModule:MoveRandom(): New position: (109, 106)
+141s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+142s DeviceModule:MoveRandom(): New position: (112, 106)
+142s DecisionModule:AddNetworkToList(): Network detected
+142s ExecutionModule:OutOfRange(): OUT OF BETTER NETWORK! Choosing another network...
+142s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+142s DecisionModule:Run(): Run decision
+142s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 78, SignalStrength: 73, AntiFragility: 95}, IQ: 85]
+142s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 78, SignalStrength: 73, AntiFragility: 95}, IQ: 85]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 97, SignalStrength: 97, AntiFragility: 50}, IQ: 73]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 76, SignalStrength: 95, AntiFragility: 41}, IQ: 63]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 40, SignalStrength: 39, AntiFragility: 85}, IQ: 62]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 78, SignalStrength: 16, AntiFragility: 56}, IQ: 51]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 14, SignalStrength: 29, AntiFragility: 73}, IQ: 47]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 76, SignalStrength: 95, AntiFragility: 6}, IQ: 45]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 84, SignalStrength: 87, AntiFragility: 5}, IQ: 45]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 56, SignalStrength: 51, AntiFragility: 33}, IQ: 43]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 47, SignalStrength: 62, AntiFragility: 32}, IQ: 43]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 66, SignalStrength: 13, AntiFragility: 41}, IQ: 40]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 65, SignalStrength: 68, AntiFragility: 6}, IQ: 36]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 27, SignalStrength: 56, AntiFragility: 27}, IQ: 34]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 90, SignalStrength: 18, AntiFragility: 13}, IQ: 33]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 38, SignalStrength: 12, AntiFragility: 16}, IQ: 20]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 2, SignalStrength: 35, AntiFragility: 7}, IQ: 12]
+142s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 204
+142s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 31
+142s ExecutionModule:Run(): Event: Vertical Handover.
+143s DeviceModule:MoveRandom(): New position: (115, 106)
+144s DeviceModule:MoveRandom(): New position: (115, 109)
+144s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+145s DeviceModule:MoveRandom(): New position: (112, 109)
+146s DeviceModule:MoveRandom(): New position: (115, 109)
+147s DeviceModule:MoveRandom(): New position: (115, 106)
+147s DecisionModule:AddNetworkToList(): Network detected
+148s DeviceModule:MoveRandom(): New position: (115, 109)
+148s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+149s DeviceModule:MoveRandom(): New position: (115, 106)
+149s DecisionModule:AddNetworkToList(): Network detected
+150s DecisionModule:Run(): Run decision
+150s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 61, SignalStrength: 43, AntiFragility: 92}, IQ: 72]
+150s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 61, SignalStrength: 43, AntiFragility: 92}, IQ: 72]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 69, SignalStrength: 92, AntiFragility: 58}, IQ: 69]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 21, SignalStrength: 52, AntiFragility: 92}, IQ: 64]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 2, SignalStrength: 66, AntiFragility: 92}, IQ: 63]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 59, SignalStrength: 76, AntiFragility: 55}, IQ: 61]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 62, SignalStrength: 44, AntiFragility: 70}, IQ: 61]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 72, SignalStrength: 23, AntiFragility: 76}, IQ: 61]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 64, SignalStrength: 35, AntiFragility: 74}, IQ: 61]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 86, SignalStrength: 31, AntiFragility: 53}, IQ: 55]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 74, SignalStrength: 73, AntiFragility: 34}, IQ: 53]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 62, SignalStrength: 89, AntiFragility: 28}, IQ: 51]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 80, SignalStrength: 80, AntiFragility: 6}, IQ: 43]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 58, SignalStrength: 11, AntiFragility: 40}, IQ: 37]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 52, SignalStrength: 27, AntiFragility: 33}, IQ: 36]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 22, SignalStrength: 87, AntiFragility: 18}, IQ: 36]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 24, SignalStrength: 82, AntiFragility: 10}, IQ: 31]
+150s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 257
+150s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 122
+150s ExecutionModule:Run(): Event: Horizontal Handover.
+150s DeviceModule:MoveRandom(): New position: (112, 106)
+151s DeviceModule:MoveRandom(): New position: (112, 103)
+151s DecisionModule:AddNetworkToList(): Network detected
+152s DeviceModule:MoveRandom(): New position: (109, 103)
+153s DeviceModule:MoveRandom(): New position: (106, 103)
+153s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+154s DeviceModule:MoveRandom(): New position: (106, 106)
+155s DeviceModule:MoveRandom(): New position: (103, 106)
+156s DeviceModule:MoveRandom(): New position: (103, 109)
+157s DeviceModule:MoveRandom(): New position: (100, 109)
+157s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+157s DecisionModule:AddNetworkToList(): Network detected
+158s DeviceModule:MoveRandom(): New position: (100, 112)
+159s DeviceModule:MoveRandom(): New position: (103, 112)
+159s DecisionModule:RemoveNetworkFromList(): Network: 14 out of range!
+159s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+160s DecisionModule:Run(): Run decision
+160s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 78, SignalStrength: 25, AntiFragility: 96}, IQ: 73]
+160s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 78, SignalStrength: 25, AntiFragility: 96}, IQ: 73]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 77, SignalStrength: 43, AntiFragility: 87}, IQ: 73]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 79, SignalStrength: 63, AntiFragility: 72}, IQ: 71]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 1, SignalStrength: 45, AntiFragility: 97}, IQ: 60]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 64, SignalStrength: 9, AntiFragility: 82}, IQ: 59]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 12, SignalStrength: 50, AntiFragility: 84}, IQ: 57]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 37, SignalStrength: 2, AntiFragility: 92}, IQ: 55]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 68, SignalStrength: 60, AntiFragility: 40}, IQ: 52]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 10, SignalStrength: 54, AntiFragility: 67}, IQ: 49]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 10, SignalStrength: 58, AntiFragility: 50}, IQ: 42]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 23, SignalStrength: 16, AntiFragility: 62}, IQ: 40]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 38, SignalStrength: 37, AntiFragility: 38}, IQ: 37]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 5, SignalStrength: 72, AntiFragility: 34}, IQ: 36]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 35, SignalStrength: 94, AntiFragility: 5}, IQ: 34]
+160s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 243
+160s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 122
+160s ExecutionModule:Run(): Event: Horizontal Handover.
+160s DeviceModule:MoveRandom(): New position: (100, 112)
+160s DecisionModule:AddNetworkToList(): Network detected
+160s DecisionModule:AddNetworkToList(): Network detected
+161s DeviceModule:MoveRandom(): New position: (103, 112)
+161s DecisionModule:RemoveNetworkFromList(): Network: 14 out of range!
+161s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+162s DeviceModule:MoveRandom(): New position: (103, 109)
+162s DecisionModule:AddNetworkToList(): Network detected
+162s DecisionModule:AddNetworkToList(): Network detected
+163s DeviceModule:MoveRandom(): New position: (106, 109)
+163s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+164s DeviceModule:MoveRandom(): New position: (103, 109)
+164s DecisionModule:AddNetworkToList(): Network detected
+165s DeviceModule:MoveRandom(): New position: (100, 109)
+165s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+165s DecisionModule:AddNetworkToList(): Network detected
+166s DeviceModule:MoveRandom(): New position: (100, 112)
+167s DeviceModule:MoveRandom(): New position: (97, 112)
+168s DeviceModule:MoveRandom(): New position: (97, 109)
+169s DeviceModule:MoveRandom(): New position: (100, 109)
+170s DecisionModule:Run(): Run decision
+170s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 3, SignalStrength: 85, AntiFragility: 92}, IQ: 68]
+170s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 3, SignalStrength: 85, AntiFragility: 92}, IQ: 68]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 74, SignalStrength: 52, AntiFragility: 72}, IQ: 67]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 79, SignalStrength: 2, AntiFragility: 92}, IQ: 66]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 63, SignalStrength: 93, AntiFragility: 42}, IQ: 60]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 38, SignalStrength: 36, AntiFragility: 82}, IQ: 59]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 22, SignalStrength: 12, AntiFragility: 97}, IQ: 57]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 40, SignalStrength: 34, AntiFragility: 76}, IQ: 56]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 5, SignalStrength: 28, AntiFragility: 92}, IQ: 54]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 17, SignalStrength: 64, AntiFragility: 65}, IQ: 52]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 13, SignalStrength: 69, AntiFragility: 59}, IQ: 50]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 35, SignalStrength: 75, AntiFragility: 40}, IQ: 47]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 10, SignalStrength: 29, AntiFragility: 72}, IQ: 45]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 31, SignalStrength: 2, AntiFragility: 69}, IQ: 42]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 71, SignalStrength: 65, AntiFragility: 4}, IQ: 36]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 33, SignalStrength: 86, AntiFragility: 8}, IQ: 33]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 10, SignalStrength: 7, AntiFragility: 49}, IQ: 28]
+170s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 277
+170s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 124
+170s ExecutionModule:Run(): Event: Horizontal Handover.
+170s DeviceModule:MoveRandom(): New position: (100, 106)
+170s DecisionModule:AddNetworkToList(): Network detected
+171s DeviceModule:MoveRandom(): New position: (100, 103)
+172s DeviceModule:MoveRandom(): New position: (100, 100)
+173s DeviceModule:MoveRandom(): New position: (97, 100)
+174s DeviceModule:MoveRandom(): New position: (94, 100)
+174s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+174s DecisionModule:AddNetworkToList(): Network detected
+175s DeviceModule:MoveRandom(): New position: (91, 100)
+175s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+176s DeviceModule:MoveRandom(): New position: (91, 97)
+177s DeviceModule:MoveRandom(): New position: (91, 100)
+178s DeviceModule:MoveRandom(): New position: (91, 103)
+179s DeviceModule:MoveRandom(): New position: (91, 100)
+180s DecisionModule:Run(): Run decision
+180s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #12, Technology = Wifi, Address = 02-06-00:00:00:00:00:0e, { DataRate: 98, SignalStrength: 98, AntiFragility: 95}, IQ: 96]
+180s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #12, Technology = Wifi, Address = 02-06-00:00:00:00:00:0e, { DataRate: 98, SignalStrength: 98, AntiFragility: 95}, IQ: 96]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 88, SignalStrength: 94, AntiFragility: 59}, IQ: 75]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 35, SignalStrength: 64, AntiFragility: 89}, IQ: 69]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 64, SignalStrength: 45, AntiFragility: 70}, IQ: 62]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 16, SignalStrength: 6, AntiFragility: 96}, IQ: 53]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 17, SignalStrength: 85, AntiFragility: 48}, IQ: 49]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 6, SignalStrength: 47, AntiFragility: 69}, IQ: 47]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 17, SignalStrength: 16, AntiFragility: 77}, IQ: 46]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 55, SignalStrength: 25, AntiFragility: 48}, IQ: 44]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 40, SignalStrength: 78, AntiFragility: 18}, IQ: 38]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 71, SignalStrength: 22, AntiFragility: 18}, IQ: 32]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 4, SignalStrength: 28, AntiFragility: 49}, IQ: 32]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 45, SignalStrength: 11, AntiFragility: 30}, IQ: 29]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 67, SignalStrength: 17, AntiFragility: 7}, IQ: 24]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 28, SignalStrength: 2, AntiFragility: 27}, IQ: 21]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 49, SignalStrength: 10, AntiFragility: 12}, IQ: 20]
+180s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 292
+180s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 121
+180s ExecutionModule:Run(): Event: Horizontal Handover.
+180s DeviceModule:MoveRandom(): New position: (91, 103)
+181s DeviceModule:MoveRandom(): New position: (91, 106)
+182s DeviceModule:MoveRandom(): New position: (91, 109)
+182s ExecutionModule:OutOfRange(): OUT OF BETTER NETWORK! Choosing another network...
+182s DecisionModule:RemoveNetworkFromList(): Network: 12 out of range!
+182s DecisionModule:Run(): Run decision
+182s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 80, SignalStrength: 95, AntiFragility: 70}, IQ: 78]
+182s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 80, SignalStrength: 95, AntiFragility: 70}, IQ: 78]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 66, SignalStrength: 96, AntiFragility: 76}, IQ: 78]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 94, SignalStrength: 36, AntiFragility: 89}, IQ: 77]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 93, SignalStrength: 41, AntiFragility: 63}, IQ: 65]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 44, SignalStrength: 71, AntiFragility: 49}, IQ: 53]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 74, SignalStrength: 4, AntiFragility: 55}, IQ: 47]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 92, SignalStrength: 47, AntiFragility: 20}, IQ: 44]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 12, SignalStrength: 26, AntiFragility: 68}, IQ: 43]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 93, SignalStrength: 9, AntiFragility: 33}, IQ: 42]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 3, SignalStrength: 88, AntiFragility: 32}, IQ: 38]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 10, SignalStrength: 71, AntiFragility: 36}, IQ: 38]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 27, SignalStrength: 27, AntiFragility: 38}, IQ: 32]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 36, SignalStrength: 15, AntiFragility: 28}, IQ: 26]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 87, SignalStrength: 1, AntiFragility: 7}, IQ: 25]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 54, SignalStrength: 18, AntiFragility: 8}, IQ: 22]
+182s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 533
+182s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 246
+182s ExecutionModule:Run(): Event: Horizontal Handover.
+183s DeviceModule:MoveRandom(): New position: (94, 109)
+184s DeviceModule:MoveRandom(): New position: (94, 112)
+185s DeviceModule:MoveRandom(): New position: (94, 109)
+186s DeviceModule:MoveRandom(): New position: (94, 112)
+187s DeviceModule:MoveRandom(): New position: (97, 112)
+187s DecisionModule:AddNetworkToList(): Network detected
+188s DeviceModule:MoveRandom(): New position: (97, 109)
+189s DeviceModule:MoveRandom(): New position: (97, 112)
+190s DecisionModule:Run(): Run decision
+190s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 85, SignalStrength: 62, AntiFragility: 90}, IQ: 81]
+190s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 85, SignalStrength: 62, AntiFragility: 90}, IQ: 81]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 47, SignalStrength: 71, AntiFragility: 84}, IQ: 71]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 87, SignalStrength: 4, AntiFragility: 86}, IQ: 65]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 28, SignalStrength: 47, AntiFragility: 75}, IQ: 56]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 49, SignalStrength: 43, AntiFragility: 51}, IQ: 48]
+       [Network #3, Technology = Wifi, Address = 02-06-00:00:00:00:00:05, { DataRate: 84, SignalStrength: 77, AntiFragility: 13}, IQ: 46]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 60, SignalStrength: 63, AntiFragility: 32}, IQ: 46]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 26, SignalStrength: 27, AntiFragility: 63}, IQ: 44]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 55, SignalStrength: 59, AntiFragility: 27}, IQ: 42]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 57, SignalStrength: 77, AntiFragility: 9}, IQ: 38]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 42, SignalStrength: 31, AntiFragility: 37}, IQ: 36]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 91, SignalStrength: 34, AntiFragility: 5}, IQ: 33]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 66, SignalStrength: 24, AntiFragility: 18}, IQ: 31]
+       [Network #7, Technology = Wifi, Address = 02-06-00:00:00:00:00:09, { DataRate: 46, SignalStrength: 41, AntiFragility: 10}, IQ: 26]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 37, SignalStrength: 30, AntiFragility: 15}, IQ: 24]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 41, SignalStrength: 13, AntiFragility: 3}, IQ: 15]
+190s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 257
+190s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 121
+190s ExecutionModule:Run(): Event: Horizontal Handover.
+190s DeviceModule:MoveRandom(): New position: (94, 112)
+190s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+191s DeviceModule:MoveRandom(): New position: (97, 112)
+191s DecisionModule:AddNetworkToList(): Network detected
+192s DeviceModule:MoveRandom(): New position: (97, 115)
+192s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+193s DeviceModule:MoveRandom(): New position: (97, 118)
+193s DecisionModule:RemoveNetworkFromList(): Network: 4 out of range!
+194s DeviceModule:MoveRandom(): New position: (97, 115)
+194s DecisionModule:AddNetworkToList(): Network detected
+195s DeviceModule:MoveRandom(): New position: (100, 115)
+195s DecisionModule:RemoveNetworkFromList(): Network: 14 out of range!
+196s DeviceModule:MoveRandom(): New position: (100, 118)
+196s DecisionModule:RemoveNetworkFromList(): Network: 4 out of range!
+197s DeviceModule:MoveRandom(): New position: (97, 118)
+197s DecisionModule:AddNetworkToList(): Network detected
+198s DeviceModule:MoveRandom(): New position: (94, 118)
+198s DecisionModule:AddNetworkToList(): Network detected
+198s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+199s DeviceModule:MoveRandom(): New position: (94, 115)
+199s DecisionModule:AddNetworkToList(): Network detected

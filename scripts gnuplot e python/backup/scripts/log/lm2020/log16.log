@@ -1,0 +1,628 @@
+Waf: Entering directory `/home/renan/Documents/NR2/ns-allinone-3.20/ns-3.20/build'
+Waf: Leaving directory `/home/renan/Documents/NR2/ns-allinone-3.20/ns-3.20/build'
+'build' finished successfully (1.936s)
+0s NetworkModule:SetPosition(): Network 0 set position => (72, 5)
+0s NetworkModule:SetRange(): Network 0 set range => 100
+0s NetworkModule:SetPosition(): Network 1 set position => (163, 23)
+0s NetworkModule:SetRange(): Network 1 set range => 100
+0s NetworkModule:SetPosition(): Network 2 set position => (31, 3)
+0s NetworkModule:SetRange(): Network 2 set range => 100
+0s NetworkModule:SetPosition(): Network 3 set position => (30, 199)
+0s NetworkModule:SetRange(): Network 3 set range => 100
+0s NetworkModule:SetPosition(): Network 4 set position => (10, 85)
+0s NetworkModule:SetRange(): Network 4 set range => 100
+0s NetworkModule:SetPosition(): Network 5 set position => (168, 20)
+0s NetworkModule:SetRange(): Network 5 set range => 100
+0s NetworkModule:SetPosition(): Network 6 set position => (73, 24)
+0s NetworkModule:SetRange(): Network 6 set range => 100
+0s NetworkModule:SetPosition(): Network 7 set position => (25, 193)
+0s NetworkModule:SetRange(): Network 7 set range => 100
+0s NetworkModule:SetPosition(): Network 8 set position => (175, 20)
+0s NetworkModule:SetRange(): Network 8 set range => 100
+0s NetworkModule:SetPosition(): Network 9 set position => (61, 131)
+0s NetworkModule:SetRange(): Network 9 set range => 100
+0s NetworkModule:SetPosition(): Network 10 set position => (87, 44)
+0s NetworkModule:SetRange(): Network 10 set range => 100
+0s NetworkModule:SetPosition(): Network 11 set position => (41, 135)
+0s NetworkModule:SetRange(): Network 11 set range => 100
+0s NetworkModule:SetPosition(): Network 12 set position => (9, 189)
+0s NetworkModule:SetRange(): Network 12 set range => 100
+0s NetworkModule:SetPosition(): Network 13 set position => (99, 105)
+0s NetworkModule:SetRange(): Network 13 set range => 100
+0s NetworkModule:SetPosition(): Network 14 set position => (198, 180)
+0s NetworkModule:SetRange(): Network 14 set range => 100
+0s NetworkModule:SetPosition(): Network 15 set position => (185, 157)
+0s NetworkModule:SetRange(): Network 15 set range => 100
+0s NetworkModule:SetPosition(): Network 16 set position => (180, 70)
+0s NetworkModule:SetRange(): Network 16 set range => 100
+0s NetworkModule:SetPosition(): Network 17 set position => (25, 101)
+0s NetworkModule:SetRange(): Network 17 set range => 100
+0s NetworkModule:SetPosition(): Network 18 set position => (100, 163)
+0s NetworkModule:SetRange(): Network 18 set range => 100
+0s NetworkModule:SetPosition(): Network 19 set position => (1, 8)
+0s NetworkModule:SetRange(): Network 19 set range => 100
+0s DeviceModule:ConfigureMobility(): Device [init x = 100, init y = 100, max = 200, velocity = 12]
+1s DeviceModule:MoveRandom(): New position: (112, 100)
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+1s DecisionModule:AddNetworkToList(): Network detected
+2s DeviceModule:MoveRandom(): New position: (112, 112)
+2s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+2s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+3s DeviceModule:MoveRandom(): New position: (124, 112)
+3s DecisionModule:AddNetworkToList(): Network detected
+3s DecisionModule:RemoveNetworkFromList(): Network: 6 out of range!
+3s DecisionModule:AddNetworkToList(): Network detected
+4s DeviceModule:MoveRandom(): New position: (136, 112)
+4s DecisionModule:AddNetworkToList(): Network detected
+4s DecisionModule:AddNetworkToList(): Network detected
+4s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+5s DeviceModule:MoveRandom(): New position: (124, 112)
+5s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+5s DecisionModule:RemoveNetworkFromList(): Network: 8 out of range!
+5s DecisionModule:AddNetworkToList(): Network detected
+6s DeviceModule:MoveRandom(): New position: (136, 112)
+6s DecisionModule:AddNetworkToList(): Network detected
+6s DecisionModule:AddNetworkToList(): Network detected
+6s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+7s DeviceModule:MoveRandom(): New position: (136, 124)
+7s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+7s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+7s DecisionModule:RemoveNetworkFromList(): Network: 8 out of range!
+8s DeviceModule:MoveRandom(): New position: (148, 124)
+8s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+9s DeviceModule:MoveRandom(): New position: (148, 112)
+9s DecisionModule:AddNetworkToList(): Network detected
+9s DecisionModule:AddNetworkToList(): Network detected
+9s DecisionModule:AddNetworkToList(): Network detected
+10s DeviceModule:MoveRandom(): New position: (160, 112)
+11s DeviceModule:MoveRandom(): New position: (160, 124)
+11s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+11s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+11s DecisionModule:RemoveNetworkFromList(): Network: 8 out of range!
+11s DecisionModule:RemoveNetworkFromList(): Network: 10 out of range!
+12s DeviceModule:MoveRandom(): New position: (148, 124)
+12s DecisionModule:AddNetworkToList(): Network detected
+13s DeviceModule:MoveRandom(): New position: (148, 136)
+13s DecisionModule:RemoveNetworkFromList(): Network: 10 out of range!
+14s DeviceModule:MoveRandom(): New position: (160, 136)
+15s DeviceModule:MoveRandom(): New position: (148, 136)
+16s DeviceModule:MoveRandom(): New position: (148, 124)
+16s DecisionModule:AddNetworkToList(): Network detected
+17s DeviceModule:MoveRandom(): New position: (148, 136)
+17s DecisionModule:RemoveNetworkFromList(): Network: 10 out of range!
+18s DeviceModule:MoveRandom(): New position: (148, 148)
+19s DeviceModule:MoveRandom(): New position: (148, 160)
+20s DecisionModule:Run(): Run decision
+20s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 56, SignalStrength: 93, AntiFragility: 80}, IQ: 77]
+20s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 56, SignalStrength: 93, AntiFragility: 80}, IQ: 77]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 15, SignalStrength: 92, AntiFragility: 94}, IQ: 73]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 67, SignalStrength: 51, AntiFragility: 54}, IQ: 56]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 70, SignalStrength: 47, AntiFragility: 47}, IQ: 52]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 60, SignalStrength: 86, AntiFragility: 15}, IQ: 44]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 23, SignalStrength: 16, AntiFragility: 63}, IQ: 41]
+20s DeviceModule:MoveRandom(): New position: (148, 172)
+20s DecisionModule:RemoveNetworkFromList(): Network: 16 out of range!
+21s DeviceModule:MoveRandom(): New position: (136, 172)
+22s DeviceModule:MoveRandom(): New position: (136, 160)
+22s DecisionModule:AddNetworkToList(): Network detected
+22s DecisionModule:AddNetworkToList(): Network detected
+23s DeviceModule:MoveRandom(): New position: (124, 160)
+23s DecisionModule:RemoveNetworkFromList(): Network: 16 out of range!
+24s DeviceModule:MoveRandom(): New position: (112, 160)
+24s DecisionModule:AddNetworkToList(): Network detected
+24s DecisionModule:AddNetworkToList(): Network detected
+25s DeviceModule:MoveRandom(): New position: (100, 160)
+25s DecisionModule:AddNetworkToList(): Network detected
+25s DecisionModule:AddNetworkToList(): Network detected
+26s DeviceModule:MoveRandom(): New position: (100, 172)
+26s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+27s DeviceModule:MoveRandom(): New position: (100, 160)
+27s DecisionModule:AddNetworkToList(): Network detected
+28s DeviceModule:MoveRandom(): New position: (112, 160)
+28s DecisionModule:RemoveNetworkFromList(): Network: 12 out of range!
+28s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+29s DeviceModule:MoveRandom(): New position: (124, 160)
+29s DecisionModule:RemoveNetworkFromList(): Network: 3 out of range!
+29s DecisionModule:RemoveNetworkFromList(): Network: 7 out of range!
+30s DeviceModule:MoveRandom(): New position: (112, 160)
+30s DecisionModule:AddNetworkToList(): Network detected
+30s DecisionModule:AddNetworkToList(): Network detected
+31s DeviceModule:MoveRandom(): New position: (112, 148)
+31s DecisionModule:AddNetworkToList(): Network detected
+32s DeviceModule:MoveRandom(): New position: (112, 160)
+32s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+33s DeviceModule:MoveRandom(): New position: (112, 148)
+33s DecisionModule:AddNetworkToList(): Network detected
+34s DeviceModule:MoveRandom(): New position: (124, 148)
+34s DecisionModule:RemoveNetworkFromList(): Network: 3 out of range!
+34s DecisionModule:RemoveNetworkFromList(): Network: 7 out of range!
+34s DecisionModule:AddNetworkToList(): Network detected
+34s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+35s DeviceModule:MoveRandom(): New position: (112, 148)
+35s DecisionModule:AddNetworkToList(): Network detected
+35s DecisionModule:AddNetworkToList(): Network detected
+35s DecisionModule:RemoveNetworkFromList(): Network: 16 out of range!
+35s DecisionModule:AddNetworkToList(): Network detected
+36s DeviceModule:MoveRandom(): New position: (124, 148)
+36s DecisionModule:RemoveNetworkFromList(): Network: 3 out of range!
+36s DecisionModule:RemoveNetworkFromList(): Network: 7 out of range!
+36s DecisionModule:AddNetworkToList(): Network detected
+36s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+37s DeviceModule:MoveRandom(): New position: (124, 136)
+37s DecisionModule:AddNetworkToList(): Network detected
+38s DeviceModule:MoveRandom(): New position: (136, 136)
+38s DecisionModule:RemoveNetworkFromList(): Network: 10 out of range!
+39s DeviceModule:MoveRandom(): New position: (136, 124)
+39s DecisionModule:AddNetworkToList(): Network detected
+40s DecisionModule:Run(): Run decision
+40s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 12, SignalStrength: 80, AntiFragility: 78}, IQ: 62]
+40s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 12, SignalStrength: 80, AntiFragility: 78}, IQ: 62]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 14, SignalStrength: 26, AntiFragility: 91}, IQ: 55]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 51, SignalStrength: 75, AntiFragility: 43}, IQ: 53]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 77, SignalStrength: 23, AntiFragility: 49}, IQ: 49]
+       [Network #10, Technology = Wifi, Address = 02-06-00:00:00:00:00:0c, { DataRate: 48, SignalStrength: 98, AntiFragility: 5}, IQ: 39]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 36, SignalStrength: 11, AntiFragility: 47}, IQ: 35]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 33, SignalStrength: 67, AntiFragility: 16}, IQ: 33]
+       [Network #11, Technology = Wifi, Address = 02-06-00:00:00:00:00:0d, { DataRate: 41, SignalStrength: 78, AntiFragility: 4}, IQ: 31]
+40s DeviceModule:MoveRandom(): New position: (136, 136)
+40s DecisionModule:RemoveNetworkFromList(): Network: 10 out of range!
+41s DeviceModule:MoveRandom(): New position: (136, 148)
+42s DeviceModule:MoveRandom(): New position: (136, 136)
+43s DeviceModule:MoveRandom(): New position: (124, 136)
+43s DecisionModule:AddNetworkToList(): Network detected
+44s DeviceModule:MoveRandom(): New position: (124, 148)
+44s DecisionModule:RemoveNetworkFromList(): Network: 10 out of range!
+45s DeviceModule:MoveRandom(): New position: (112, 148)
+45s DecisionModule:AddNetworkToList(): Network detected
+45s DecisionModule:AddNetworkToList(): Network detected
+45s DecisionModule:RemoveNetworkFromList(): Network: 16 out of range!
+45s DecisionModule:AddNetworkToList(): Network detected
+46s DeviceModule:MoveRandom(): New position: (112, 160)
+46s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+47s DeviceModule:MoveRandom(): New position: (112, 172)
+48s DeviceModule:MoveRandom(): New position: (124, 172)
+48s DecisionModule:RemoveNetworkFromList(): Network: 7 out of range!
+49s DeviceModule:MoveRandom(): New position: (136, 172)
+49s DecisionModule:RemoveNetworkFromList(): Network: 3 out of range!
+49s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+50s DeviceModule:MoveRandom(): New position: (136, 184)
+51s DeviceModule:MoveRandom(): New position: (148, 184)
+51s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+52s DeviceModule:MoveRandom(): New position: (148, 172)
+52s DecisionModule:AddNetworkToList(): Network detected
+53s DeviceModule:MoveRandom(): New position: (148, 160)
+53s DecisionModule:AddNetworkToList(): Network detected
+54s DeviceModule:MoveRandom(): New position: (148, 148)
+55s DeviceModule:MoveRandom(): New position: (148, 136)
+56s DeviceModule:MoveRandom(): New position: (136, 136)
+56s DecisionModule:AddNetworkToList(): Network detected
+57s DeviceModule:MoveRandom(): New position: (136, 148)
+58s DeviceModule:MoveRandom(): New position: (136, 160)
+59s DeviceModule:MoveRandom(): New position: (148, 160)
+59s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+60s DecisionModule:Run(): Run decision
+60s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 74, SignalStrength: 57, AntiFragility: 85}, IQ: 75]
+60s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 74, SignalStrength: 57, AntiFragility: 85}, IQ: 75]
+       [Network #14, Technology = Wifi, Address = 02-06-00:00:00:00:00:10, { DataRate: 52, SignalStrength: 84, AntiFragility: 68}, IQ: 68]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 14, SignalStrength: 37, AntiFragility: 93}, IQ: 59]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 67, SignalStrength: 79, AntiFragility: 12}, IQ: 42]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 24, SignalStrength: 65, AntiFragility: 25}, IQ: 34]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 57, SignalStrength: 38, AntiFragility: 7}, IQ: 27]
+60s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 179
+60s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 180
+60s ExecutionModule:Run(): Event: Horizontal Handover.
+60s DeviceModule:MoveRandom(): New position: (148, 148)
+61s DeviceModule:MoveRandom(): New position: (136, 148)
+61s DecisionModule:AddNetworkToList(): Network detected
+62s DeviceModule:MoveRandom(): New position: (136, 136)
+63s DeviceModule:MoveRandom(): New position: (148, 136)
+63s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+64s DeviceModule:MoveRandom(): New position: (148, 124)
+64s DecisionModule:AddNetworkToList(): Network detected
+65s DeviceModule:MoveRandom(): New position: (148, 112)
+65s DecisionModule:AddNetworkToList(): Network detected
+65s DecisionModule:AddNetworkToList(): Network detected
+65s DecisionModule:AddNetworkToList(): Network detected
+66s DeviceModule:MoveRandom(): New position: (136, 112)
+66s DecisionModule:AddNetworkToList(): Network detected
+67s DeviceModule:MoveRandom(): New position: (148, 112)
+67s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+68s DeviceModule:MoveRandom(): New position: (148, 100)
+69s DeviceModule:MoveRandom(): New position: (136, 100)
+69s DecisionModule:AddNetworkToList(): Network detected
+69s DecisionModule:RemoveNetworkFromList(): Network: 14 out of range!
+70s DeviceModule:MoveRandom(): New position: (136, 88)
+71s DeviceModule:MoveRandom(): New position: (124, 88)
+71s DecisionModule:AddNetworkToList(): Network detected
+71s DecisionModule:AddNetworkToList(): Network detected
+71s DecisionModule:AddNetworkToList(): Network detected
+72s DeviceModule:MoveRandom(): New position: (136, 88)
+72s DecisionModule:RemoveNetworkFromList(): Network: 0 out of range!
+72s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+72s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+73s DeviceModule:MoveRandom(): New position: (136, 76)
+73s DecisionModule:AddNetworkToList(): Network detected
+74s DeviceModule:MoveRandom(): New position: (136, 88)
+74s DecisionModule:RemoveNetworkFromList(): Network: 0 out of range!
+75s DeviceModule:MoveRandom(): New position: (136, 76)
+75s DecisionModule:AddNetworkToList(): Network detected
+76s DeviceModule:MoveRandom(): New position: (136, 64)
+76s DecisionModule:RemoveNetworkFromList(): Network: 15 out of range!
+76s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+77s DeviceModule:MoveRandom(): New position: (136, 76)
+77s DecisionModule:AddNetworkToList(): Network detected
+77s DecisionModule:AddNetworkToList(): Network detected
+78s DeviceModule:MoveRandom(): New position: (148, 76)
+78s DecisionModule:RemoveNetworkFromList(): Network: 0 out of range!
+78s ExecutionModule:OutOfRange(): OUT OF BETTER NETWORK! Choosing another network...
+78s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+78s DecisionModule:Run(): Run decision
+78s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 86, SignalStrength: 90, AntiFragility: 77}, IQ: 82]
+78s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 86, SignalStrength: 90, AntiFragility: 77}, IQ: 82]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 46, SignalStrength: 56, AntiFragility: 62}, IQ: 56]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 72, SignalStrength: 11, AntiFragility: 67}, IQ: 54]
+       [Network #10, Technology = Wifi, Address = 02-06-00:00:00:00:00:0c, { DataRate: 98, SignalStrength: 26, AntiFragility: 24}, IQ: 43]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 67, SignalStrength: 4, AntiFragility: 43}, IQ: 39]
+       [Network #18, Technology = Wimax, Address = 02-06-00:00:00:00:00:15, { DataRate: 98, SignalStrength: 18, AntiFragility: 11}, IQ: 34]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 10, SignalStrength: 43, AntiFragility: 16}, IQ: 21]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 15, SignalStrength: 18, AntiFragility: 21}, IQ: 18]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 3, SignalStrength: 24, AntiFragility: 11}, IQ: 12]
+78s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 258
+78s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 440
+78s ExecutionModule:Run(): Event: Horizontal Handover.
+79s DeviceModule:MoveRandom(): New position: (148, 64)
+79s DecisionModule:AddNetworkToList(): Network detected
+79s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+80s DecisionModule:Run(): Run decision
+80s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 92, SignalStrength: 98, AntiFragility: 50}, IQ: 72]
+80s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 92, SignalStrength: 98, AntiFragility: 50}, IQ: 72]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 61, SignalStrength: 81, AntiFragility: 71}, IQ: 71]
+       [Network #15, Technology = Wifi, Address = 02-06-00:00:00:00:00:11, { DataRate: 8, SignalStrength: 91, AntiFragility: 91}, IQ: 70]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 36, SignalStrength: 22, AntiFragility: 92}, IQ: 60]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 8, SignalStrength: 98, AntiFragility: 48}, IQ: 50]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 6, SignalStrength: 42, AntiFragility: 36}, IQ: 30]
+       [Network #10, Technology = Wifi, Address = 02-06-00:00:00:00:00:0c, { DataRate: 3, SignalStrength: 48, AntiFragility: 21}, IQ: 23]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 4, SignalStrength: 69, AntiFragility: 2}, IQ: 19]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 1, SignalStrength: 29, AntiFragility: 24}, IQ: 19]
+80s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 489
+80s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 204
+80s ExecutionModule:Run(): Event: Horizontal Handover.
+80s DeviceModule:MoveRandom(): New position: (148, 76)
+80s DecisionModule:RemoveNetworkFromList(): Network: 0 out of range!
+80s DecisionModule:AddNetworkToList(): Network detected
+81s DeviceModule:MoveRandom(): New position: (148, 88)
+81s DecisionModule:AddNetworkToList(): Network detected
+82s DeviceModule:MoveRandom(): New position: (136, 88)
+83s DeviceModule:MoveRandom(): New position: (124, 88)
+83s DecisionModule:AddNetworkToList(): Network detected
+83s DecisionModule:AddNetworkToList(): Network detected
+83s DecisionModule:AddNetworkToList(): Network detected
+84s DeviceModule:MoveRandom(): New position: (124, 76)
+84s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+84s DecisionModule:RemoveNetworkFromList(): Network: 15 out of range!
+84s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+85s DeviceModule:MoveRandom(): New position: (112, 76)
+85s DecisionModule:AddNetworkToList(): Network detected
+85s DecisionModule:AddNetworkToList(): Network detected
+86s DeviceModule:MoveRandom(): New position: (124, 76)
+86s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+86s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+87s DeviceModule:MoveRandom(): New position: (124, 88)
+87s DecisionModule:AddNetworkToList(): Network detected
+87s DecisionModule:AddNetworkToList(): Network detected
+87s DecisionModule:AddNetworkToList(): Network detected
+88s DeviceModule:MoveRandom(): New position: (124, 76)
+88s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+88s DecisionModule:RemoveNetworkFromList(): Network: 15 out of range!
+88s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+89s DeviceModule:MoveRandom(): New position: (112, 76)
+89s DecisionModule:AddNetworkToList(): Network detected
+89s DecisionModule:AddNetworkToList(): Network detected
+90s DeviceModule:MoveRandom(): New position: (124, 76)
+90s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+90s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+91s DeviceModule:MoveRandom(): New position: (136, 76)
+91s DecisionModule:AddNetworkToList(): Network detected
+92s DeviceModule:MoveRandom(): New position: (136, 64)
+92s DecisionModule:RemoveNetworkFromList(): Network: 15 out of range!
+92s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+93s DeviceModule:MoveRandom(): New position: (136, 52)
+93s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+94s DeviceModule:MoveRandom(): New position: (136, 40)
+95s DeviceModule:MoveRandom(): New position: (124, 40)
+95s DecisionModule:AddNetworkToList(): Network detected
+96s DeviceModule:MoveRandom(): New position: (124, 28)
+97s DeviceModule:MoveRandom(): New position: (112, 28)
+98s DeviceModule:MoveRandom(): New position: (100, 28)
+99s DeviceModule:MoveRandom(): New position: (100, 40)
+99s DecisionModule:AddNetworkToList(): Network detected
+99s DecisionModule:AddNetworkToList(): Network detected
+99s DecisionModule:AddNetworkToList(): Network detected
+100s DecisionModule:Run(): Run decision
+100s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 74, SignalStrength: 80, AntiFragility: 83}, IQ: 80]
+100s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 74, SignalStrength: 80, AntiFragility: 83}, IQ: 80]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 54, SignalStrength: 92, AntiFragility: 86}, IQ: 79]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 10, SignalStrength: 78, AntiFragility: 96}, IQ: 70]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 23, SignalStrength: 32, AntiFragility: 91}, IQ: 59]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 2, SignalStrength: 9, AntiFragility: 79}, IQ: 42]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 24, SignalStrength: 15, AntiFragility: 63}, IQ: 41]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 39, SignalStrength: 24, AntiFragility: 52}, IQ: 41]
+       [Network #10, Technology = Wifi, Address = 02-06-00:00:00:00:00:0c, { DataRate: 3, SignalStrength: 20, AntiFragility: 59}, IQ: 35]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 16, SignalStrength: 20, AntiFragility: 48}, IQ: 33]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 98, SignalStrength: 16, AntiFragility: 5}, IQ: 31]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 2, SignalStrength: 16, AntiFragility: 33}, IQ: 21]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 37, SignalStrength: 7, AntiFragility: 2}, IQ: 12]
+100s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 230
+100s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 120
+100s ExecutionModule:Run(): Event: Horizontal Handover.
+100s DeviceModule:MoveRandom(): New position: (88, 40)
+100s DecisionModule:AddNetworkToList(): Network detected
+101s DeviceModule:MoveRandom(): New position: (76, 40)
+101s DecisionModule:RemoveNetworkFromList(): Network: 8 out of range!
+101s DecisionModule:RemoveNetworkFromList(): Network: 16 out of range!
+102s DeviceModule:MoveRandom(): New position: (88, 40)
+102s DecisionModule:AddNetworkToList(): Network detected
+102s DecisionModule:AddNetworkToList(): Network detected
+103s DeviceModule:MoveRandom(): New position: (88, 28)
+103s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+103s DecisionModule:RemoveNetworkFromList(): Network: 16 out of range!
+104s DeviceModule:MoveRandom(): New position: (100, 28)
+104s DecisionModule:RemoveNetworkFromList(): Network: 4 out of range!
+104s DecisionModule:AddNetworkToList(): Network detected
+104s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+104s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+105s DeviceModule:MoveRandom(): New position: (100, 40)
+105s DecisionModule:AddNetworkToList(): Network detected
+105s DecisionModule:AddNetworkToList(): Network detected
+105s DecisionModule:AddNetworkToList(): Network detected
+106s DeviceModule:MoveRandom(): New position: (88, 40)
+106s DecisionModule:AddNetworkToList(): Network detected
+107s DeviceModule:MoveRandom(): New position: (100, 40)
+107s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+108s DeviceModule:MoveRandom(): New position: (112, 40)
+108s DecisionModule:RemoveNetworkFromList(): Network: 4 out of range!
+108s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+108s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+109s DeviceModule:MoveRandom(): New position: (112, 52)
+109s DecisionModule:AddNetworkToList(): Network detected
+109s DecisionModule:AddNetworkToList(): Network detected
+110s DeviceModule:MoveRandom(): New position: (112, 40)
+110s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+110s DecisionModule:RemoveNetworkFromList(): Network: 17 out of range!
+111s DeviceModule:MoveRandom(): New position: (124, 40)
+112s DeviceModule:MoveRandom(): New position: (136, 40)
+112s DecisionModule:RemoveNetworkFromList(): Network: 2 out of range!
+113s DeviceModule:MoveRandom(): New position: (136, 52)
+114s DeviceModule:MoveRandom(): New position: (136, 64)
+114s DecisionModule:AddNetworkToList(): Network detected
+115s DeviceModule:MoveRandom(): New position: (124, 64)
+116s DeviceModule:MoveRandom(): New position: (124, 76)
+116s DecisionModule:AddNetworkToList(): Network detected
+117s DeviceModule:MoveRandom(): New position: (124, 64)
+117s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+118s DeviceModule:MoveRandom(): New position: (124, 52)
+118s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+119s DeviceModule:MoveRandom(): New position: (136, 52)
+120s DecisionModule:Run(): Run decision
+120s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 28, SignalStrength: 82, AntiFragility: 87}, IQ: 71]
+120s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 28, SignalStrength: 82, AntiFragility: 87}, IQ: 71]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 85, SignalStrength: 42, AntiFragility: 75}, IQ: 69]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 48, SignalStrength: 99, AntiFragility: 39}, IQ: 56]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 15, SignalStrength: 25, AntiFragility: 83}, IQ: 51]
+       [Network #10, Technology = Wifi, Address = 02-06-00:00:00:00:00:0c, { DataRate: 18, SignalStrength: 22, AntiFragility: 75}, IQ: 47]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 5, SignalStrength: 58, AntiFragility: 59}, IQ: 45]
+       [Network #16, Technology = Wifi, Address = 02-06-00:00:00:00:00:12, { DataRate: 42, SignalStrength: 15, AntiFragility: 57}, IQ: 42]
+       [Network #8, Technology = Wifi, Address = 02-06-00:00:00:00:00:0a, { DataRate: 61, SignalStrength: 12, AntiFragility: 29}, IQ: 32]
+120s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 436
+120s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 201
+120s ExecutionModule:Run(): Event: Horizontal Handover.
+120s DeviceModule:MoveRandom(): New position: (124, 52)
+121s DeviceModule:MoveRandom(): New position: (124, 64)
+121s DecisionModule:AddNetworkToList(): Network detected
+122s DeviceModule:MoveRandom(): New position: (112, 64)
+122s DecisionModule:AddNetworkToList(): Network detected
+122s DecisionModule:AddNetworkToList(): Network detected
+122s DecisionModule:AddNetworkToList(): Network detected
+123s DeviceModule:MoveRandom(): New position: (100, 64)
+123s DecisionModule:AddNetworkToList(): Network detected
+123s DecisionModule:AddNetworkToList(): Network detected
+124s DeviceModule:MoveRandom(): New position: (88, 64)
+125s DeviceModule:MoveRandom(): New position: (88, 76)
+125s DecisionModule:RemoveNetworkFromList(): Network: 8 out of range!
+126s DeviceModule:MoveRandom(): New position: (76, 76)
+126s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+126s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+126s DecisionModule:RemoveNetworkFromList(): Network: 16 out of range!
+127s DeviceModule:MoveRandom(): New position: (76, 64)
+127s DecisionModule:AddNetworkToList(): Network detected
+127s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+127s DecisionModule:AddNetworkToList(): Network detected
+128s DeviceModule:MoveRandom(): New position: (64, 64)
+128s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+129s DeviceModule:MoveRandom(): New position: (64, 52)
+130s DeviceModule:MoveRandom(): New position: (52, 52)
+131s DeviceModule:MoveRandom(): New position: (52, 40)
+132s DeviceModule:MoveRandom(): New position: (52, 28)
+132s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+132s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+133s DeviceModule:MoveRandom(): New position: (52, 40)
+133s DecisionModule:AddNetworkToList(): Network detected
+133s DecisionModule:AddNetworkToList(): Network detected
+134s DeviceModule:MoveRandom(): New position: (52, 28)
+134s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+134s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+135s DeviceModule:MoveRandom(): New position: (40, 28)
+136s DeviceModule:MoveRandom(): New position: (40, 40)
+136s DecisionModule:AddNetworkToList(): Network detected
+136s DecisionModule:AddNetworkToList(): Network detected
+137s DeviceModule:MoveRandom(): New position: (28, 40)
+138s DeviceModule:MoveRandom(): New position: (28, 28)
+138s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+138s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+138s DecisionModule:RemoveNetworkFromList(): Network: 13 out of range!
+139s DeviceModule:MoveRandom(): New position: (16, 28)
+140s DecisionModule:Run(): Run decision
+140s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 80, SignalStrength: 66, AntiFragility: 89}, IQ: 81]
+140s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 80, SignalStrength: 66, AntiFragility: 89}, IQ: 81]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 93, SignalStrength: 64, AntiFragility: 77}, IQ: 77]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 85, SignalStrength: 47, AntiFragility: 77}, IQ: 71]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 91, SignalStrength: 95, AntiFragility: 16}, IQ: 54]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 52, SignalStrength: 21, AntiFragility: 50}, IQ: 43]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 41, SignalStrength: 40, AntiFragility: 19}, IQ: 29]
+       [Network #10, Technology = Wifi, Address = 02-06-00:00:00:00:00:0c, { DataRate: 32, SignalStrength: 10, AntiFragility: 8}, IQ: 14]
+140s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 189
+140s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 123
+140s ExecutionModule:Run(): Event: Horizontal Handover.
+140s DeviceModule:MoveRandom(): New position: (4, 28)
+141s DeviceModule:MoveRandom(): New position: (16, 28)
+142s DeviceModule:MoveRandom(): New position: (16, 16)
+143s DeviceModule:MoveRandom(): New position: (4, 16)
+144s DeviceModule:MoveRandom(): New position: (4, 28)
+145s DeviceModule:MoveRandom(): New position: (16, 28)
+146s DeviceModule:MoveRandom(): New position: (4, 28)
+147s DeviceModule:MoveRandom(): New position: (16, 28)
+148s DeviceModule:MoveRandom(): New position: (16, 16)
+149s DeviceModule:MoveRandom(): New position: (16, 4)
+150s DeviceModule:MoveRandom(): New position: (16, 4)
+151s DeviceModule:MoveRandom(): New position: (4, 4)
+152s DeviceModule:MoveRandom(): New position: (4, 4)
+153s DeviceModule:MoveRandom(): New position: (16, 4)
+154s DeviceModule:MoveRandom(): New position: (16, 4)
+155s DeviceModule:MoveRandom(): New position: (16, 4)
+156s DeviceModule:MoveRandom(): New position: (28, 4)
+157s DeviceModule:MoveRandom(): New position: (16, 4)
+158s DeviceModule:MoveRandom(): New position: (28, 4)
+159s DeviceModule:MoveRandom(): New position: (28, 16)
+160s DecisionModule:Run(): Run decision
+160s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 71, SignalStrength: 56, AntiFragility: 71}, IQ: 67]
+160s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 71, SignalStrength: 56, AntiFragility: 71}, IQ: 67]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 80, SignalStrength: 30, AntiFragility: 77}, IQ: 66]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 70, SignalStrength: 58, AntiFragility: 64}, IQ: 64]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 19, SignalStrength: 38, AntiFragility: 86}, IQ: 57]
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 21, SignalStrength: 72, AntiFragility: 58}, IQ: 52]
+       [Network #10, Technology = Wifi, Address = 02-06-00:00:00:00:00:0c, { DataRate: 77, SignalStrength: 41, AntiFragility: 33}, IQ: 46]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 18, SignalStrength: 59, AntiFragility: 5}, IQ: 21]
+160s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 195
+160s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 121
+160s ExecutionModule:Run(): Event: Horizontal Handover.
+160s DeviceModule:MoveRandom(): New position: (40, 16)
+161s DeviceModule:MoveRandom(): New position: (40, 28)
+161s DecisionModule:AddNetworkToList(): Network detected
+162s DeviceModule:MoveRandom(): New position: (40, 16)
+162s DecisionModule:RemoveNetworkFromList(): Network: 13 out of range!
+163s DeviceModule:MoveRandom(): New position: (52, 16)
+163s DecisionModule:AddNetworkToList(): Network detected
+164s DeviceModule:MoveRandom(): New position: (64, 16)
+164s DecisionModule:AddNetworkToList(): Network detected
+165s DeviceModule:MoveRandom(): New position: (64, 28)
+166s DeviceModule:MoveRandom(): New position: (64, 40)
+166s DecisionModule:AddNetworkToList(): Network detected
+166s DecisionModule:AddNetworkToList(): Network detected
+167s DeviceModule:MoveRandom(): New position: (52, 40)
+167s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+168s DeviceModule:MoveRandom(): New position: (52, 28)
+168s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+168s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+169s DeviceModule:MoveRandom(): New position: (52, 40)
+169s DecisionModule:AddNetworkToList(): Network detected
+169s DecisionModule:AddNetworkToList(): Network detected
+170s DeviceModule:MoveRandom(): New position: (52, 52)
+171s DeviceModule:MoveRandom(): New position: (52, 64)
+172s DeviceModule:MoveRandom(): New position: (52, 52)
+173s DeviceModule:MoveRandom(): New position: (64, 52)
+174s DeviceModule:MoveRandom(): New position: (64, 64)
+175s DeviceModule:MoveRandom(): New position: (76, 64)
+175s DecisionModule:AddNetworkToList(): Network detected
+176s DeviceModule:MoveRandom(): New position: (76, 76)
+176s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+176s DecisionModule:AddNetworkToList(): Network detected
+176s DecisionModule:RemoveNetworkFromList(): Network: 19 out of range!
+177s DeviceModule:MoveRandom(): New position: (76, 64)
+177s DecisionModule:AddNetworkToList(): Network detected
+177s DecisionModule:RemoveNetworkFromList(): Network: 18 out of range!
+177s DecisionModule:AddNetworkToList(): Network detected
+178s DeviceModule:MoveRandom(): New position: (76, 52)
+178s DecisionModule:AddNetworkToList(): Network detected
+179s DeviceModule:MoveRandom(): New position: (76, 40)
+179s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!
+180s DecisionModule:Run(): Run decision
+180s DecisionModule:AnalyzingNetworks(): Current Network: 
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 98, SignalStrength: 93, AntiFragility: 94}, IQ: 94]
+180s DecisionModule:ShowAllNetworks(): All detected networks:
+       [Network #0, Technology = Wifi, Address = 02-06-00:00:00:00:00:02, { DataRate: 98, SignalStrength: 93, AntiFragility: 94}, IQ: 94]
+       [Network #9, Technology = Wifi, Address = 02-06-00:00:00:00:00:0b, { DataRate: 51, SignalStrength: 80, AntiFragility: 95}, IQ: 80]
+       [Network #6, Technology = Wifi, Address = 02-06-00:00:00:00:00:08, { DataRate: 69, SignalStrength: 88, AntiFragility: 69}, IQ: 73]
+       [Network #13, Technology = Wifi, Address = 02-06-00:00:00:00:00:0f, { DataRate: 63, SignalStrength: 56, AntiFragility: 87}, IQ: 73]
+       [Network #10, Technology = Wifi, Address = 02-06-00:00:00:00:00:0c, { DataRate: 90, SignalStrength: 15, AntiFragility: 88}, IQ: 70]
+       [Network #17, Technology = Wifi, Address = 02-06-00:00:00:00:00:13, { DataRate: 89, SignalStrength: 96, AntiFragility: 43}, IQ: 67]
+       [Network #1, Technology = Wifi, Address = 02-06-00:00:00:00:00:03, { DataRate: 9, SignalStrength: 63, AntiFragility: 93}, IQ: 64]
+       [Network #5, Technology = Wifi, Address = 02-06-00:00:00:00:00:07, { DataRate: 65, SignalStrength: 96, AntiFragility: 8}, IQ: 44]
+       [Network #4, Technology = Wifi, Address = 02-06-00:00:00:00:00:06, { DataRate: 47, SignalStrength: 42, AntiFragility: 38}, IQ: 41]
+       [Network #19, Technology = Wimax, Address = 02-06-00:00:00:00:00:16, { DataRate: 17, SignalStrength: 95, AntiFragility: 18}, IQ: 37]
+       [Network #2, Technology = Wifi, Address = 02-06-00:00:00:00:00:04, { DataRate: 33, SignalStrength: 34, AntiFragility: 22}, IQ: 27]
+180s ExecutionModule:Run(): Decision time => Seconds: 0, Miliseconds: 238
+180s ExecutionModule:Run(): Handover time => Seconds: 0, Miliseconds: 121
+180s ExecutionModule:Run(): Event: Horizontal Handover.
+180s DeviceModule:MoveRandom(): New position: (76, 28)
+180s DecisionModule:AddNetworkToList(): Network detected
+180s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+181s DeviceModule:MoveRandom(): New position: (76, 16)
+182s DeviceModule:MoveRandom(): New position: (64, 16)
+182s DecisionModule:RemoveNetworkFromList(): Network: 5 out of range!
+182s DecisionModule:RemoveNetworkFromList(): Network: 8 out of range!
+183s DeviceModule:MoveRandom(): New position: (52, 16)
+183s DecisionModule:RemoveNetworkFromList(): Network: 1 out of range!
+184s DeviceModule:MoveRandom(): New position: (52, 4)
+184s DecisionModule:RemoveNetworkFromList(): Network: 13 out of range!
+185s DeviceModule:MoveRandom(): New position: (40, 4)
+186s DeviceModule:MoveRandom(): New position: (40, 16)
+187s DeviceModule:MoveRandom(): New position: (28, 16)
+188s DeviceModule:MoveRandom(): New position: (16, 16)
+189s DeviceModule:MoveRandom(): New position: (4, 16)
+190s DeviceModule:MoveRandom(): New position: (4, 28)
+191s DeviceModule:MoveRandom(): New position: (16, 28)
+192s DeviceModule:MoveRandom(): New position: (16, 16)
+193s DeviceModule:MoveRandom(): New position: (16, 28)
+194s DeviceModule:MoveRandom(): New position: (16, 40)
+194s DecisionModule:AddNetworkToList(): Network detected
+195s DeviceModule:MoveRandom(): New position: (28, 40)
+195s DecisionModule:AddNetworkToList(): Network detected
+195s DecisionModule:AddNetworkToList(): Network detected
+196s DeviceModule:MoveRandom(): New position: (16, 40)
+196s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+196s DecisionModule:RemoveNetworkFromList(): Network: 13 out of range!
+197s DeviceModule:MoveRandom(): New position: (16, 52)
+197s DecisionModule:AddNetworkToList(): Network detected
+197s DecisionModule:AddNetworkToList(): Network detected
+198s DeviceModule:MoveRandom(): New position: (16, 40)
+198s DecisionModule:RemoveNetworkFromList(): Network: 9 out of range!
+198s DecisionModule:RemoveNetworkFromList(): Network: 13 out of range!
+199s DeviceModule:MoveRandom(): New position: (16, 28)
+199s DecisionModule:RemoveNetworkFromList(): Network: 11 out of range!

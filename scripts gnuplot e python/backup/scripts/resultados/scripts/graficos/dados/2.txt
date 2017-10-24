@@ -1,0 +1,5 @@
+#Velocidade		#decisoes       #2	#10	#20	
+Pedestre(1m/s)		 20             4	7	7       
+Ciclista(3m/s)		 10             3	3	6       
+Motorista(12m/s)	  5             2	4	4       
+  

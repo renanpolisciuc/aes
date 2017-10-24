@@ -1,0 +1,15 @@
+######################
+Relatorio 
+######################
+-Ator: Ciclista
+-Velocidade: 3m/s
+-Media de decisoes por simulacao: 0.0
+-Numero medio de handovers: 18.2333333333
+-Numero medio de handovers sem zeros: 18.2333333333
+-Numero maximo de handovers: 21
+-Numero minimo de handovers: 16
+-Handovers: [16, 18, 18, 17, 19, 17, 19, 18, 19, 18, 21, 18, 19, 20, 19, 21, 18, 19, 17, 17, 18, 17, 18, 19, 17, 17, 18, 19, 17, 19]
+-Variancia: 10015
+-Desvio padrao: 100.074971896
+-Intervalo de confiancia: [-17.5780354388, 54.0447021055]
+-: [-17.5780354388, 54.0447021055]

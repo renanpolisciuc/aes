@@ -1,0 +1,4 @@
+#Velocidade		#2	#10	#20
+Pedestre(1m/s)		6	10	11	
+Ciclista(3m/s)		5	11	12	
+Motorista(12m/s)	5	13	15	
