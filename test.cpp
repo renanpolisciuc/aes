@@ -2,6 +2,7 @@
 #include<iostream>
 #include<string.h>
 #include <chrono>
+#include <omp.h>
 #include "aes.h"
 #include "key_expansion.h"
 
@@ -51,6 +52,8 @@ int main(int argc, char ** argv) {
   //Lê os bytes do arquivo e adiciona padding caso necessário
   buffer = new unsigned char[MAX_BUFFER_SIZE];
   bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
+  /* Fork a team of threads giving them their own copies of variables */
+
   while (bytesRead > 0) {
 
     auto t1 = high_resolution_clock::now();
@@ -68,6 +71,7 @@ int main(int argc, char ** argv) {
       memset((buffer + bytesRead), 0, (buffSize - bytesRead));
 
     /* Execução do algoritmo AES */
+    #pragma omp parallel for
     for(int i = 0; i < buffSize; i+= 16) {
       //Processa os bytes de 16 em 16
       aes(buffer + i, exp_key);
@@ -78,9 +82,9 @@ int main(int argc, char ** argv) {
     duracao += elapsed.count();
 
     //DEBUG
-    // for(int i = 0; i < buffSize; i += 16)
-    //   printState(buffer + i, 16);
-
+     /*for(int i = 0; i < buffSize; i += 16)
+       printState(buffer + i, 16);
+-**/
     fwrite(buffer, sizeof(unsigned char), buffSize, fout);
     bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
 
