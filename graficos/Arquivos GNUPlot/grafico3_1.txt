@@ -1,4 +1,0 @@
-#rótulos                         
-Pedestre(1m/s) 13 6 13 10 13 11
-Ciclista(3m/s) 13 5 13 11 14 12
-Motorista(12m/s) 13 5 16 13 18 15

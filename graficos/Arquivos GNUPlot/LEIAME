@@ -1,4 +1,0 @@
-1) Crie a pasta 'saida' caso ela ainda não exista
-2) Execute o arquivo executar_todos.py
-  > python executar_todos.py
-3) Entre na pasta 'saida' e verifique os arquivos dos gráficos em formato .eps
