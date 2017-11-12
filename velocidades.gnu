@@ -7,7 +7,7 @@ set terminal postscript eps color font "Helvetica, 35"
 set encoding utf8
 
 # output [arquivo_de_saida.extensão]
-set output "saida/grafico1.eps"
+set output "velocidades.eps"
 
 # tamanho do arquivo
 set size 5.0,4.0	# tamanho do grafico
@@ -65,5 +65,5 @@ set xtics  ("412KB" 0, "45MB" 1, "72MB" 2, "214MB" 3, "648MB" 4, "917MB" 5)
 # lt => line type
 # t => title
 # QUANDO MAIS DE UMA COMBINACAO USAR ',' E '\' PARA QUEBRA DE LINHA
-plot 'grafico1.txt' using 2:3:4 t "CPU" lt 1  lc rgb "#cccc00", \
-     'grafico1.txt' u 5:6:7 t "GPU" lt 1  lc rgb "#3333cc", \
+plot 'velocidades.txt' using 2:3:4 t "CPU" lt 1  lc rgb "#cccc00", \
+     'velocidades.txt' u 5:6:7 t "GPU" lt 1  lc rgb "#3333cc", \
