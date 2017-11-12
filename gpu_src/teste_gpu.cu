@@ -1,15 +1,17 @@
 #include<stdio.h>
 #include<iostream>
 #include<string.h>
+#include <chrono>
 #include "aes_gpu.h"
 
 using namespace std;
+using namespace std::chrono;
 
-//#define MAX_BUFFER_SIZE  536870912
-#define MAX_BUFFER_SIZE  CACHE_SIZE
+#define MAX_BUFFER_SIZE  536870912
+//#define MAX_BUFFER_SIZE  CACHE_SIZE
 #define MAX_THR_PBLK 1024
 
-#define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
+#define HANDLE_ERROR(ans) { gpuAssert((ans), __FILE__, __LINE__); }
 inline void gpuAssert(cudaError_t code, const char *file, int line, bool abort=true) {
   if (code != cudaSuccess) {
     fprintf(stderr,"GPUassert: %s %s %d\n", cudaGetErrorString(code), file, line);
@@ -27,12 +29,14 @@ void printState(unsigned char * state, int size) {
 int main(int argc, char ** argv) {
   long buffSize = 0L, //Tamanho do arquivo
        bytesRead = 0L; //Quantidade de bytes lidos pelo fread
+  long long total_bytes = 0L;
 
   FILE * fin; // Pointer para o arquivo
   FILE * fout;
   unsigned char * buffer = NULL; //Bytes do arquivo
   unsigned char * buffGPU = NULL;
   unsigned char * keysGPU = NULL;
+  float duracao = 0.0;
 
   unsigned char key[16] = {
     1, 2, 3, 4,
@@ -60,13 +64,17 @@ int main(int argc, char ** argv) {
   //Lê os bytes do arquivo e adiciona padding caso necessário
   buffer = new unsigned char[MAX_BUFFER_SIZE];
   bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
-  gpuErrchk(cudaMalloc((void**)&buffGPU, sizeof(unsigned char) * MAX_BUFFER_SIZE));
-  gpuErrchk(cudaMalloc((void**)&keysGPU, sizeof(unsigned char) * EXP_KEY_SIZE));
-  gpuErrchk(cudaMemcpy(keysGPU, exp_key, sizeof(unsigned char) * EXP_KEY_SIZE, cudaMemcpyHostToDevice));
-  gpuErrchk(cudaEventCreate(&start));
-  gpuErrchk(cudaEventCreate(&stop));
+  HANDLE_ERROR(cudaMalloc((void**)&buffGPU, sizeof(unsigned char) * MAX_BUFFER_SIZE));
+  HANDLE_ERROR(cudaMalloc((void**)&keysGPU, sizeof(unsigned char) * EXP_KEY_SIZE));
+  HANDLE_ERROR(cudaMemcpy(keysGPU, exp_key, sizeof(unsigned char) * EXP_KEY_SIZE, cudaMemcpyHostToDevice));
 
+
+  HANDLE_ERROR(cudaEventCreate(&start));
+  HANDLE_ERROR(cudaEventCreate(&stop));
+  HANDLE_ERROR(cudaEventRecord(start, 0));
   while (bytesRead > 0) {
+
+    total_bytes += bytesRead;
     if (bytesRead < MAX_BUFFER_SIZE)
       bytesRead -= 1; /* Se ler o último bloco do arquivo, desconsidera o EOF */
 
@@ -80,20 +88,17 @@ int main(int argc, char ** argv) {
     if (bytesRead < buffSize)
       memset((buffer + bytesRead), 0, (buffSize - bytesRead));
 
-    gpuErrchk(cudaMemcpy(buffGPU, buffer, sizeof(unsigned char) * buffSize, cudaMemcpyHostToDevice));
-    if (buffSize > CACHE_SIZE) {
-      int nBlkCache = (buffSize / CACHE_SIZE) + 1;
+    HANDLE_ERROR(cudaMemcpy(buffGPU, buffer, sizeof(unsigned char) * buffSize, cudaMemcpyHostToDevice));
+
+    if (buffSize >= CACHE_SIZE) {
+      int nBlkCache = (buffSize / CACHE_SIZE);
       for(int i = 0; i < nBlkCache; i++) {
         /* Algoritmo aqui */
         int nBlocks = 3;
         int nTh = 1024;
-        gpuErrchk(cudaEventRecord(start));
+
         aes<<<nBlocks, nTh>>>(buffGPU + CACHE_SIZE * i, keysGPU, 3072);
-        gpuErrchk(cudaEventRecord(stop));
-        gpuErrchk(cudaEventSynchronize(stop));
-        gpuErrchk(cudaEventElapsedTime(&time_run, start, stop));
-        time_total += time_run;
-        gpuErrchk(cudaMemcpy(buffer + CACHE_SIZE * i, buffGPU + CACHE_SIZE * i, sizeof(unsigned char) * CACHE_SIZE, cudaMemcpyDeviceToHost));
+        HANDLE_ERROR(cudaMemcpy(buffer + CACHE_SIZE * i, buffGPU + CACHE_SIZE * i, sizeof(unsigned char) * CACHE_SIZE, cudaMemcpyDeviceToHost));
       }
     }
     else {
@@ -105,21 +110,24 @@ int main(int argc, char ** argv) {
         nBlocks = (nTh / MAX_THR_PBLK) + 1;
         nTh = MAX_THR_PBLK;
       }
-      gpuErrchk(cudaEventRecord(start));
+
       aes<<<nBlocks, nTh>>>(buffGPU, keysGPU, buffSize / 16);
-      gpuErrchk(cudaEventRecord(stop));
-      gpuErrchk(cudaEventSynchronize(stop));
-      gpuErrchk(cudaEventElapsedTime(&time_run, start, stop));
       time_total += time_run;
-      gpuErrchk(cudaMemcpy(buffer, buffGPU, sizeof(unsigned char) * buffSize, cudaMemcpyDeviceToHost));
+      HANDLE_ERROR(cudaMemcpy(buffer, buffGPU, sizeof(unsigned char) * buffSize, cudaMemcpyDeviceToHost));
     }
-    // for(int i = 0; i < buffSize; i += 16)
-    //   printState(buffer + i, 16);
     fwrite(buffer, sizeof(unsigned char), buffSize, fout);
     memset(buffer, 0, MAX_BUFFER_SIZE * sizeof(unsigned char));
     bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
   }
-  cout << time_total << endl;
+
+  HANDLE_ERROR(cudaEventRecord(stop, 0));
+  HANDLE_ERROR(cudaEventSynchronize(stop));
+  HANDLE_ERROR(cudaEventElapsedTime(&time_run, start, stop));
+  HANDLE_ERROR(cudaEventDestroy(start));
+  HANDLE_ERROR(cudaEventDestroy(stop));
+
+  cout <<  ((double)total_bytes / 1000000000)   << " | " << (float) (time_run / 1000) << endl;
+
   //Libera a memória alocada
   cudaFree(buffGPU);
   cudaFree(keysGPU);

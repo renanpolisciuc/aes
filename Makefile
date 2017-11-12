@@ -9,7 +9,7 @@ tables:
 aes:
 	g++ -c aes.cpp
 test:
-	g++ -c test.cpp -L aes.o
+	g++ -std=c++11 -c -Wall test.cpp  -L aes.o
 key_expansion:
 	g++ -c key_expansion.cpp
 
@@ -21,7 +21,7 @@ make_gpu: aes_gpu test_gpu
 aes_gpu:
 	nvcc -ccbin g++-4.7 -c gpu_src/aes_gpu.cu
 test_gpu:
-	nvcc -ccbin g++-4.7 -c gpu_src/teste_gpu.cu -L aes_gpu.o key_expansion.o tables_gpu.o
+	nvcc -ccbin g++-4.7 -std=c++11 -c gpu_src/teste_gpu.cu -L aes_gpu.o key_expansion.o tables_gpu.o
 
 
 clean:

@@ -222,7 +222,7 @@ void aes(unsigned char * in_bytes, unsigned char * key, int nBlocks) {
   int id = blockIdx.x * blockDim.x + threadIdx.x;
   __shared__ unsigned char cache[CACHE_SIZE];
 
-  if (id < nBlocks) {
+  if (id <= nBlocks) {
     int idBlock = id * 16;
     for(int i = 0, idP = idBlock; i < 16; i++, idP++)
       cache[threadIdx.x * 16 + i] = in_bytes[idP];

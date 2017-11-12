@@ -23,6 +23,7 @@ void printState(unsigned char * state, int size) {
 int main(int argc, char ** argv) {
   long buffSize = 0L, //Tamanho do arquivo
        bytesRead = 0L; //Quantidade de bytes lidos pelo fread
+  long long total_bytes = 0L;
 
   FILE * fin; // Pointer para o arquivo
   FILE * fout;
@@ -55,8 +56,9 @@ int main(int argc, char ** argv) {
   /* Fork a team of threads giving them their own copies of variables */
 
   while (bytesRead > 0) {
-
     auto t1 = high_resolution_clock::now();
+    total_bytes += bytesRead;
+
     if (bytesRead < MAX_BUFFER_SIZE)
       bytesRead -= 1; /* Se ler o último bloco do arquivo, desconsidera o EOF */
 
@@ -71,26 +73,24 @@ int main(int argc, char ** argv) {
       memset((buffer + bytesRead), 0, (buffSize - bytesRead));
 
     /* Execução do algoritmo AES */
-    #pragma omp parallel for
     for(int i = 0; i < buffSize; i+= 16) {
       //Processa os bytes de 16 em 16
       aes(buffer + i, exp_key);
     }
-    auto t2 = high_resolution_clock::now();
-    std::chrono::duration<double> elapsed = t2 - t1;
-
-    duracao += elapsed.count();
-
     //DEBUG
-     /*for(int i = 0; i < buffSize; i += 16)
-       printState(buffer + i, 16);
--**/
+    // for(int i = 0; i < buffSize; i += 16)
+    //   printState(buffer + i, 16);
     fwrite(buffer, sizeof(unsigned char), buffSize, fout);
     bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
 
     memset(buffer, 0, MAX_BUFFER_SIZE * sizeof(unsigned char));
+
+    auto t2 = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>( t2 - t1 );
+    duracao += duration.count();
   }
-  cout << duracao << endl;
+
+  cout <<  ((double)total_bytes / 1000000000)   << " | " << (float) (duracao / 1000) << endl;
   //Libera a memória alocada
   delete [] buffer;
   fclose(fin);
