@@ -40,7 +40,7 @@ files_names = [
     "lubuntu-17.04-desktop-i386.iso"
 ]
 #os.system("rm -f -r output_tests/*")
-rodadas = 5
+rodadas = 20
 #for idx, cmd in enumerate(run_commands):
 #  tipo = "cpu"
 #  if idx >= 6:
@@ -75,7 +75,13 @@ for idR, r in enumerate(res):
   matriz_saida.insert(idx * 3 + 2, tp[2])
 
 for i in range(0, 6):
-  print "## " + str(matriz_saida[i * 3]) + " " + str(matriz_saida[i * 3 + 1]) + " " + str(matriz_saida[i * 3 + 2]) + " ",
-  print str(matriz_saida[18 + (i * 3)]) + " " + str(matriz_saida[18 + (i * 3) + 1]) + " " + str(matriz_saida[18 + (i * 3) + 2])
+  c1 = float(tam[i] / matriz_saida[i * 3])
+  c2 = float(tam[i] / matriz_saida[i * 3 + 1])
+  c3 = float(tam[i] / matriz_saida[i * 3 + 2])
+  g1 = float(tam[i + 6] / matriz_saida[18 + (i * 3)])
+  g2 = float(tam[i + 6] / matriz_saida[18 + (i * 3) + 1])
+  g3 = float(tam[i + 6] / matriz_saida[18 + (i * 3) + 2])
+  print "** " + str(c1) + " " + str(c2) + " " + str(c3) + " ",
+  print str(g1) + " " + str(g2) + " " + str(g3)
   #m = np.mean(r)
   #print tam[idR] / m

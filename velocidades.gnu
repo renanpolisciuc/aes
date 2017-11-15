@@ -35,10 +35,10 @@ set xlabel "Tamanhos dos arquivos"
 set ylabel "Velocidade(GBytes/s)"
 
 # intervalo do eixo Y
-set yrange [0:30]
+#set yrange [0:30]
 
 # intervalo entre pontos do eixo y "0, 2, 4, 6, ..., 30
-set ytic 2
+#set ytic 2
 
 # estilo de gráfico
 set style data histogram
@@ -65,5 +65,5 @@ set xtics  ("412KB" 0, "45MB" 1, "72MB" 2, "214MB" 3, "648MB" 4, "917MB" 5)
 # lt => line type
 # t => title
 # QUANDO MAIS DE UMA COMBINACAO USAR ',' E '\' PARA QUEBRA DE LINHA
-plot 'velocidades.txt' using 2:3:4 t "CPU" lt 1  lc rgb "#cccc00", \
-     'velocidades.txt' u 5:6:7 t "GPU" lt 1  lc rgb "#3333cc", \
+plot 'saida.txt' using 2:3:4 t "CPU" lt 1  lc rgb "#cccc00", \
+     'saida.txt' u 5:6:7 t "GPU" lt 1  lc rgb "#3333cc", \
