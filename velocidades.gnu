@@ -44,16 +44,18 @@ set ylabel "Velocidade(GBytes/s)"
 set style data histogram
 
 # estilo da barra; errobars => intervalo de confianca; gap [numero] => espacamento entre os histogramas
-set style histogram errorbars gap 5
+set style histogram errorbars gap 5 lw 10
 
 # estilo das bordas
 set style fill solid border -1
+
+set style line 1 lt 5 lw 5 pt 3 ps 0.5
 
 # largura da barra
 set boxwidth 1
 
 # legendas dos histogramas
-set xtics  ("412KB" 0, "45MB" 1, "72MB" 2, "214MB" 3, "648MB" 4, "917MB" 5)
+#set xtics  ("412KB" 0, "45MB" 1, "72MB" 2, "214MB" 3, "648MB" 4, "917MB" 5)
 
 # cria os histogramas usando o arquivo: grafico1.txt
 
@@ -65,5 +67,6 @@ set xtics  ("412KB" 0, "45MB" 1, "72MB" 2, "214MB" 3, "648MB" 4, "917MB" 5)
 # lt => line type
 # t => title
 # QUANDO MAIS DE UMA COMBINACAO USAR ',' E '\' PARA QUEBRA DE LINHA
-plot 'saida.txt' using 2:3:4 t "CPU" lt 1  lc rgb "#cccc00", \
-     'saida.txt' u 5:6:7 t "GPU" lt 1  lc rgb "#3333cc", \
+plot 'saida.txt' using  2:3:4:xtic(1) t "CPU" lt 2 lw 5 lc rgb "#cccc00", \
+     'saida.txt' u 5:6:7:xtic(1) t "GPU - S" lt 2 lw 5 lc rgb "#3333cc", \
+     #'saida.txt' u 8:9:10:xtic(1) t "GPU - G" lt 2 lw 5 lc rgb "#33ccff", \
