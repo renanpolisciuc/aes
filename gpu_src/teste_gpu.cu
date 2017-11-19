@@ -36,7 +36,6 @@ int main(int argc, char ** argv) {
   unsigned char * buffer = NULL; //Bytes do arquivo
   unsigned char * buffGPU = NULL;
   unsigned char * keysGPU = NULL;
-  float duracao = 0.0;
 
   unsigned char key[16] = {
     1, 2, 3, 4,
@@ -93,7 +92,6 @@ int main(int argc, char ** argv) {
     if (buffSize >= CACHE_SIZE) {
       int nBlkCache = (buffSize / CACHE_SIZE);
       for(int i = 0; i < nBlkCache; i++) {
-        /* Algoritmo aqui */
         int nBlocks = 3;
         int nTh = 1024;
 
@@ -102,7 +100,6 @@ int main(int argc, char ** argv) {
       }
     }
     else {
-      /* Algoritmo aqui */
       int nBlocks = 1;
       int nTh = buffSize / 16;
 

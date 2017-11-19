@@ -31,14 +31,6 @@ __device__ void mixColumns(unsigned char * state);
 */
 __device__ void addRoundKey(unsigned char * state, unsigned char * key);
 
-/**
-  Função AES
-  - Realiza a criptografia de in_bytes utilizando os algoritmos do AES
-  @param in_bytes (16 bytes)
-  @param key chave escolhida pelo usuário (16 bytes)
-*/
-__global__ void aes(unsigned char * in_bytes, unsigned char * key, int nBlocks);
-
 
 //DEBUG
 __host__ void printState(unsigned char * state, int size);
@@ -78,3 +70,11 @@ __host__ void subWord(unsigned char * word);
   @param palavra
 */
 __host__ void translateWord(unsigned char * word);
+
+/**
+  Função AES
+  - Realiza a criptografia de in_bytes utilizando os algoritmos do AES
+  @param in_bytes (16 bytes)
+  @param key chave escolhida pelo usuário (16 bytes)
+*/
+__global__ void aes(unsigned char * in_bytes, unsigned char * key, int nBlocks);

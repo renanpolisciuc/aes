@@ -216,7 +216,6 @@ void addKeyExpansion(unsigned char * key, unsigned char * exp_keys) {
   }
 }
 
-
 __global__
 void aes(unsigned char * in_bytes, unsigned char * key, int nBlocks) {
   int id = blockIdx.x * blockDim.x + threadIdx.x;
@@ -253,7 +252,6 @@ void aes(unsigned char * in_bytes, unsigned char * key, int nBlocks) {
     addRoundKey(state, key + 160);
 
     //Copia a resposta para a memória
-
     for(int i = 0, idP = idBlock; i < 16; i++, idP++)
       in_bytes[idP] = state[i];
   }

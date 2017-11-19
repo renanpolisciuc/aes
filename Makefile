@@ -5,13 +5,13 @@ make_cpu: tables key_expansion aes test
 	rm -f *.o
 
 tables:
-	g++ -c tables.cpp
+	g++ -c cpu_src/tables.cpp
 aes:
-	g++ -c aes.cpp
+	g++ -c cpu_src/aes.cpp
 test:
-	g++ -std=c++11 -c -Wall test.cpp  -L aes.o
+	g++ -std=c++11 -c -Wall cpu_src/test.cpp  -L aes.o
 key_expansion:
-	g++ -c key_expansion.cpp
+	g++ -c cpu_src/key_expansion.cpp
 
 
 make_gpu: aes_gpu test_gpu
