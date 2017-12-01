@@ -26,6 +26,14 @@ void printState(unsigned char * state, int size) {
   printf("\n");
 }
 
+__host__
+int getProximoMultiplo16(long numero) {
+  int n = numero;
+  if (n % 16 != 0)
+    n = n + (16 - (n % 16));
+  return n;
+}
+
 int main(int argc, char ** argv) {
   long buffSize = 0L, //Tamanho do arquivo
        bytesRead = 0L; //Quantidade de bytes lidos pelo fread
@@ -71,6 +79,7 @@ int main(int argc, char ** argv) {
   HANDLE_ERROR(cudaEventCreate(&start));
   HANDLE_ERROR(cudaEventCreate(&stop));
   HANDLE_ERROR(cudaEventRecord(start, 0));
+
   while (bytesRead > 0) {
 
     total_bytes += bytesRead;
@@ -81,40 +90,31 @@ int main(int argc, char ** argv) {
 
     //Verifica se o tamanho do arquivo é múltiplo de 16. Caso não for, encontra o próximo múltiplo de 16 a partir
     //do tamanho do arquivo
-    if (buffSize % 16 != 0)
-      buffSize = buffSize + (16 - (buffSize % 16));
+    buffSize = getProximoMultiplo16(buffSize);
 
     if (bytesRead < buffSize)
       memset((buffer + bytesRead), 0, (buffSize - bytesRead));
 
+    cudaMemset(buffGPU, 0, sizeof(unsigned char) * MAX_BUFFER_SIZE);
     HANDLE_ERROR(cudaMemcpy(buffGPU, buffer, sizeof(unsigned char) * buffSize, cudaMemcpyHostToDevice));
 
-    if (buffSize >= CACHE_SIZE) {
-      int nBlkCache = (buffSize / CACHE_SIZE);
-      for(int i = 0; i < nBlkCache; i++) {
-        int nBlocks = 3;
-        int nTh = 1024;
+    int nBlocks = 1;
+    int nTh = buffSize / 16;
 
-        aes<<<nBlocks, nTh>>>(buffGPU + CACHE_SIZE * i, keysGPU, 3072);
-        HANDLE_ERROR(cudaMemcpy(buffer + CACHE_SIZE * i, buffGPU + CACHE_SIZE * i, sizeof(unsigned char) * CACHE_SIZE, cudaMemcpyDeviceToHost));
-      }
+    if (nTh > MAX_THR_PBLK) {
+      nBlocks = (nTh / MAX_THR_PBLK) + 1;
+      nTh = MAX_THR_PBLK;
     }
-    else {
-      int nBlocks = 1;
-      int nTh = buffSize / 16;
+    aes<<<nBlocks, nTh>>>(buffGPU, keysGPU, buffSize / 16);
+    time_total += time_run;
+    HANDLE_ERROR(cudaMemcpy(buffer, buffGPU, sizeof(unsigned char) * buffSize, cudaMemcpyDeviceToHost));
 
-      if (nTh > MAX_THR_PBLK) {
-        nBlocks = (nTh / MAX_THR_PBLK) + 1;
-        nTh = MAX_THR_PBLK;
-      }
-
-      aes<<<nBlocks, nTh>>>(buffGPU, keysGPU, buffSize / 16);
-      time_total += time_run;
-      HANDLE_ERROR(cudaMemcpy(buffer, buffGPU, sizeof(unsigned char) * buffSize, cudaMemcpyDeviceToHost));
-    }
+    // for(int i = 0; i < buffSize; i += 16)
+    //   printState(buffer + i, 16);
     fwrite(buffer, sizeof(unsigned char), buffSize, fout);
     memset(buffer, 0, MAX_BUFFER_SIZE * sizeof(unsigned char));
     bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
+
   }
 
   HANDLE_ERROR(cudaEventRecord(stop, 0));

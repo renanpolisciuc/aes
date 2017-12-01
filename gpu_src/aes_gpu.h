@@ -4,7 +4,7 @@
 //Número de chaves do AES. 176 = 16 * 11 (1 para cada rodada do AES + chave escolhida pelo usuário)
 #define EXP_KEY_SIZE 176
 
-#define CACHE_SIZE 49152
+#define MAX_CACHE 16384
 
 /**
   Função shiftRows do AES
@@ -34,6 +34,7 @@ __device__ void addRoundKey(unsigned char * state, unsigned char * key);
 
 //DEBUG
 __host__ void printState(unsigned char * state, int size);
+__host__ int getProximoMultiplo16(long numero);
 
 /**
   Função addKeyExpansion do AES
@@ -72,7 +73,7 @@ __host__ void subWord(unsigned char * word);
 __host__ void translateWord(unsigned char * word);
 
 /**
-  Função AES
+  Função AES - Implementada com Shared memory
   - Realiza a criptografia de in_bytes utilizando os algoritmos do AES
   @param in_bytes (16 bytes)
   @param key chave escolhida pelo usuário (16 bytes)

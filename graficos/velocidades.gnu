@@ -1,16 +1,16 @@
 #reset
 
 # eps => extensão de saída; font "NomeDaFonte, Tamanho"
-set terminal postscript eps color font "Helvetica, 35"
+set terminal pdf size 7,5 color font "Helvetica, 10"
 
 # codificação dos caracteres
 set encoding utf8
 
 # output [arquivo_de_saida.extensão]
-set output "velocidades.eps"
+set output "velocidades.pdf"
 
 # tamanho do arquivo
-set size 5.0,4.0	# tamanho do grafico
+set size 1,1	# tamanho do grafico
 
 # rmargin [tamanho] => margem da direita; lmargin [tamanho] => margem da esquerda
 #set rmargin 2.5
@@ -44,12 +44,12 @@ set ylabel "Velocidade(GBytes/s)"
 set style data histogram
 
 # estilo da barra; errobars => intervalo de confianca; gap [numero] => espacamento entre os histogramas
-set style histogram errorbars gap 5 lw 10
+set style histogram errorbars gap 5 lw 2
 
 # estilo das bordas
 set style fill solid border -1
 
-set style line 1 lt 5 lw 5 pt 3 ps 0.5
+set style line 1 lt 5 lw 1 pt 3 ps 0.5
 
 # largura da barra
 set boxwidth 1
@@ -67,6 +67,6 @@ set boxwidth 1
 # lt => line type
 # t => title
 # QUANDO MAIS DE UMA COMBINACAO USAR ',' E '\' PARA QUEBRA DE LINHA
-plot 'velocidades.txt' using  2:3:4:xtic(1) t "CPU" lt 2 lw 5 lc rgb "#cccc00", \
-     'velocidades.txt' u 5:6:7:xtic(1) t "GPU - S" lt 2 lw 5 lc rgb "#3333cc", \
-     #'velocidades.txt' u 8:9:10:xtic(1) t "GPU - G" lt 2 lw 5 lc rgb "#33ccff", \
+plot 'velocidades.txt' using  2:3:4:xtic(1) t "CPU" lt 2 lw 1 lc rgb "#cccc00", \
+     'velocidades.txt' u 5:6:7:xtic(1) t "GPU - S" lt 2 lw 1 lc rgb "#3333cc", \
+     #'velocidades.txt' u 8:9:10:xtic(1) t "GPU - G" lt 2 lw 1 lc rgb "#33ccff", \

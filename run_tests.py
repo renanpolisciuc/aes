@@ -100,7 +100,7 @@ for idR, r in enumerate(res):
 len_arqs = len(arqs_o)
 
 #Gera a saída para o gráfico de velocidades
-f_vel = open("graficos/velocidades.txt", 'w')
+f_vel = open("velocidades.txt", 'w')
 for i in range(0, len_arqs):
   c1 = float(tam[i] / matriz_saida[i][0])
   c2 = float(tam[i] / matriz_saida[i][1])
@@ -112,7 +112,7 @@ for i in range(0, len_arqs):
   f_vel.write(str(calcularTamanho(tam[i])) + " " + str(c1) + " " + str(c2) + " " + str(c3) + " " + str(g1) + " " + str(g2) + " " + str(g3) + "\n")
 f_vel.close()
 #Gera a saída para o gráfico de speedup
-f_speedup = open("graficos/speedup.txt", 'w')
+f_speedup = open("speedup.txt", 'w')
 for i in range(0, len_arqs):
   c1 = float(tam[i] / matriz_saida[i][0])
   c2 = float(tam[i] / matriz_saida[i][1])
@@ -124,5 +124,5 @@ for i in range(0, len_arqs):
 f_speedup.close()
 os.system("gnuplot graficos/velocidades.gnu")
 os.system("gnuplot graficos/speedup.gnu")
-os.system("evince graficos/velocidades.eps")
-os.system("evince graficos/speedup.eps")
+os.system("evince velocidades.pdf")
+os.system("evince aceleracao.pdf")

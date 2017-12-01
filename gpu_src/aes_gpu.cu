@@ -217,24 +217,18 @@ void addKeyExpansion(unsigned char * key, unsigned char * exp_keys) {
 }
 
 __global__
-void aes(unsigned char * in_bytes, unsigned char * key, int nBlocks) {
+void aes(unsigned char * in_bytes, unsigned char * keys, int nBlocks) {
   int id = blockIdx.x * blockDim.x + threadIdx.x;
-  __shared__ unsigned char cache[CACHE_SIZE];
 
   if (id <= nBlocks) {
-    int idBlock = id * 16;
-    for(int i = 0, idP = idBlock; i < 16; i++, idP++)
-      cache[threadIdx.x * 16 + i] = in_bytes[idP];
-
-    __syncthreads();
 
     unsigned char state[16];
     //Copia os primeiros 16 bytes para a memoria
     for(int i = 0; i < 16; i++)
-      state[i] = cache[threadIdx.x * 16 + i];
+      state[i] = in_bytes[id * 16 + i];
 
     //Adiciona a primeira chave
-    addRoundKey(state, key);
+    addRoundKey(state, keys);
 
     //N-1 rodadas
     for(int i = 0; i < (R_ROUNDS -1); i++) {
@@ -243,16 +237,16 @@ void aes(unsigned char * in_bytes, unsigned char * key, int nBlocks) {
       mixColumns(state);
 
       //Seleciona a próxima chave
-      addRoundKey(state, key + (16 * (i + 1)));
+      addRoundKey(state, keys + (16 * (i + 1)));
     }
 
     //Última rodada
     subBytes(state);
     shiftRows(state);
-    addRoundKey(state, key + 160);
+    addRoundKey(state, keys + 160);
 
     //Copia a resposta para a memória
-    for(int i = 0, idP = idBlock; i < 16; i++, idP++)
-      in_bytes[idP] = state[i];
+    for(int i = 0; i < 16; i++)
+      in_bytes[id * 16 + i] = state[i];
   }
 }
