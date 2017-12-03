@@ -28,7 +28,7 @@ int main(int argc, char ** argv) {
   FILE * fin; // Pointer para o arquivo
   FILE * fout;
   unsigned char * buffer = NULL; //Bytes do arquivo
-  double duracao = 0L;
+  double duracao = 0L, duracao_IO = 0L, duracao_proc = 0L;
 
   unsigned char key[16] = {
     1, 2, 3, 4,
@@ -55,8 +55,9 @@ int main(int argc, char ** argv) {
   bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
   /* Fork a team of threads giving them their own copies of variables */
 
+  auto t1 = high_resolution_clock::now();
   while (bytesRead > 0) {
-    auto t1 = high_resolution_clock::now();
+
     total_bytes += bytesRead;
 
     if (bytesRead < MAX_BUFFER_SIZE)
@@ -72,25 +73,34 @@ int main(int argc, char ** argv) {
     if (bytesRead < buffSize)
       memset((buffer + bytesRead), 0, (buffSize - bytesRead));
 
+    auto t1_p = high_resolution_clock::now();
     /* Execução do algoritmo AES */
     for(int i = 0; i < buffSize; i+= 16) {
       //Processa os bytes de 16 em 16
       aes(buffer + i, exp_key);
     }
+    auto t2_p = high_resolution_clock::now();
+    auto duration_P = duration_cast<milliseconds>( t2_p - t1_p );
+    duracao_proc += duration_P.count();
     //DEBUG
     // for(int i = 0; i < buffSize; i += 16)
     //   printState(buffer + i, 16);
+
+    auto t1_io = high_resolution_clock::now();
     fwrite(buffer, sizeof(unsigned char), buffSize, fout);
     bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
-
     memset(buffer, 0, MAX_BUFFER_SIZE * sizeof(unsigned char));
+    auto t2_io = high_resolution_clock::now();
+    auto duration_IO = duration_cast<milliseconds>( t2_io - t1_io );
 
-    auto t2 = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>( t2 - t1 );
-    duracao += duration.count();
+    duracao_IO += duration_IO.count();
   }
 
-  cout <<  ((double)total_bytes / 1000000000)   << " | " << (float) (duracao / 1000) << endl;
+  auto t2 = high_resolution_clock::now();
+  auto duration = duration_cast<milliseconds>( t2 - t1 );
+  duracao += duration.count();
+
+  cout <<  ((double)total_bytes / 1000000000)   << " | " << (float) (duracao / 1000) << " | " <<  (float) (duracao_proc / 1000)<< " | " << (float) (duracao_IO / 1000) << endl;
   //Libera a memória alocada
   delete [] buffer;
   fclose(fin);

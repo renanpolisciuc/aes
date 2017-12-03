@@ -2,41 +2,17 @@
 # -*- coding: utf-8 -*-
 
 import os
-import math
-#import numpy as np
-#import scipy as sp
-#import scipy.stats
-
-def media(l):
-  return float(sum(l)) / len(l)
-
-def variancia(l, m):
-  v = 0
-  for li in l:
-    v = v + pow(li - m, 2)
-  return v / (len(l) - 1)
-
-def desvio(v):
-  return math.sqrt(v)
-
-def intervalo_confianca(m, d, n):
-  sq = (d / math.sqrt(n))
-  mult = 1.96 * sq
-  i_inf = m - mult
-  i_sup = m + mult
-
-  print i_inf
-  print i_sup
-
-  return m, i_inf, i_sup
+import numpy as np
+import scipy as sp
+import scipy.stats
 
 #Método que calcula o intervalo de confiança
-#def mean_confidence_interval(data, confidence=0.95):
-#  a = 1.0*np.array(data)
-#  n = len(a)
-#  m, se = np.mean(a), scipy.stats.sem(a)
-#  h = se * sp.stats.t._ppf((1+confidence)/2., n-1)
-#  return m, m-h, m+h
+def mean_confidence_interval(data, confidence=0.95):
+  a = 1.0*np.array(data)
+  n = len(a)
+  m, se = np.mean(a), scipy.stats.sem(a)
+  h = se * sp.stats.t._ppf((1+confidence)/2., n-1)
+  return m, m-h, m+h
 
 #Obtém o tamanho do arquivo em Megas ou KBytes
 def calcularTamanho(tamanho):
@@ -117,10 +93,7 @@ for ri, run in enumerate(runtimes):
 #Calcula os resultados médios e os intervalos de confiança por arquivo
 matriz_saida = []
 for idR, r in enumerate(res):
-  m = media(r)
-  v = variancia(r, m)
-  d = desvio(v)
-  tp = intervalo_confianca(m, d, len(r))
+  tp = mean_confidence_interval(r, 0.95)
   matriz_saida.insert(idR, tp)
 
 #Conta o número de arquivos de entrada
@@ -151,5 +124,5 @@ for i in range(0, len_arqs):
 f_speedup.close()
 os.system("gnuplot graficos/velocidades.gnu")
 os.system("gnuplot graficos/speedup.gnu")
-os.system("evince velocidades.pdf &")
-os.system("evince aceleracao.pdf &")
+os.system("evince velocidades.pdf")
+os.system("evince aceleracao.pdf")
