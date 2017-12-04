@@ -1,13 +1,13 @@
 #reset
 
 # eps => extensão de saída; font "NomeDaFonte, Tamanho"
-set terminal pdf size 11,5 color font "Helvetica, 12"
+set terminal pdf size 12,8 color font "Helvetica, 11"
 
 # codificação dos caracteres
 set encoding utf8
 
 # output [arquivo_de_saida.extensão]
-set output "pdf/io.pdf"
+set output "pdf/comparacao.pdf"
 
 # tamanho do arquivo
 set size 1,1	# tamanho do grafico
@@ -26,13 +26,13 @@ set key right top
 set grid
 
 # título do gráfico
-set title "Tempo de IO - AES - CPU/GPU"
+set title "Tempo execução - GPU - Comparação IO"
 
 # rótulo do eixo X
 set xlabel "Tamanhos dos arquivos"
 
 # rótulo do eixo y
-set ylabel "Tempo gasto(s)"
+set ylabel "Tempo gasto (s)"
 
 # intervalo do eixo Y
 #set yrange [0:30]
@@ -67,6 +67,7 @@ set boxwidth 1
 # lt => line type
 # t => title
 # QUANDO MAIS DE UMA COMBINACAO USAR ',' E '\' PARA QUEBRA DE LINHA
-plot 'io.txt' using  2:3:4:xtic(1) t "CPU" lt 2 lw 1 lc rgb "#cccc00", \
-     'io.txt' u 5:6:7:xtic(1) t "GPU - S" lt 2 lw 1 lc rgb "#3333cc", \
+plot 'comparacao.txt' using  2:3:4:xtic(1) t "I/O" lt 2 lw 1 lc rgb "#009900", \
+     'comparacao.txt' u 5:6:7:xtic(1) t "Processamento" lt 2 lw 1 lc rgb "#ffff00", \
+     'comparacao.txt' u 8:9:10:xtic(1) t "Total" lt 2 lw 1 lc rgb "#993333", \
      #'Vazãos.txt' u 8:9:10:xtic(1) t "GPU - G" lt 2 lw 1 lc rgb "#33ccff", \
