@@ -26,7 +26,7 @@ set key right top
 set grid
 
 # título do gráfico
-set title "Aceleração - CPU/GPU"
+set title "Aceleração - CPU/GPU - Processamento + IO"
 
 # rótulo do eixo X
 set xlabel "Tamanhos dos arquivos"

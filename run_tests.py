@@ -95,6 +95,8 @@ if count_arqs_saida == 0:
 
 #Resultados(tempos)
 res = []
+res_io = []
+res_pr = []
 
 #Tamanhos dos arquivo
 tam = []
@@ -104,15 +106,23 @@ tam = []
 for ri, run in enumerate(runtimes):
   for fi, f in enumerate(arqs_o):
     res_p = []
+    res_pio = []
+    res_ppr = []
     for it in range(0, rodadas):
       f = open(pasta_saida + tp_run[ri] + "_" + str(fi) + "_" + str(it), 'r')
       spl = f.readline().split('|')
+      t_io = spl[3]
+      t_pr = spl[2]
       t = spl[1]
       s = spl[0]
       if ri == 0 and it == 0:
         tam.append(float(s))
       res_p.insert(it, float(t[:len(t) - 1]))
+      res_pio.insert(it, float(t_io[:len(t_io) - 1]))
+      res_ppr.insert(it, float(t_pr[:len(t_pr) - 1]))
     res.insert(ri * len(arqs_o) + fi, res_p)
+    res_io.insert(ri * len(arqs_o) + fi, res_pio)
+    res_pr.insert(ri * len(arqs_o) + fi, res_ppr)
 
 #Calcula os resultados médios e os intervalos de confiança por arquivo
 matriz_saida = []
@@ -122,6 +132,22 @@ for idR, r in enumerate(res):
   d = desvio(v)
   tp = intervalo_confianca(m, d, len(r))
   matriz_saida.insert(idR, tp)
+
+matriz_saida_io = []
+for idR, r in enumerate(res_io):
+  m = media(r)
+  v = variancia(r, m)
+  d = desvio(v)
+  tp = intervalo_confianca(m, d, len(r))
+  matriz_saida_io.insert(idR, tp)
+
+matriz_saida_pr = []
+for idR, r in enumerate(res_pr):
+  m = media(r)
+  v = variancia(r, m)
+  d = desvio(v)
+  tp = intervalo_confianca(m, d, len(r))
+  matriz_saida_pr.insert(idR, tp)
 
 #Conta o número de arquivos de entrada
 len_arqs = len(arqs_o)
@@ -138,6 +164,7 @@ for i in range(0, len_arqs):
 
   f_vel.write(str(calcularTamanho(tam[i])) + " " + str(c1) + " " + str(c2) + " " + str(c3) + " " + str(g1) + " " + str(g2) + " " + str(g3) + "\n")
 f_vel.close()
+
 #Gera a saída para o gráfico de speedup
 f_speedup = open("speedup.txt", 'w')
 for i in range(0, len_arqs):
@@ -149,7 +176,50 @@ for i in range(0, len_arqs):
   g3 = float(tam[i] / matriz_saida[i + len_arqs][2])
   f_speedup.write(str(calcularTamanho(tam[i])) + " " + str(g1 / c1) + " " + str(g2 / c2) + " " + str(g3 / c3) + "\n")
 f_speedup.close()
+
+
+f_speedup = open("speedup_processamento.txt", 'w')
+for i in range(0, len_arqs):
+  c1 = float(tam[i] / matriz_saida_pr[i][0])
+  c2 = float(tam[i] / matriz_saida_pr[i][1])
+  c3 = float(tam[i] / matriz_saida_pr[i][2])
+  g1 = float(tam[i] / matriz_saida_pr[i + len_arqs][0])
+  g2 = float(tam[i] / matriz_saida_pr[i + len_arqs][1])
+  g3 = float(tam[i] / matriz_saida_pr[i + len_arqs][2])
+  f_speedup.write(str(calcularTamanho(tam[i])) + " " + str(g1 / c1) + " " + str(g2 / c2) + " " + str(g3 / c3) + "\n")
+f_speedup.close()
+
+#Gera a saída para o gráfico de speedup
+f_io = open("io.txt", 'w')
+for i in range(0, len_arqs):
+  c1 = float(matriz_saida_io[i][0])
+  c2 = float(matriz_saida_io[i][1])
+  c3 = float(matriz_saida_io[i][2])
+  g1 = float(matriz_saida_io[i + len_arqs][0])
+  g2 = float(matriz_saida_io[i + len_arqs][1])
+  g3 = float(matriz_saida_io[i + len_arqs][2])
+  f_io.write(str(calcularTamanho(tam[i])) + " " + str(c1) + " " + str(c2) + " " + str(c3) + " " + str(g1) + " " + str(g2) + " " + str(g3) + "\n")
+f_io.close()
+
+#Gera a saída para o gráfico de speedup
+f_proc = open("velocidades_processamento.txt", 'w')
+for i in range(0, len_arqs):
+  c1 = float(tam[i] / matriz_saida_pr[i][0])
+  c2 = float(tam[i] / matriz_saida_pr[i][1])
+  c3 = float(tam[i] / matriz_saida_pr[i][2])
+  g1 = float(tam[i] / matriz_saida_pr[i + len_arqs][0])
+  g2 = float(tam[i] / matriz_saida_pr[i + len_arqs][1])
+  g3 = float(tam[i] / matriz_saida_pr[i + len_arqs][2])
+  f_proc.write(str(calcularTamanho(tam[i])) + " " + str(c1) + " " + str(c2) + " " + str(c3) + " " + str(g1) + " " + str(g2) + " " + str(g3) + "\n")
+f_proc.close()
+
 os.system("gnuplot graficos/velocidades.gnu")
+os.system("gnuplot graficos/velocidades_processamento.gnu")
 os.system("gnuplot graficos/speedup.gnu")
+os.system("gnuplot graficos/speedup_processamento.gnu")
+os.system("gnuplot graficos/io.gnu")
 os.system("evince velocidades.pdf &")
+os.system("evince velocidade_processamento.pdf &")
 os.system("evince aceleracao.pdf &")
+os.system("evince aceleracao_processamento.pdf &")
+os.system("evince io.pdf &")

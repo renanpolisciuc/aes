@@ -1,2 +1,0 @@
-http://www.facweb.iitkgp.ernet.in/~sourav/AES.pdf
-https://www.lri.fr/~fmartignon/documenti/systemesecurite/5-AES.pdf

@@ -7,7 +7,7 @@ set terminal pdf size 7,5 color font "Helvetica, 10"
 set encoding utf8
 
 # output [arquivo_de_saida.extensão]
-set output "velocidades.pdf"
+set output "velocidade.pdf"
 
 # tamanho do arquivo
 set size 1,1	# tamanho do grafico
@@ -26,13 +26,13 @@ set key right top
 set grid
 
 # título do gráfico
-set title "Velocidade AES - CPU/GPU"
+set title "Vazão AES - CPU/GPU - Processamento + IO"
 
 # rótulo do eixo X
 set xlabel "Tamanhos dos arquivos"
 
 # rótulo do eixo y
-set ylabel "Velocidade(GBytes/s)"
+set ylabel "Vazão(GBytes/s)"
 
 # intervalo do eixo Y
 #set yrange [0:30]
@@ -69,4 +69,4 @@ set boxwidth 1
 # QUANDO MAIS DE UMA COMBINACAO USAR ',' E '\' PARA QUEBRA DE LINHA
 plot 'velocidades.txt' using  2:3:4:xtic(1) t "CPU" lt 2 lw 1 lc rgb "#cccc00", \
      'velocidades.txt' u 5:6:7:xtic(1) t "GPU - S" lt 2 lw 1 lc rgb "#3333cc", \
-     #'velocidades.txt' u 8:9:10:xtic(1) t "GPU - G" lt 2 lw 1 lc rgb "#33ccff", \
+     #'Vazãos.txt' u 8:9:10:xtic(1) t "GPU - G" lt 2 lw 1 lc rgb "#33ccff", \
