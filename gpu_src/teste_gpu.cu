@@ -35,6 +35,7 @@ int getProximoMultiplo16(long numero) {
 }
 
 int main(int argc, char ** argv) {
+  long MAX_THREADS = MAX_THR_PBLK;
   long buffSize = 0L, //Tamanho do arquivo
        bytesRead = 0L; //Quantidade de bytes lidos pelo fread
   long long total_bytes = 0L;
@@ -65,6 +66,15 @@ int main(int argc, char ** argv) {
     return -1;
   }
 
+  int countDevices = 0;
+  cudaGetDeviceCount(&countDevices);
+  for(int i = 0; i < countDevices; i++) {
+    cudaDeviceProp prop;
+    cudaGetDeviceProperties(&prop, i);
+
+    MAX_THREADS = prop.maxThreadsPerBlock;
+    break;
+  }
   //Expansão de chaves
   unsigned char exp_key[EXP_KEY_SIZE];
   addKeyExpansion(key, exp_key);
@@ -104,9 +114,9 @@ int main(int argc, char ** argv) {
     int nBlocks = 1;
     int nTh = buffSize / 16;
 
-    if (nTh > MAX_THR_PBLK) {
-      nBlocks = (nTh / MAX_THR_PBLK) + 1;
-      nTh = MAX_THR_PBLK;
+    if (nTh > MAX_THREADS) {
+      nBlocks = (nTh / MAX_THREADS) + 1;
+      nTh = MAX_THREADS;
     }
 
     HANDLE_ERROR(cudaEventCreate(&start));

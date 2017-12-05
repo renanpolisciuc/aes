@@ -7,7 +7,7 @@ set terminal pdf size 7,5 color font "Helvetica, 10"
 set encoding utf8
 
 # output [arquivo_de_saida.extensão]
-set output "aceleracao.pdf"
+set output "pdf/aceleracao.pdf"
 
 # tamanho do arquivo
 set size 1,1	# tamanho do grafico

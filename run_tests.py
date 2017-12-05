@@ -57,6 +57,24 @@ runtimes = ["./run", "./run_gpu"]
 #Tipos
 tp_run = ["cpu", "gpu"]
 
+comando = '0'
+if len(os.sys.argv) > 1:
+  comando = os.sys.argv[1]
+
+if comando == '1':
+    os.system("rm output_tests/* pdf/*")
+
+if comando == '2':
+    os.system("head -c 90KB </dev/urandom > " + pasta_amostra + "/f1")
+    os.system("head -c 1MB </dev/urandom > " + pasta_amostra + "/f2")
+    os.system("head -c 5MB </dev/urandom > " + pasta_amostra + "/f3")
+    os.system("head -c 10MB </dev/urandom > " + pasta_amostra + "/f4")
+    os.system("head -c 20MB </dev/urandom > " + pasta_amostra + "/f5")
+    os.system("head -c 30MB </dev/urandom > " + pasta_amostra + "/f6")
+    print "Amostras geradadas na pasta " + pasta_amostra + ". Execute python run_tests.py 1"
+    exit(0)
+
+
 #Número de simulações por arquivo
 rodadas = 20
 
