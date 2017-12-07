@@ -76,11 +76,13 @@ int main(int argc, char ** argv) {
     break;
   }
   //Expansão de chaves
-  unsigned char exp_key[EXP_KEY_SIZE];
+  unsigned char * exp_key(NULL);
+  HANDLE_ERROR(cudaMallocHost(&exp_key, sizeof(unsigned char) * EXP_KEY_SIZE));
+
   addKeyExpansion(key, exp_key);
 
   //Lê os bytes do arquivo e adiciona padding caso necessário
-  buffer = new unsigned char[MAX_BUFFER_SIZE];
+  HANDLE_ERROR(cudaMallocHost(&buffer, MAX_BUFFER_SIZE * sizeof(unsigned char)));
   bytesRead = fread(buffer, sizeof(unsigned char), MAX_BUFFER_SIZE, fin);
   HANDLE_ERROR(cudaMalloc((void**)&buffGPU, sizeof(unsigned char) * MAX_BUFFER_SIZE));
   HANDLE_ERROR(cudaMalloc((void**)&keysGPU, sizeof(unsigned char) * EXP_KEY_SIZE));
@@ -89,6 +91,10 @@ int main(int argc, char ** argv) {
   HANDLE_ERROR(cudaEventCreate(&start_all));
   HANDLE_ERROR(cudaEventCreate(&stop_all));
   HANDLE_ERROR(cudaEventRecord(start_all, 0));
+
+  HANDLE_ERROR(cudaEventCreate(&start));
+  HANDLE_ERROR(cudaEventCreate(&stop));
+  HANDLE_ERROR(cudaEventRecord(start, 0));
 
   while (bytesRead > 0) {
 
@@ -119,19 +125,11 @@ int main(int argc, char ** argv) {
       nTh = MAX_THREADS;
     }
 
-    HANDLE_ERROR(cudaEventCreate(&start));
-    HANDLE_ERROR(cudaEventCreate(&stop));
-    HANDLE_ERROR(cudaEventRecord(start, 0));
-
     aes<<<nBlocks, nTh>>>(buffGPU, keysGPU, buffSize / 16);
-
-    cudaDeviceSynchronize();
 
     HANDLE_ERROR(cudaEventRecord(stop, 0));
     HANDLE_ERROR(cudaEventSynchronize(stop));
     HANDLE_ERROR(cudaEventElapsedTime(&time_run, start, stop));
-    HANDLE_ERROR(cudaEventDestroy(start));
-    HANDLE_ERROR(cudaEventDestroy(stop));
 
     time_total_processamento += time_run;
 
@@ -150,6 +148,8 @@ int main(int argc, char ** argv) {
   HANDLE_ERROR(cudaEventRecord(stop_all, 0));
   HANDLE_ERROR(cudaEventSynchronize(stop_all));
   HANDLE_ERROR(cudaEventElapsedTime(&time_total, start_all, stop_all));
+  HANDLE_ERROR(cudaEventDestroy(start));
+  HANDLE_ERROR(cudaEventDestroy(stop));
   HANDLE_ERROR(cudaEventDestroy(start_all));
   HANDLE_ERROR(cudaEventDestroy(stop_all));
 
@@ -158,7 +158,8 @@ int main(int argc, char ** argv) {
   //Libera a memória alocada
   cudaFree(buffGPU);
   cudaFree(keysGPU);
-  delete [] buffer;
+  cudaFreeHost(exp_key);
+  cudaFreeHost(buffer);
   fclose(fin);
   fclose(fout);
   return 0;
