@@ -1,4 +1,4 @@
-CXX = g++-4.7
+CXX = clang++-3.8
 CXX_FLAGS = -std=c++11 -O3 -Wall -fopenmp
 HOST_COMPILER = $(CXX)
 NVCC_FLAGS = -std=c++11 -O3 -ccbin $(HOST_COMPILER)
@@ -8,7 +8,7 @@ NVCC_FLAGS = -std=c++11 -O3 -ccbin $(HOST_COMPILER)
 all: clean make_cpu make_gpu
 
 make_cpu: tables key_expansion aes test
-	$(CXX) *.o -o run
+	$(CXX) $(CXX_FLAGS) *.o -o run
 	@rm -f *.o
 
 tables:
