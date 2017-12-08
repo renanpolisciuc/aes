@@ -61,24 +61,28 @@
 /**
  * Initialize tables of constants
  **/
-unsigned char S_BOX_HOST[256] = S_BOX_CONSTANTS;
-unsigned char rcon_host[11] = RCON_CONSTANTS;
+const unsigned char S_BOX_HOST[256] = S_BOX_CONSTANTS;
+const unsigned char rcon_host[11] = RCON_CONSTANTS;
 
-__device__ unsigned char S_BOX[256] = S_BOX_CONSTANTS;
-__device__ unsigned char mul2[] = MUL2_CONSTANTS;
-__device__ unsigned char mul3[] = MUL3_CONSTANTS;
-__device__ unsigned char rcon[11] = RCON_CONSTANTS;
+__device__ const unsigned char S_BOX[256] = S_BOX_CONSTANTS;
+__device__ const unsigned char mul2[] = MUL2_CONSTANTS;
+__device__ const unsigned char mul3[] = MUL3_CONSTANTS;
+__device__ const unsigned char rcon[11] = RCON_CONSTANTS;
 
 
-__device__ void subBytes(unsigned char * state)
+__device__ __forceinline__
+void subBytes(unsigned char * __restrict__ state)
 {
   //Faz a substituição byte a byte pela S_BOX
+  #pragma unroll
   for(int i = 0; i < 16; i++)
     state[i] = S_BOX[state[i]];
 }
 
-__device__
-void shiftRows(unsigned char * state) {
+
+__device__ __forceinline__
+void shiftRows(unsigned char * __restrict__ state)
+{
   unsigned char tmp[16];
   //0 shifts
   tmp[0] = state[0];
@@ -103,18 +107,26 @@ void shiftRows(unsigned char * state) {
   tmp[7] = state[3];
   tmp[11] = state[7];
   tmp[15] = state[11];
+
+  #pragma unroll
   for(int i = 0; i < 16; i++)
     state[i] = tmp[i];
 }
 
-__device__
-void addRoundKey(unsigned char * state, unsigned char * key) {
+
+__device__ __forceinline__
+void addRoundKey(unsigned char * __restrict__ state, unsigned char * __restrict__ key)
+{
   //Xor byte a byte entre o estado e a chave
+  #pragma unroll
   for(int i = 0; i < 16; i++)
     state[i] ^= key[i];
 }
-__device__
-void mixColumns(unsigned char * state) {
+
+
+__device__ __forceinline__
+void mixColumns(unsigned char * __restrict__ state)
+{
   //Algoritmo mix column
   //Operação em GF(2^8)
   unsigned char tmp[16];
@@ -137,13 +149,16 @@ void mixColumns(unsigned char * state) {
   tmp[13] = (unsigned char)(state[12] ^ mul2[state[13]] ^ mul3[state[14]] ^ state[15]);
   tmp[14] = (unsigned char)(state[12] ^ state[13] ^ mul2[state[14]] ^ mul3[state[15]]);
   tmp[15] = (unsigned char)(mul3[state[12]] ^ state[13] ^ state[14] ^ mul2[state[15]]);
+
+  #pragma unroll
   for(int i = 0; i < 16; i++)
     state[i] = tmp[i];
 }
 
 
 __host__
-void rotWord(unsigned char * word) {
+void rotWord(unsigned char * word)
+{
   unsigned char tmp_word = word[0];
   //Rotaciona uma word
   word[0] = word[1];
@@ -151,30 +166,44 @@ void rotWord(unsigned char * word) {
   word[2] = word[3];
   word[3] = tmp_word;
 }
+
+
 __host__
-void subWord(unsigned char * word) {
+void subWord(unsigned char * __restrict__ word)
+{
   //Substitui cada byte da word por um byte da S_BOX
+  #pragma unroll
   for(int i = 0; i < 4; i++)
     word[i] = S_BOX_HOST[word[i]];
 }
+
+
 __host__
-void addKeyExpansionCore(unsigned char * key, unsigned char i) {
+void addKeyExpansionCore(unsigned char * __restrict__ key, unsigned char i)
+{
   //Rotaciona, substitui e faz um xor com a tabela rcon (apenas os bits mais à esquerda)
   rotWord(key);
   subWord(key);
   key[0] ^= rcon_host[i];
 }
+
+
 __host__
-void translateWord(unsigned char * word) {
+void translateWord(unsigned char * __restrict__ word)
+{
   //transforma linha em coluna
   unsigned char tmp[16];
+  #pragma unroll
   for(int i = 0; i < 4; i++)
     for(int j = 0; j < 4; j++)
       tmp[i * 4 + j] = word[4 * j + i];
   memcpy(word, tmp, 16);
 }
+
+
 __host__
-void addKeyExpansion(unsigned char * key, unsigned char * exp_keys) {
+void addKeyExpansion(unsigned char * __restrict__ key, unsigned char * __restrict__ exp_keys)
+{
   int bytesGenerated = 16;
   int rconIte = 1;
   unsigned char tmp[4];
@@ -184,12 +213,14 @@ void addKeyExpansion(unsigned char * key, unsigned char * exp_keys) {
 
   //Gera todas as chaves para as rodadas
   while(bytesGenerated < EXP_KEY_SIZE) {
+    #pragma unroll
     for(int i = 0; i < 4; i++)
       tmp[i] = exp_keys[i + bytesGenerated - 4];
 
     if (bytesGenerated % 16 == 0)
       addKeyExpansionCore(tmp, rconIte++);
 
+    #pragma unroll
     for(int i = 0; i < 4; i++) {
       exp_keys[bytesGenerated] = exp_keys[bytesGenerated - 16] ^ tmp[i];
       bytesGenerated++;
@@ -198,13 +229,15 @@ void addKeyExpansion(unsigned char * key, unsigned char * exp_keys) {
 }
 
 __global__
-void aes(unsigned char * in_bytes, unsigned char * keys, int nBlocks) {
-  int id = blockIdx.x * blockDim.x + threadIdx.x;
-
-  if (id <= nBlocks) {
-
+void aes(unsigned char * __restrict__ in_bytes, unsigned char * __restrict__ keys, int nBlocks)
+{
+  for(int id = blockIdx.x * blockDim.x + threadIdx.x;
+      id <= nBlocks;
+      id += blockDim.x * gridDim.x)
+  {
     unsigned char state[16];
     //Copia os primeiros 16 bytes para a memoria
+    #pragma unroll
     for(int i = 0; i < 16; i++)
       state[i] = in_bytes[id * 16 + i];
 
@@ -212,6 +245,7 @@ void aes(unsigned char * in_bytes, unsigned char * keys, int nBlocks) {
     addRoundKey(state, keys);
 
     //N-1 rodadas
+    #pragma unroll
     for(int i = 0; i < (R_ROUNDS -1); i++) {
       subBytes(state);
       shiftRows(state);
@@ -227,6 +261,7 @@ void aes(unsigned char * in_bytes, unsigned char * keys, int nBlocks) {
     addRoundKey(state, keys + 160);
 
     //Copia a resposta para a memória
+    #pragma unroll
     for(int i = 0; i < 16; i++)
       in_bytes[id * 16 + i] = state[i];
   }
