@@ -64,10 +64,9 @@
 const unsigned char S_BOX_HOST[256] = S_BOX_CONSTANTS;
 const unsigned char rcon_host[11] = RCON_CONSTANTS;
 
-__device__ const unsigned char S_BOX[256] = S_BOX_CONSTANTS;
-__device__ const unsigned char mul2[] = MUL2_CONSTANTS;
-__device__ const unsigned char mul3[] = MUL3_CONSTANTS;
-__device__ const unsigned char rcon[11] = RCON_CONSTANTS;
+__device__ __const__ unsigned char S_BOX[256] = S_BOX_CONSTANTS;
+__device__ __const__ unsigned char mul2[] = MUL2_CONSTANTS;
+__device__ __const__ unsigned char mul3[] = MUL3_CONSTANTS;
 
 
 __device__ __forceinline__
@@ -231,9 +230,9 @@ void addKeyExpansion(unsigned char * __restrict__ key, unsigned char * __restric
 __global__
 void aes(unsigned char * __restrict__ in_bytes, unsigned char * __restrict__ keys, int nBlocks)
 {
-  for(int id = blockIdx.x * blockDim.x + threadIdx.x;
-      id <= nBlocks;
-      id += blockDim.x * gridDim.x)
+  int id = blockIdx.x * blockDim.x + threadIdx.x;
+
+  if ( id <= nBlocks )
   {
     unsigned char state[16];
     //Copia os primeiros 16 bytes para a memoria
@@ -246,8 +245,14 @@ void aes(unsigned char * __restrict__ in_bytes, unsigned char * __restrict__ key
 
     //N-1 rodadas
     #pragma unroll
-    for(int i = 0; i < (R_ROUNDS -1); i++) {
-      subBytes(state);
+    for(int i = 0; i < (R_ROUNDS -1); i++)
+    {
+      //subBytes(state);
+      //Faz a substituição byte a byte pela S_BOX
+      #pragma unroll
+      for(int j = 0; j < 16; j++)
+        state[j] = S_BOX[state[j]];
+
       shiftRows(state);
       mixColumns(state);
 
@@ -256,7 +261,12 @@ void aes(unsigned char * __restrict__ in_bytes, unsigned char * __restrict__ key
     }
 
     //Última rodada
-    subBytes(state);
+    //subBytes(state);
+    //Faz a substituição byte a byte pela S_BOX
+    #pragma unroll
+    for(int i = 0; i < 16; i++)
+      state[i] = S_BOX[state[i]];
+
     shiftRows(state);
     addRoundKey(state, keys + 160);
 

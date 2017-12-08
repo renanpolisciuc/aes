@@ -118,14 +118,14 @@ int main(int argc, char ** argv) {
     duracao_IO += duration_IO1.count();
 
     int nBlocks = 1;
-    int nTh = buffSize / 16;
+    int nThreads = buffSize / 16;
 
-    if (nTh > MAX_THREADS) {
-      nBlocks = (nTh / MAX_THREADS) + 1;
-      nTh = MAX_THREADS;
+    if (nThreads > MAX_THREADS) {
+      nBlocks = (nThreads / MAX_THREADS) + 1;
+      nThreads = MAX_THREADS;
     }
 
-    aes<<<nBlocks, nTh>>>(buffGPU, keysGPU, buffSize / 16);
+    aes<<<nBlocks, nThreads>>>(buffGPU, keysGPU, buffSize / 16);
 
     HANDLE_ERROR(cudaEventRecord(stop, 0));
     HANDLE_ERROR(cudaEventSynchronize(stop));
