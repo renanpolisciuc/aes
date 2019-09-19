@@ -75,6 +75,7 @@ int main(int argc, char ** argv) {
 
     auto t1_p = high_resolution_clock::now();
     /* Execução do algoritmo AES */
+    #pragma omp parallel for schedule(static)
     for(int i = 0; i < buffSize; i+= 16) {
       //Processa os bytes de 16 em 16
       aes(buffer + i, exp_key);
